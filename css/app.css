@@ -1,0 +1,118 @@
+
+.screenOne {
+	background: url(../images/background.jpeg) top center no-repeat fixed;
+	height: 800px;
+	background-size: cover;
+
+
+
+
+
+
+	/*
+
+	background-repeat: no-repeat;
+	background-size: 360px auto;
+	background-position: center;
+*/
+}
+
+
+
+.gifimage {
+
+
+	background: url(../images/background2.jpg) top center no-repeat fixed;
+	height: 1000px;
+	overflow: hidden;
+	width: 100%;
+	background-size: cover;
+	clear: both;
+
+}
+
+
+/* Screen Three */
+.screenThree {
+
+	background: url(../images/bgthree.jpg) top center no-repeat fixed;
+	height: 1000px;
+	overflow: hidden;
+	width: 100%;
+	background-size: cover;
+	z-index: 204;
+	clear: both;
+
+}
+
+/*Screen four*/
+
+#screen4_bg{
+	
+	background: url(../images/background3.jpg) top center no-repeat fixed;
+	height: 1000px;
+	overflow: hidden;
+	width: 100%;
+	background-size: 90%;
+	z-index: 204;
+	clear: both;
+}
+
+
+
+
+
+/* header */
+.logo{
+    height: 74px;
+}
+
+
+/* body */
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+/* featured header */
+.featuredHeader{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #FFFFFF;
+    background-color: #000;
+    width: 50%;
+    opacity: 0.3;
+    backdrop-filter: blur(5px);
+    /*
+    *  Where the magic happens
+    *  Centering method from CSS Tricks
+    *  http://css-tricks.com/centering-percentage-widthheight-elements/
+    */
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+.white{
+    opacity: 1;
+}
+
+.downArrow{
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    color: #FFFFFF;
+    /*
+    *  Where the magic happens
+    *  Centering method from CSS Tricks
+    *  http://css-tricks.com/centering-percentage-widthheight-elements/
+    */
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
