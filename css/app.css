@@ -176,6 +176,9 @@ body{
 	max-height: 75px;
 }
 
+.featurePageArrow{
+	opacity: 0;
+}
 
 
 /* media query for web view */
