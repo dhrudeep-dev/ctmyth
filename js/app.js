@@ -33,6 +33,7 @@ window.onload = function(){
   // feature page
   let introductionPage = document.querySelector('#screen1_bgOne');
   let featureHeader = document.querySelector('.featuredHeader');
+  let featureHeaderContent = document.querySelector('.featureHeaderContent');
   let downArrow = document.querySelector('#featurePageArrow');
 
   TweenMax.fromTo(introductionPage, 1, {
@@ -49,11 +50,18 @@ window.onload = function(){
     delay: 2
   });
 
+  TweenMax.fromTo(featureHeaderContent, 1, {
+    opacity: 0,
+  },{
+    opacity:1,  
+    delay: 3
+  });
+
   TweenMax.fromTo(downArrow, 1, {
     opacity: 0,
   },{
     opacity: 1,
-    delay: 3,
+    delay: 4,
   });
 
   TweenMax.fromTo(downArrow, 1, {
@@ -62,6 +70,6 @@ window.onload = function(){
     y: -5,
     yoyo: true,
     repeat: -1,
-    delay: 3,
+    delay: 4,
   });
 }
