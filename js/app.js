@@ -39,7 +39,7 @@ window.onload = function(){
   let featureHeaderContent3 = document.querySelector('.featureHeaderContent3');
   let featureHeaderContent4 = document.querySelector('.featureHeaderContent4');
   let downArrow = document.querySelector('#featurePageArrow');
-  let myObject = document.getElementById('ftImg').contentDocument;
+  let myObject = document.getElementById('doctor').contentDocument;
   let docHead = myObject.getElementById('head');
 
  
