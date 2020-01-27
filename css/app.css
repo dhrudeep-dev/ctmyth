@@ -1,8 +1,8 @@
 /* feature page */
 .screenOne {
-	background: url(../images/featureImage.svg) top center no-repeat fixed;
-	height: 800px;
-	background-size: cover;
+	background: url(../images/featureImage.svg) top center repeat fixed;
+    height: 800px;
+	background-size: contain;
 }
 
 /* page 2 */
@@ -67,11 +67,6 @@ body{
     width: 50%;
     opacity: 0.3;
     backdrop-filter: blur(5px);
-    /*
-    *  Where the magic happens
-    *  Centering method from CSS Tricks
-    *  http://css-tricks.com/centering-percentage-widthheight-elements/
-    */
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
