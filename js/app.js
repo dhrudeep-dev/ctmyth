@@ -42,11 +42,17 @@ window.onload = function(){
   let myObject = document.getElementById('ftImg').contentDocument;
   let docHead = myObject.getElementById('head');
 
-  TweenMax.to(docHead, 0.1, {
-    rotation: 360,
-    repeat: -1
-});
-
+ 
+  TweenMax.fromTo(docHead, 1, {
+      xPercent: -10,
+      rotation:-5
+      
+  },{
+      xPercent: 20,
+      rotation:5,
+      yoyo: true,
+      repeat: -1
+  });
 
   TweenMax.fromTo(introductionPage, 1, {
     opacity: 0
