@@ -39,9 +39,9 @@ body{
 
 /* feature page */
 .screenOne {
-	background: url(../images/featureImage.svg) top center repeat fixed;
+	background: url(../images/featureImage.svg) top repeat fixed;
     height: 800px;
-	background-size: contain;
+	background-size: 50%;
 }
 
 /* myth 1 */
