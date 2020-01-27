@@ -11,6 +11,11 @@
 	z-index: 1000;
 	background: #E6E6E6 !important;
 }
+/* fixing logo position */
+
+.menu-text{
+	margin-top: -1.4%;
+}
 
 /* nav title */
 .title-bar{
