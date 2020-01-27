@@ -129,7 +129,15 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+	max-width: 80%;
+	max-height: auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+#ftImg{
+	max-height: 200px;
+    border: none;
     max-width: 80%;
     padding: 20px;
     text-align: center;
