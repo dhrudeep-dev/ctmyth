@@ -5,22 +5,17 @@
 	background-size: cover;
 }
 
-
-
+/* page 2 */
 .gifimage {
-
-
 	background: url(../images/background2.jpg) top center no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
 	background-size: cover;
-	clear: both;
-
+    clear: both;
 }
 
-
-/* Screen Three */
+/* page 3 */
 .screenThree {
 
 	background: url(../images/bgthree.jpg) top center no-repeat fixed;
