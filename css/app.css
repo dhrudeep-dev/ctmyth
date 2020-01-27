@@ -112,16 +112,6 @@ body{
 }
 
 
-
-
-
-
-
-/* header */
-.logo{
-    height: 74px;
-}
-
 /* featured header */
 .featuredHeader{
     background-color: rgb(0,0,0); /* Fallback color */
@@ -150,44 +140,34 @@ body{
     left: 50%;
     top: 90%;
     color: #707070;
-    /*
-    *  Where the magic happens
-    *  Centering method from CSS Tricks
-    *  http://css-tricks.com/centering-percentage-widthheight-elements/
-    */
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-/* list item */
-.dropdown.menu{
-    align-items: center;
-    font-size: 14pt;
-li{
-    justify-content: center;
-}
-
-/* logo */
-
+/* header */
 .logo{
-
-    
+	max-height: 75px;
 }
 
 /* Menu */
 
-#responsive-menu .dropdown.menu{
+.navigation{
+	align-items: center;
+}
 
-    height: 75px;
+/* list item */
+.dropdown{
+	font-size: 14pt;
+	max-height: 75px;
 }
 
 /* media query for web view */
 @media only screen and (min-width: 768px) {
 
-   /* padding to the nav li*/
-   .navigation li{
-	   padding-top: 20px; 
-   }
+	/* padding to the nav li*/
+	.navigation li{
+		padding-top: 20px; 
+	}
 }
