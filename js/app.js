@@ -32,8 +32,10 @@ window.onload = function(){
   let body = document.querySelector("body");
   // feature page
   let introductionPage = document.querySelector('#screen1_bgOne');
+  let mainNav = document.querySelector('.navigation');
   let featureHeader = document.querySelector('.featuredHeader');
   let featureHeaderContent = document.querySelector('.featureHeaderContent');
+  let featureHeaderContent1 = document.querySelector('.featureHeaderContent1');
   let downArrow = document.querySelector('#featurePageArrow');
 
   TweenMax.fromTo(introductionPage, 1, {
@@ -43,25 +45,39 @@ window.onload = function(){
     delay: 1
   });
 
-  TweenMax.fromTo(featureHeader, 1, {
+  TweenMax.fromTo(mainNav, 1, {
     opacity: 0,
   },{
     opacity:1,  
     delay: 2
   });
 
-  TweenMax.fromTo(featureHeaderContent, 1, {
+  TweenMax.fromTo(featureHeader, 1, {
     opacity: 0,
   },{
     opacity:1,  
     delay: 3
   });
 
+  TweenMax.fromTo(featureHeaderContent, 1, {
+    opacity: 0,
+  },{
+    opacity:1,  
+    delay: 4
+  });
+
+  TweenMax.fromTo(featureHeaderContent1, 1, {
+    opacity: 0,
+  },{
+    opacity:1,  
+    delay: 5
+  });
+
   TweenMax.fromTo(downArrow, 1, {
     opacity: 0,
   },{
     opacity: 1,
-    delay: 4,
+    delay: 6,
   });
 
   TweenMax.fromTo(downArrow, 1, {
@@ -70,6 +86,9 @@ window.onload = function(){
     y: -5,
     yoyo: true,
     repeat: -1,
-    delay: 4,
+    delay: 6,
   });
 }
+
+/* assigning active class to current Myth */
+
