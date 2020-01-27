@@ -73,3 +73,6 @@ window.onload = function(){
     delay: 4,
   });
 }
+
+/* assigning active class to current Myth */
+
