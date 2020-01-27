@@ -140,10 +140,11 @@ body{
     text-align: center;
 	border-radius: 10px;
 }
-#ftImg{
+.ftImg{
 	max-height: 200px;
     border: none;
-    max-width: 80%;
+	max-width: 80%;
+	width: 300px;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
