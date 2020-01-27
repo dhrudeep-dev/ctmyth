@@ -146,6 +146,20 @@ body{
 
 /* list item */
 li{
-    padding-top: 30px;
+    /* padding-top: 20px; */
+    justify-content: center;
 }
 
+/* logo */
+
+.logo{
+
+    
+}
+
+/* Menu */
+
+#responsive-menu .dropdown.menu{
+
+    height: 75px;
+}
