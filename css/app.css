@@ -7,7 +7,7 @@
 
 /* page 2 */
 .gifimage {
-	background: url(../images/background2.jpg) top center no-repeat fixed;
+	background: url(../images/photo5.jpeg) top center no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -32,14 +32,58 @@
 
 #screen4_bg{
 	
-	background: url(../images/background3.jpg) top center no-repeat fixed;
+	background: url(../images/photo4.jpeg) top center no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
-	background-size: 90%;
+	background-size: cover;
 	z-index: 204;
 	clear: both;
 }
+
+
+/*Screen five*/
+
+#screen5_bg{
+	
+	background: url(../images/photo00.jpeg) top center no-repeat fixed;
+	height: 1000px;
+	overflow: hidden;
+	width: 100%;
+	background-size: cover;
+	z-index: 204;
+	clear: both;
+}
+
+
+
+/*Screen Six*/
+
+#screen6_bg{
+	
+	background: url(../images/photo1.jpeg) top center no-repeat fixed;
+	height: 1000px;
+	overflow: hidden;
+	width: 100%;
+	background-size: cover;
+	z-index: 204;
+	clear: both;
+}
+
+/*Screen seven*/
+
+#screen7_bg{
+	
+	background: url(../images/photo2.jpeg) top center no-repeat fixed;
+	height: 1000px;
+	overflow: hidden;
+	width: 100%;
+	background-size: cover;
+	z-index: 204;
+	clear: both;
+}
+
+
 
 
 
@@ -99,3 +143,9 @@ body{
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
+
+/* list item */
+li{
+    padding-top: 30px;
+}
+
