@@ -101,7 +101,7 @@ body{
 
 /* header */
 .logo{
-    height: 74px;
+    max-height: 75px;
 }
 
 /* featured header */
@@ -145,21 +145,13 @@ body{
 }
 
 /* list item */
-li{
-    /* padding-top: 20px; */
-    justify-content: center;
-}
-
-/* logo */
-
-.logo{
-
-    
+.dropdown.menu{
+	align-items: center;
 }
 
 /* Menu */
 
 #responsive-menu .dropdown.menu{
-
+	align-content: center;
     height: 75px;
 }
