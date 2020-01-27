@@ -1,3 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* body */
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 /* feature page */
 .screenOne {
 	background: url(../images/featureImage.svg) top center repeat fixed;
@@ -5,7 +15,7 @@
 	background-size: contain;
 }
 
-/* page 2 */
+/* myth 1 */
 .gifimage {
 	background: url(../images/background2.jpg) top center no-repeat fixed;
 	height: 1000px;
@@ -15,7 +25,7 @@
     clear: both;
 }
 
-/* page 3 */
+/* myth 2 */
 .screenThree {
 
 	background: url(../images/bgthree.jpg) top center no-repeat fixed;
@@ -28,7 +38,7 @@
 
 }
 
-/*Screen four*/
+/* myth 3 */
 
 #screen4_bg{
 	
@@ -48,13 +58,6 @@
 /* header */
 .logo{
     height: 74px;
-}
-
-
-/* body */
-body{
-    font-family: 'Roboto Condensed', sans-serif;
-
 }
 
 /* featured header */
