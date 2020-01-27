@@ -7,8 +7,8 @@
 /* Nav */
 .navigation{
 	position: fixed !important;
-    top: 0;
-    width: 100%;
+	width: 100%;
+	z-index: 1000;
     
 }
 
@@ -110,7 +110,7 @@ body{
 
 /* header */
 .logo{
-    max-height: 75px;
+    height: 74px;
 }
 
 /* featured header */
@@ -154,14 +154,35 @@ body{
 }
 
 /* list item */
+<<<<<<< HEAD
 .dropdown.menu{
     align-items: center;
     font-size: 14pt;
+=======
+li{
+    justify-content: center;
+}
+
+/* logo */
+
+.logo{
+
+    
+>>>>>>> b1ca09643a796a133ad8ab4035b8e1c260cea82b
 }
 
 /* Menu */
 
 #responsive-menu .dropdown.menu{
-	align-content: center;
+
     height: 75px;
+}
+
+/* media query for web view */
+@media only screen and (min-width: 768px) {
+
+   /* padding to the nav li*/
+   .navigation li{
+	   padding-top: 20px; 
+   }
 }
