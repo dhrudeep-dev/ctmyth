@@ -11,6 +11,11 @@
 	z-index: 1000;
 	background: #E6E6E6 !important;
 }
+/* fixing logo position */
+
+.menu-text{
+	margin-top: -1.4%;
+}
 
 /* nav title */
 .title-bar{
@@ -20,6 +25,7 @@
 /* nav ham color */
 .menu-icon{
 	background-color: #5a5555;
+	left: 85%;
 }
 /* body */
 body{
@@ -123,7 +129,15 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+	max-width: 80%;
+	max-height: auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+#ftImg{
+	max-height: 200px;
+    border: none;
     max-width: 80%;
     padding: 20px;
     text-align: center;
