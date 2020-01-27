@@ -155,7 +155,8 @@ body{
 
 /* list item */
 .dropdown.menu{
-	align-items: center;
+    align-items: center;
+    font-size: 14pt;
 }
 
 /* Menu */
