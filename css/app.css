@@ -140,9 +140,8 @@ body{
     border-radius: 10px;
 }
 
-
-.white{
-    opacity: 1;
+.featureHeaderContent{
+	
 }
 
 .downArrow{
@@ -163,11 +162,9 @@ body{
 }
 
 /* list item */
-<<<<<<< HEAD
 .dropdown.menu{
     align-items: center;
     font-size: 14pt;
-=======
 li{
     justify-content: center;
 }
@@ -177,7 +174,6 @@ li{
 .logo{
 
     
->>>>>>> b1ca09643a796a133ad8ab4035b8e1c260cea82b
 }
 
 /* Menu */
