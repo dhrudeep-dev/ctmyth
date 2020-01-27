@@ -1,20 +1,8 @@
 
 .screenOne {
-	background: url(../images/background.jpeg) top center no-repeat fixed;
+	background: url(../images/featureImage.svg) top center no-repeat fixed;
 	height: 800px;
 	background-size: cover;
-
-
-
-
-
-
-	/*
-
-	background-repeat: no-repeat;
-	background-size: 360px auto;
-	background-position: center;
-*/
 }
 
 
