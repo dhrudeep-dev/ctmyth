@@ -42,7 +42,7 @@ window.onload = function(){
   let myObject = document.getElementById('doctor').contentDocument;
   let docHead = myObject.getElementById('head');
 
- 
+  //  head animation
   TweenMax.fromTo(docHead, 1, {
       xPercent: -10,
       rotation:-5
