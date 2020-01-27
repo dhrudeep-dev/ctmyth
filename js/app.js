@@ -39,6 +39,20 @@ window.onload = function(){
   let featureHeaderContent3 = document.querySelector('.featureHeaderContent3');
   let featureHeaderContent4 = document.querySelector('.featureHeaderContent4');
   let downArrow = document.querySelector('#featurePageArrow');
+  let myObject = document.getElementById('ftImg').contentDocument;
+  let docHead = myObject.getElementById('head');
+
+ 
+  TweenMax.fromTo(docHead, 1, {
+      xPercent: -10,
+      rotation:-5
+      
+  },{
+      xPercent: 20,
+      rotation:5,
+      yoyo: true,
+      repeat: -1
+  });
 
   TweenMax.fromTo(introductionPage, 1, {
     opacity: 0
