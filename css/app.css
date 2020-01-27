@@ -115,7 +115,8 @@ body{
 
 /* header */
 .logo{
-    height: 74px;
+	height: 74px;
+	align-content: center;
 }
 
 /* featured header */
@@ -159,24 +160,25 @@ body{
 
 /* list item */
 .dropdown.menu{
-    align-items: center;
-    font-size: 14pt;
-li{
-    justify-content: center;
+    align-content: center;
+	font-size: 14pt;
+	max-height: 75px;
+	letter-spacing: 1px;
+	
 }
 
-/* logo */
-
-.logo{
-
-    
+/* list item text */
+li a{
+	color: #F17B0D;
+	
 }
+
 
 /* Menu */
 
-#responsive-menu .dropdown.menu{
-
-    height: 75px;
+#responsive-menu{
+	max-height: 75px;
+	align-content: center;
 }
 
 /* media query for web view */
