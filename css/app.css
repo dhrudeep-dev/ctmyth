@@ -1,4 +1,4 @@
-
+/* feature page */
 .screenOne {
 	background: url(../images/featureImage.svg) top center no-repeat fixed;
 	height: 800px;
@@ -93,7 +93,7 @@ body{
     position: absolute;
     left: 50%;
     top: 90%;
-    color: #FFFFFF;
+    color: #707070;
     /*
     *  Where the magic happens
     *  Centering method from CSS Tricks
