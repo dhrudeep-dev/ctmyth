@@ -106,5 +106,6 @@ window.onload = function(){
   });
 }
 
+
 /* assigning active class to current Myth */
 
