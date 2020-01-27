@@ -35,15 +35,6 @@ window.onload = function(){
   let featureHeader = document.querySelector('.featuredHeader');
   let downArrow = document.querySelector('#featurePageArrow');
 
-  // setting transofrm origins of all pages
-  TweenMax.set(featureHeader, {
-    transformOrigin: "center center"
-  });
-
-  TweenMax.set(downArrow, {
-    transformOrigin: "center center"
-  });
-
   TweenMax.fromTo(introductionPage, 1, {
     opacity: 0
   },{
@@ -53,10 +44,8 @@ window.onload = function(){
 
   TweenMax.fromTo(featureHeader, 1, {
     opacity: 0,
-    scale: 0,
   },{
-    opacity:1,
-    scale: 1,
+    opacity:1,  
     delay: 2
   });
 
