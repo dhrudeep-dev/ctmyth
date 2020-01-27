@@ -17,6 +17,10 @@
 	background: #E6E6E6 !important;
 }
 
+/* nav ham color */
+.menu-icon{
+	background-color: #5a5555;
+}
 /* body */
 body{
 	font-family: 'Roboto Condensed', sans-serif;
