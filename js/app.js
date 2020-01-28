@@ -37,23 +37,12 @@ window.onload = function(){
   let featureHeaderContent = document.querySelector('.featureHeaderContent');
   let featureHeaderContent2 = document.querySelector('.featureHeaderContent2');
   let featureHeaderContent3 = document.querySelector('.featureHeaderContent3');
-  let featureHeaderContent4 = document.querySelector('.featureHeaderContent4');
   let downArrow = document.querySelector('#featurePageArrow');
-  let myObject = document.getElementById('doctor').contentDocument;
-  let docHead = myObject.getElementById('head');
+  let bothCharacters = document.querySelector(".ftImg");
+  let doctor = document.getElementById('doctor').contentDocument;
+  let docHead = doctor.getElementById('head');
 
-  //  head animation
-  TweenMax.fromTo(docHead, 1, {
-      xPercent: -10,
-      rotation:-5
-      
-  },{
-      xPercent: 20,
-      rotation:5,
-      yoyo: true,
-      repeat: -1
-  });
-
+  // onload reveal animation
   TweenMax.fromTo(introductionPage, 1, {
     opacity: 0
   },{
@@ -61,6 +50,7 @@ window.onload = function(){
     delay: 1
   });
 
+  // main nav animation
   TweenMax.fromTo(mainNav, 1, {
     opacity: 0,
   },{
@@ -68,6 +58,7 @@ window.onload = function(){
     delay: 1
   });
 
+  // main content animation
   TweenMax.fromTo(featureHeader, 1, {
     opacity: 0,
   },{
@@ -75,39 +66,59 @@ window.onload = function(){
     delay: 2
   });
 
+  TweenMax.fromTo(bothCharacters, 1, {
+    opacity: 0
+  },{
+    opacity:1,
+    delay: 3
+  });
+
+  //  head animation
+  TweenMax.fromTo(docHead, 1, {
+    xPercent: -10,
+    rotation:-5
+    
+  },{
+    xPercent: 20,
+    rotation:5,
+    yoyo: true,
+    repeat: -1,
+    delay: 3
+  });
+
   TweenMax.fromTo(featureHeaderContent, 1, {
     opacity: 0,
   },{
     opacity:1,  
-    delay: 3
+    delay: 3.5
   });
 
   TweenMax.fromTo(featureHeaderContent2, 1, {
     opacity: 0,
   },{
     opacity:1,  
-    delay: 4
+    delay: 3.5
   });
 
   TweenMax.fromTo(featureHeaderContent3, 1, {
     opacity: 0,
   },{
     opacity:1,  
-    delay: 5
+    delay: 4
   });
 
   TweenMax.fromTo(featureHeaderContent4, 1, {
     opacity: 0,
   },{
     opacity:1,  
-    delay: 6
+    delay: 5
   });
 
   TweenMax.fromTo(downArrow, 1, {
     opacity: 0,
   },{
     opacity: 1,
-    delay: 7
+    delay: 6
   });
 
   TweenMax.fromTo(downArrow, 1, {
@@ -116,7 +127,7 @@ window.onload = function(){
     y: -5,
     yoyo: true,
     repeat: -1,
-    delay: 7
+    delay: 6
   });
 }
 
