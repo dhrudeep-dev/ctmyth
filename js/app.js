@@ -97,14 +97,14 @@ window.onload = function(){
     opacity: 0,
   },{
     opacity:1,  
-    delay: 3.5
+    delay: 4
   });
 
   TweenMax.fromTo(featureHeaderContent3, 1, {
     opacity: 0,
   },{
     opacity:1,  
-    delay: 4
+    delay: 4.5
   });
 
   TweenMax.fromTo(downArrow, 1, {
