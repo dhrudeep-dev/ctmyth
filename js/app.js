@@ -40,7 +40,10 @@ window.onload = function(){
   let downArrow = document.querySelector('#featurePageArrow');
   let bothCharacters = document.querySelector(".characters");
   let doctor = document.getElementById('doctor').contentDocument;
+  let visitor = document.getElementById('visitor').contentDocument;
+
   let docHead = doctor.getElementById('head');
+  let visHead = visitor.getElementById('head');
 
   // onload reveal animation
   TweenMax.fromTo(introductionPage, 1, {
@@ -79,13 +82,27 @@ window.onload = function(){
     rotation:-5
     
   },{
-    xPercent: 20,
+    xPercent: 10,
     rotation:5,
     yoyo: true,
     repeat: -1,
     delay: 3
   });
+    
+    //  head animation
+  TweenMax.fromTo(visHead, 1, {
+    xPercent: 10,
+    rotation:5
+    
+  },{
+    xPercent: -10,
+    rotation:-5,
+    yoyo: true,
+    repeat: -1,
+    delay: 3
+  });
 
+    
   TweenMax.fromTo(featureHeaderContent, 1, {
     opacity: 0,
   },{
