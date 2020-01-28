@@ -38,7 +38,7 @@ window.onload = function(){
   let featureHeaderContent2 = document.querySelector('.featureHeaderContent2');
   let featureHeaderContent3 = document.querySelector('.featureHeaderContent3');
   let downArrow = document.querySelector('#featurePageArrow');
-  let bothCharacters = document.querySelector(".ftImg");
+  let bothCharacters = document.querySelector(".characters");
   let doctor = document.getElementById('doctor').contentDocument;
   let docHead = doctor.getElementById('head');
 
@@ -105,13 +105,6 @@ window.onload = function(){
   },{
     opacity:1,  
     delay: 4
-  });
-
-  TweenMax.fromTo(featureHeaderContent4, 1, {
-    opacity: 0,
-  },{
-    opacity:1,  
-    delay: 5
   });
 
   TweenMax.fromTo(downArrow, 1, {
