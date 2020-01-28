@@ -35,6 +35,12 @@
       </div>
     </div>
 
+    <!-- Scroll Bar -->
+    <div class="sticky navigation" data-sticky data-margin-top="0">
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>  
+</div>
 
 
     <!-- feature page -->
@@ -118,6 +124,22 @@
         </section>
     </div>
     
+
+
+
+    <script>
+      // When the user scrolls the page, execute myFunction 
+      window.onscroll = function() {myFunction()};
+      
+      function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+      </script>
+
+
     <!-- link for foundation js -->
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
