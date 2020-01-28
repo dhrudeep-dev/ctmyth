@@ -67,6 +67,8 @@ body{
 
 }
 
+
+
 /* myth 3 */
 
 #screen4_bg{
@@ -187,6 +189,57 @@ body{
 .featurePageArrow{
 	opacity: 0;
 }
+
+
+
+
+/* side bar */
+#mySidenav a {
+	position: absolute;
+	left: -80px;
+	transition: 0.3s;
+	padding: 15px;
+	width: 100px;
+	text-decoration: none;
+	font-size: 14px;
+	color: white;
+	border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+	left: 0;
+}
+
+#mythOne {
+	top: 150px;
+	background-color: #EFB700;
+}
+
+#mythTwo {
+	top: 220px;
+	background-color: #EFB700;
+}
+
+  #mythThree {
+	top: 290px;
+	background-color: #EFB700;
+  }
+  
+  #mythFour {
+	top: 360px;
+	background-color: #EFB700;
+  }
+
+  #mythFive {
+	top: 430px;
+	background-color: #EFB700;
+  }
+
+  #mythSix {
+	top: 500px;
+	background-color: #EFB700;
+  }
+/* End of Side Bar */
 
 
 /* media query for web view */
