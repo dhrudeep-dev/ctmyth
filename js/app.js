@@ -31,6 +31,8 @@ window.onload = function(){
   // reference the pages
   let body = document.querySelector("body");
   // feature page
+  let progressBar = document.querySelector('#progressBar');
+  let sideNav = document.querySelector('#mySidenav');
   let introductionPage = document.querySelector('#screen1_bgOne');
   let mainNav = document.querySelector('.navigation');
   let featureHeader = document.querySelector('.featuredHeader');
@@ -55,6 +57,22 @@ window.onload = function(){
 
   // main nav animation
   TweenMax.fromTo(mainNav, 1, {
+    opacity: 0,
+  },{
+    opacity:1,  
+    delay: 1
+  });
+
+  // progress bar animation
+  TweenMax.fromTo(progressBar, 1, {
+    opacity: 0,
+  },{
+    opacity:1,  
+    delay: 1
+  });
+
+  // side nav animation
+  TweenMax.fromTo(sideNav, 1, {
     opacity: 0,
   },{
     opacity:1,  

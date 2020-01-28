@@ -3,7 +3,7 @@
 	padding: 0;
 	font-family: 'Roboto Condensed', sans-serif;
 }
-
+/* font family */
 h1, h2, h3, h4, h5, h6, p{
 	font-family: 'Roboto Condensed', sans-serif;
 }
@@ -15,6 +15,7 @@ h1, h2, h3, h4, h5, h6, p{
 	width: 100%;
 	z-index: 1000;
 	background: #E6E6E6 !important;
+	border: none;
 }
 /* fixing logo position */
 
@@ -25,22 +26,29 @@ h1, h2, h3, h4, h5, h6, p{
 /* nav title */
 .title-bar{
 	background: #E6E6E6 !important;
+	border: none;
+}
+
+.title-bar-title{
+	border: none;
 }
 
 /* nav ham color */
 .menu-icon{
 	background-color: #5a5555;
 	left: 85%;
+	border: none;
 }
 /* body */
 body{
 	font-family: 'Roboto Condensed', sans-serif;
+	outline: none;
 }
 
 /* feature page */
 .screenOne {
 	background: url(../images/featureImage.svg) top repeat fixed;
-    height: 800px;
+    height: 768px;
 	background-size: 50%;
 }
 
@@ -210,33 +218,38 @@ body{
 	left: 0;
 }
 
+#intro{
+	top: 120px;
+	background-color: #EFB700;
+}
+
 #mythOne {
-	top: 150px;
+	top: 190px;
 	background-color: #EFB700;
 }
 
 #mythTwo {
-	top: 220px;
+	top: 260px;
 	background-color: #EFB700;
 }
 
 #mythThree {
-	top: 290px;
+	top: 330px;
 	background-color: #EFB700;
 }
 
 #mythFour {
-	top: 360px;
+	top: 400px;
 	background-color: #EFB700;
 }
 
 #mythFive {
-	top: 430px;
+	top: 470px;
 	background-color: #EFB700;
 }
 
 #mythSix {
-	top: 500px;
+	top: 540px;
 	background-color: #EFB700;
 }
 /* End of Side Bar */
@@ -257,6 +270,7 @@ body{
 	height: 8px;
 	background: #EFB700;
 	width: 0%;
+	border: none;
 }
 
 
