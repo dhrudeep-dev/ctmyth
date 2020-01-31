@@ -266,6 +266,19 @@ body {
 	background-color: #EFB700;
 }
 
+#screen2_bgOne>#visitor{
+	position: relative;
+	top: 100px;	
+	left: 100px;
+}
+
+#screen2_bgOne>#doctor{
+float: right;
+position: relative;
+top: 100px;
+right: 100px;
+}
+
 #mythTwo {
 	top: 260px;
 	background-color: #EFB700;
