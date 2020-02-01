@@ -346,13 +346,7 @@ right: 100px;
 	border-radius: 10px;
 }
 
-#visitorScr2{
-	margin-left: -10%;
-}
-#doctorScr2{
-	margin-left: 50%;
 
-}
 /* media query for web view */
 @media only screen and (min-width: 768px) {
 

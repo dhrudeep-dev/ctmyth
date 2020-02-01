@@ -170,7 +170,7 @@ let visLayer = visitorScr2.getElementById('Layer_2');
 let bubbleScr2Red = document.getElementById('bubbleScr2');
     
  let t1 = new TimelineMax()
-    .to (visitorScr2Char, 5, { x:280})
+    .to (visitorScr2Char, 5, { x:200})
     .call(changeText, ["do you think that all patients who come to CTs get treatment like an experimental object?"], this, 6)
     .call(changeText, ["Clinical research has enforced oversight, and patients also have rights that help protect them. Before participating, you are given in-depth information about the study."], this, "+=6")
     .call(changeText, ["what about the medicines which we are getting from ct?"], this, "+=6")
