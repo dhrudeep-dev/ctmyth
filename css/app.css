@@ -141,25 +141,6 @@ body {
 	clear: both;
 }
 
-.featuredHeaderScr2{
-	background-color: rgb(0, 0, 0);
-	/* Fallback color */
-	background-color: rgba(0, 0, 0, 0.5);
-	/* Black w/opacity/see-through */
-	color: white;
-	font-weight: bold;
-	border: none;
-	position: absolute;
-	top: 175%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 80%;
-	max-height: auto;
-	padding: 20%;
-	text-align: center;
-	border-radius: 10px;
-}
-
 /* featured header */
 .featuredHeader {
 	background-color: rgb(0, 0, 0);
@@ -347,7 +328,35 @@ right: 100px;
 	border: none;
 }
 
+/* screen2 styles*/
 
+
+.featuredHeaderScr2{
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.5);
+	/* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	border: none;
+	position: absolute;
+	top: 180%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 80%;
+	max-height: auto;
+	padding: 15%;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#visitorScr2{
+	margin-left: -10%;
+}
+#doctorScr2{
+	margin-left: 50%;
+
+}
 /* media query for web view */
 @media only screen and (min-width: 768px) {
 
