@@ -170,15 +170,15 @@ let visLayer = visitorScr2.getElementById('Layer_2');
 let bubbleScr2Red = document.getElementById('bubbleScr2');
     
  let t1 = new TimelineMax()
-    .to (visitorScr2Char, 5, { x:300})
-    .call(changeText, ["do you think that all patients who come to CTs get treatment like an experimental object?"], this, 4)
-    .call(changeText, ["Clinical research has enforced oversight, and patients also have rights that help protect them. Before participating, you are given in-depth information about the study."], this, "+=4")
-    .call(changeText, ["what about the medicines which we are getting from ct?"], this, "+=4")
-    .call(changeText, ["Investigational medicines are researched extensively in a laboratory before they are ready for clinical trials with human volunteers"], this, "+=4")
-    .call(changeText, ["Before medicines can be approved for use, they must undergo extensive clinical research to ensure they are safe and effective."], this, "+=4")
-    .call(changeText, ["how can I believe that medicines are safe to use?"], this, "+=4")
-    .call(changeText, ["government and international regulations are also in place to make sure that research involving people is done according to strict scientific and ethical guidelines"], this, "+=4")
-    .call(changeText, ["wow, that’s great now I can trust cts. I would also suggest my friends and family members too."], this, "+=4")
+    .to (visitorScr2Char, 5, { x:280})
+    .call(changeText, ["do you think that all patients who come to CTs get treatment like an experimental object?"], this, 6)
+    .call(changeText, ["Clinical research has enforced oversight, and patients also have rights that help protect them. Before participating, you are given in-depth information about the study."], this, "+=6")
+    .call(changeText, ["what about the medicines which we are getting from ct?"], this, "+=6")
+    .call(changeText, ["Investigational medicines are researched extensively in a laboratory before they are ready for clinical trials with human volunteers"], this, "+=6")
+    .call(changeText, ["Before medicines can be approved for use, they must undergo extensive clinical research to ensure they are safe and effective."], this, "+=6")
+    .call(changeText, ["how can I believe that medicines are safe to use?"], this, "+=6")
+    .call(changeText, ["government and international regulations are also in place to make sure that research involving people is done according to strict scientific and ethical guidelines"], this, "+=6")
+    .call(changeText, ["wow, that’s great now I can trust cts. I would also suggest my friends and family members too."], this, "+=6")
 
        
     

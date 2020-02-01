@@ -340,12 +340,8 @@ right: 100px;
 	font-weight: bold;
 	border: none;
 	position: absolute;
-	top: 180%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 80%;
-	max-height: auto;
-	padding: 15%;
+	margin-top: 5%;
+	width: 80% !important;
 	text-align: center;
 	border-radius: 10px;
 }
