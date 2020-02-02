@@ -184,12 +184,40 @@ body {
 }
 
 .bubbleScr2{
-	left: 30%;
+	left: 25%;
 }
 
 .speech-bubble:after {
 	content: '';
 	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #a53d38;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+.bubbleScr3{
+	left: 60%;
+}
+.speech-bubble1	 {
+	position: relative;
+	background: #a53d38;
+	color: #fff;
+	border-radius: 10px;
+	padding: 20px;
+	max-width: 400px;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1rem;
+}
+.speech-bubble1:after {
+	content: '';
+	position: absolute;
+	transform: rotate(90deg);
 	bottom: 0;
 	left: 50%;
 	width: 0;
