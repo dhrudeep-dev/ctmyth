@@ -187,6 +187,7 @@ body {
 	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
+	margin-top: -20%;
 }
 
 .speech-bubble {
@@ -376,12 +377,12 @@ right: 100px;
 /* screen2 styles*/
 
 
-.featuredHeaderScr2{
-	background-color: rgb(0, 0, 0);
+/* .featuredHeaderScr2{
+	background-color: rgb(0, 0, 0); */
 	/* Fallback color */
-	background-color: rgba(0, 0, 0, 0.5);
+	/* background-color: rgba(0, 0, 0, 0.5); */
 	/* Black w/opacity/see-through */
-	color: white;
+	/* color: white;
 	font-weight: bold;
 	border: none;
 	position: absolute;
@@ -389,7 +390,7 @@ right: 100px;
 	width: 80% !important;
 	text-align: center;
 	border-radius: 10px;
-}
+} */
 
 .bblCon{
 	margin-top: 5%;
