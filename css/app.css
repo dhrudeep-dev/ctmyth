@@ -45,6 +45,7 @@ p {
 .title-bar {
 	/* background: #E6E6E6 !important; */
 	border: none;
+	background-color: #FFFFFF;
 }
 
 .title-bar-title {
@@ -284,7 +285,7 @@ top: 250px;
 /* list item */
 .dropdown {
 	font-size: 14pt;
-	max-height: 75px;
+	max-height: 105px;
 	letter-spacing: 1px;
 }
 
@@ -402,9 +403,6 @@ right: 100px;
 		padding-top: 20px;
 	}
 
-	.top-bar, .top-bar ul {
-		background-color: #FFFFFF;
-		
-	}
+
 	
 }
