@@ -21,7 +21,7 @@ p {
 	position: fixed !important;
 	width: 100%;
 	z-index: 1000;
-	background: #E6E6E6 !important;
+	/* background: #E6E6E6 !important; */
 	border: none;
 }
 
@@ -43,7 +43,7 @@ p {
 
 /* nav title */
 .title-bar {
-	background: #E6E6E6 !important;
+	/* background: #E6E6E6 !important; */
 	border: none;
 }
 
@@ -170,14 +170,19 @@ body {
 	border-radius: 10px;
 }
 
+.characters{
+	margin: ;
+}
+
 .ftImg {
 	max-width: 200px;
 	max-height: 200px;
-	border: none;
-	max-width: 90%;
-	padding: 20px;
-	text-align: center;
-	border-radius: 10px;
+    border: none;
+	max-width: 80%;
+	width: 130px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .myth1Animation {
@@ -202,7 +207,8 @@ body {
 }
 
 .bubbleScr2{
-	left: 40%;
+	left: 50%;
+top: 250px;
 }
 
 .speech-bubble:after {
@@ -220,7 +226,8 @@ body {
 	margin-bottom: -20px;
 }
 .bubbleScr3{
-	left: 40%;
+	left: 10%;
+	top: 230px;
 }
 .speech-bubble1	 {
 	position: relative;
@@ -408,4 +415,10 @@ right: 100px;
 	.navigation li {
 		padding-top: 20px;
 	}
+
+	.top-bar, .top-bar ul {
+		background-color: #FFFFFF;
+		
+	}
+	
 }
