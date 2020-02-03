@@ -79,9 +79,9 @@ body {
 } */
 
 /* myth 1 */
-.screenThree {
+.screenTwo {
 
-	background: url(../images/myth1Bg.svg) top no-repeat fixed;
+	/* background: url(../images/myth1Bg.svg) top no-repeat fixed; */
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -170,10 +170,9 @@ body {
 
 .ftImg {
 	max-width: 200px;
-	max-height: 200px;
+	
 	border: none;
 	max-width: 80%;
-	width: 130px;
 	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
@@ -375,7 +374,7 @@ right: 100px;
 	font-weight: bold;
 	border: none;
 	position: absolute;
-	margin-top: 5%;
+	margin-top: 20%;
 	width: 80% !important;
 	text-align: center;
 	border-radius: 10px;
