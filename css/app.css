@@ -61,20 +61,19 @@ body {
 	background-size: 50%;
 }
 
-/* myth 1 */
-.gifimage {
+/* .gifimage {
 	background: url(../images/photo5.jpeg) top center no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
 	background-size: cover;
 	clear: both;
-}
+} */
 
-/* myth 2 */
+/* myth 1 */
 .screenThree {
 
-	background: url(../images/bgthree.jpg) top center no-repeat fixed;
+	background: url(../images/myth1Bg.svg) top no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
