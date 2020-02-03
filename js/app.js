@@ -159,7 +159,7 @@ window.onload = function(){
   });
     
     
-//SCREEN2 ANIMATION
+//Myth2 ANIMATION
 let visitorScr2Char = document.getElementById('visitorScr2')
 let doctorScr2 = document.getElementById('doctorScr2').contentDocument;
 let visitorScr2 = document.getElementById('visitorScr2').contentDocument;
