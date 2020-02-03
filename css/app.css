@@ -21,7 +21,7 @@ p {
 	position: fixed !important;
 	width: 100%;
 	z-index: 1000;
-	background: #E6E6E6 !important;
+	/* background: #E6E6E6 !important; */
 	border: none;
 }
 
@@ -43,7 +43,7 @@ p {
 
 /* nav title */
 .title-bar {
-	background: #E6E6E6 !important;
+	/* background: #E6E6E6 !important; */
 	border: none;
 }
 
@@ -409,4 +409,10 @@ right: 100px;
 	.navigation li {
 		padding-top: 20px;
 	}
+
+	.top-bar, .top-bar ul {
+		background-color: #FFFFFF;
+		
+	}
+	
 }
