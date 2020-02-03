@@ -203,8 +203,6 @@ let bubbleScr2Red = document.getElementById('bubbleScr2');
 
 
       }
-
-
 }
 
 
