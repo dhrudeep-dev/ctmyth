@@ -46,6 +46,7 @@ p {
 .title-bar {
 	/* background: #E6E6E6 !important; */
 	border: none;
+	background-color: #FFFFFF;
 }
 
 .title-bar-title {
@@ -100,11 +101,11 @@ body {
 
 #screen4_bg {
 
-	background: url(../images/photo4.jpeg) top center no-repeat fixed;
+	background: url(../images/featureImage.svg) top repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
-	background-size: cover;
+	background-size: 50%;
 	z-index: 204;
 	clear: both;
 }
@@ -288,7 +289,7 @@ body {
 /* list item */
 .dropdown {
 	font-size: 14pt;
-	max-height: 75px;
+	max-height: 105px;
 	letter-spacing: 1px;
 }
 
