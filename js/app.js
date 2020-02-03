@@ -27,6 +27,8 @@ $(document).ready(function() {
     $('#screen7_bg').parallax("20%", 0.3);
 })
 
+$("#bubbleScr2").hide();
+$("#bubbleScr3").hide();
 window.onload = function(){
   // reference the pages
   let body = document.querySelector("body");
@@ -186,13 +188,14 @@ let bubbleScr2Red = document.getElementById('bubbleScr2');
     .call(changeText1, ["Government and international regulations are also in place to make sure that research involving people is done according to strict scientific and ethical guidelines"], this, "+=6")
     .call(changeText, ["Wow, that’s great now I can trust cts. I would also suggest my friends and family members too."], this, "+=6")
 
-      
+    
       function changeText1(newtext){
         $("#bubbleScr3").show();
         $("#bubbleScr3").text(newtext)
         $("#bubbleScr2").hide();
       }
 
+      
       function changeText(newtext){
         $("#bubbleScr2").show();
         $("#bubbleScr2").text(newtext)
