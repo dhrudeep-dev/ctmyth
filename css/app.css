@@ -191,7 +191,7 @@ body {
 }
 
 .bubbleScr2{
-	left: 25%;
+	left: 40%;
 }
 
 .speech-bubble:after {
@@ -209,7 +209,7 @@ body {
 	margin-bottom: -20px;
 }
 .bubbleScr3{
-	left: 60%;
+	left: 40%;
 }
 .speech-bubble1	 {
 	position: relative;
