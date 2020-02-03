@@ -185,6 +185,8 @@ body {
 	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
+	position: relative;
+	top: 145px;
 }
 
 .myth1Animation {
@@ -197,7 +199,9 @@ body {
 	margin-top: -20%;
 }
 .myth1FocusArea {
-	background-image: url(../images/myth1Bg.svg);
+	background: url(../images/myth1Bg.svg);
+	background-size: cover;
+	background-position: center;
 	/* Black w/opacity/see-through */
 	color: white;
 	font-weight: bold;
@@ -211,6 +215,8 @@ body {
 	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
+	width: 600px;
+height: 350px;
 }
 .speech-bubble {
 	position: relative;
