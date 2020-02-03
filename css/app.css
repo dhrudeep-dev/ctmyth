@@ -25,12 +25,13 @@ p {
 	border: none;
 }
 
-.top-bar, .top-bar ul {
+.top-bar,
+.top-bar ul {
 	background-color: #FFFFFF;
-	
+
 }
 
-.box-shadow{
+.box-shadow {
 	box-shadow: 0px 3px 0px 0px #EFB700;
 }
 
@@ -177,16 +178,16 @@ body {
 .ftImg {
 	max-width: 200px;
 	max-height: 200px;
-    border: none;
+	border: none;
 	max-width: 80%;
 	width: 130px;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
 }
 
 .myth1Animation {
-	
+
 	border: none;
 	max-width: 90%;
 	padding: 20px;
@@ -206,9 +207,9 @@ body {
 	font-size: 1rem;
 }
 
-.bubbleScr2{
+.bubbleScr2 {
 	left: 50%;
-top: 250px;
+	top: 250px;
 }
 
 .speech-bubble:after {
@@ -225,11 +226,13 @@ top: 250px;
 	margin-left: -10px;
 	margin-bottom: -20px;
 }
-.bubbleScr3{
+
+.bubbleScr3 {
 	left: 10%;
 	top: 230px;
 }
-.speech-bubble1	 {
+
+.speech-bubble1 {
 	position: relative;
 	background: #a53d38;
 	color: #fff;
@@ -239,6 +242,7 @@ top: 250px;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 1rem;
 }
+
 .speech-bubble1:after {
 	content: '';
 	position: absolute;
@@ -322,17 +326,17 @@ top: 250px;
 	background-color: #EFB700;
 }
 
-#screen2_bgOne>#visitor{
+#screen2_bgOne>#visitor {
 	position: relative;
-	top: 100px;	
+	top: 100px;
 	left: 100px;
 }
 
-#screen2_bgOne>#doctor{
-float: right;
-position: relative;
-top: 100px;
-right: 100px;
+#screen2_bgOne>#doctor {
+	float: right;
+	position: relative;
+	top: 100px;
+	right: 100px;
 }
 
 #mythTwo {
@@ -380,12 +384,9 @@ right: 100px;
 }
 
 /* screen2 styles*/
-.featuredHeaderScr2{
+.featuredHeaderScr2 {}
 
-
-}
-
-.bblCon{
+.bblCon {
 	margin-top: 5%;
 	width: 80% !important;
 	text-align: center;
@@ -402,9 +403,33 @@ right: 100px;
 		padding-top: 20px;
 	}
 
-	.top-bar, .top-bar ul {
+	.top-bar,
+	.top-bar ul {
 		background-color: #FFFFFF;
-		
+
 	}
-	
+
+}
+
+@media only screen and (max-width: 600px) {
+	.myth1Animation {
+		border: none;
+		max-width: 100%;
+		padding: 20px;
+		text-align: center;
+		border-radius: 10px;
+		margin-top: -20%;
+	}
+
+	.bubbleScr2 {
+		left: 60%;
+		top: 190px;
+		width: 100px;
+	}
+
+	.bubbleScr3 {
+		left: 20%;
+		top: 140px;
+		width: 100px;
+	}
 }
