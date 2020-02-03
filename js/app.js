@@ -221,12 +221,6 @@ let bubbleScr2Red = document.getElementById('bubbleScr2');
     
 
 }
-setInterval("my_function();",5000); 
- 
-    function my_function(){
-        window.location = location.href;
-        $('#div').load('#div');
-      }
 
 /* assigning active class to current Myth */
 
