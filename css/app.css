@@ -162,7 +162,7 @@ body {
 	font-weight: bold;
 	border: none;
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	max-width: 80%;
@@ -283,7 +283,7 @@ body {
 	width: 30px;
 	position: absolute;
 	left: 50%;
-	top: 90%;
+	top: 95%;
 	color: #707070;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
@@ -304,7 +304,7 @@ body {
 /* list item */
 .dropdown {
 	font-size: 14pt;
-	max-height: 105px;
+	max-height: 75px;
 	letter-spacing: 1px;
 }
 
@@ -423,6 +423,21 @@ body {
 	.top-bar ul {
 		background-color: #FFFFFF;
 
+	
+}
+
+
+/* For Mobile Device Only */
+@media screen and (max-width: 39.9375em) {
+
+
+	.dropdown {
+		font-size: 14pt;
+		max-height: 105px;
+		letter-spacing: 1px;
+	}
+
+	
 	}
 
 }

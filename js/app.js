@@ -26,7 +26,8 @@ $(document).ready(function() {
     //  myth 6
     $('#screen7_bg').parallax("20%", 0.3);
 })
-
+// $("#bubbleScr2").hide();
+// $("#bubbleScr3").hide();
 window.onload = function(){
   // reference the pages
   let body = document.querySelector("body");
@@ -160,14 +161,14 @@ window.onload = function(){
     
     
 //Myth2 ANIMATION
-let visitorScr2Char = document.getElementById('visitorScr2')
-let doctorScr2 = document.getElementById('doctorScr2').contentDocument;
-let visitorScr2 = document.getElementById('visitorScr2').contentDocument;
+// let visitorScr2Char = document.getElementById('visitorScr2')
+// let doctorScr2 = document.getElementById('doctorScr2').contentDocument;
+// let visitorScr2 = document.getElementById('visitorScr2').contentDocument;
 
-let visLeftFeet = visitorScr2.getElementById('leftFeet');
-let visRightFeet = visitorScr2.getElementById('rightFeet');
-let visRightPant = visitorScr2.getElementById('rightLeg');
-let visLeftPant = visitorScr2.getElementById('leftLeg');
+// let visLeftFeet = visitorScr2.getElementById('leftFeet');
+// let visRightFeet = visitorScr2.getElementById('rightFeet');
+// let visRightPant = visitorScr2.getElementById('rightLeg');
+// let visLeftPant = visitorScr2.getElementById('leftLeg');
 
 
 let docLayer = doctorScr2.getElementById('Layer_2');
@@ -176,15 +177,15 @@ let visLayer = visitorScr2.getElementById('Layer_2');
 let bubbleScr2Red = document.getElementById('bubbleScr2');
     
   let t1 = new TimelineMax()
-    .to (visitorScr2Char, 5, { x:200},0)
-    .to (visLeftFeet, 0.5, { y:-100},0.5)
-    .to (visLeftPant, 0.5, { y:-100},0.5)
-    .to (visRightFeet, 1, { y:-100},1)
-    .to (visRightPant, 1, { y:-100},)
-    .to (visLeftFeet, 1.5, { y:0},1.5)
-    .to (visLeftPant, 1.5, { y:0},1.5)
-    .to (visRightFeet, 2, { y:0},2)
-    .to (visRightPant, 2, { y:0},2)
+    // .to (visitorScr2Char, 5, { x:200},0)
+    // .to (visLeftFeet, 0.5, { y:-100},0.5)
+    // .to (visLeftPant, 0.5, { y:-100},0.5)
+    // .to (visRightFeet, 1, { y:-100},1)
+    // .to (visRightPant, 1, { y:-100},)
+    // .to (visLeftFeet, 1.5, { y:0},1.5)
+    // .to (visLeftPant, 1.5, { y:0},1.5)
+    // .to (visRightFeet, 2, { y:0},2)
+    // .to (visRightPant, 2, { y:0},2)
     .call(changeText, ["Do you think that all patients who come to CTs get treatment like an experimental object?"], this, 6)
     .call(changeText1, ["Clinical research has enforced oversight, and patients also have rights that help protect them. Before participating, you are given in-depth information about the study."], this, "+=6")
     .call(changeText, ["What about the medicines which we are getting from ct?"], this, "+=6")
