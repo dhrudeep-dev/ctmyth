@@ -27,9 +27,11 @@ p {
 
 .top-bar, .top-bar ul {
 	background-color: #FFFFFF;
-	-webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5); 
-	box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
-	/* padding */
+	
+}
+
+.box-shadow{
+	box-shadow: 0px 3px 0px 0px #EFB700;
 }
 
 
@@ -169,7 +171,7 @@ body {
 }
 
 .ftImg {
-	max-width: 200px;
+	max-width: 80px;
 	max-height: 200px;
 	border: none;
 	max-width: 90%;
@@ -179,11 +181,9 @@ body {
 }
 
 .myth1Animation {
-	max-width: 200px;
-	max-height: 200px;
+	
 	border: none;
-	max-width: 80%;
-	width: 130px;
+	max-width: 90%;
 	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
