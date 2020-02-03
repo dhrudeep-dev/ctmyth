@@ -26,8 +26,8 @@ $(document).ready(function() {
     //  myth 6
     $('#screen7_bg').parallax("20%", 0.3);
 })
-$("#bubbleScr2").hide();
-$("#bubbleScr3").hide();
+// $("#bubbleScr2").hide();
+// $("#bubbleScr3").hide();
 window.onload = function(){
   // reference the pages
   let body = document.querySelector("body");
