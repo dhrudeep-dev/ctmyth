@@ -373,6 +373,14 @@ right: 100px;
 	border-radius: 10px;
 }
 
+.bblCon{
+	margin-top: 5%;
+	width: 80% !important;
+	text-align: center;
+	border-radius: 10px;
+	height: 150px;
+}
+
 
 /* media query for web view */
 @media only screen and (min-width: 768px) {
