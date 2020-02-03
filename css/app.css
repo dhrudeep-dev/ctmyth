@@ -425,6 +425,7 @@ body {
 
 	
 }
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -448,6 +449,12 @@ body {
 		left: 20%;
 		top: 140px;
 		width: 100px;
+	}
+
+	.dropdown {
+		font-size: 14pt;
+		max-height: 105px;
+		letter-spacing: 1px;
 	}
 
 }
