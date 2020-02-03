@@ -218,9 +218,25 @@ let bubbleScr2Red = document.getElementById('bubbleScr2');
     //   }
     // }
 
+    var $rows = $("#rowone.one, #rowtwo.three, #rowthree.two").addClass("pageLoad");
+
+    setTimeout(function() {
+        $rows.removeClass("pageLoad");
+    }, 800);
+    
     
 
 }
+
+
+$(".innerNav").hover(function(){
+  $(this).addClass("hover");
+});
+
+setInterval(function(){ 
+  $(".hover").addClass("slideIn");
+  $(".hover").removeClass("hover");
+}, 2200);
 
 /* assigning active class to current Myth */
 
