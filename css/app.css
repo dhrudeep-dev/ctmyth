@@ -196,7 +196,22 @@ body {
 	border-radius: 10px;
 	margin-top: -20%;
 }
-
+.myth1FocusArea {
+	background-image: url(../images/myth1Bg.svg);
+	/* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	border: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 80%;
+	max-height: auto;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+}
 .speech-bubble {
 	position: relative;
 	background: #a53d38;
@@ -420,6 +435,7 @@ body {
 		text-align: center;
 		border-radius: 10px;
 		margin-top: -20%;
+		object-fit: fill;
 	}
 
 	.bubbleScr2 {
@@ -434,10 +450,4 @@ body {
 		width: 100px;
 	}
 
-	
-	.dropdown {
-		font-size: 14pt;
-		max-height: 105px;
-		letter-spacing: 1px;
-	}
 }
