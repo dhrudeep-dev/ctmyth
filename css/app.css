@@ -162,7 +162,7 @@ body {
 	font-weight: bold;
 	border: none;
 	position: absolute;
-	top: 60%;
+	top: 55%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	max-width: 80%;
@@ -412,21 +412,6 @@ body {
 }
 
 
-/* For Mobile Device Only */
-@media screen and (max-width: 39.9375em) {
-
-
-	.dropdown {
-		font-size: 14pt;
-		max-height: 105px;
-		letter-spacing: 1px;
-	}
-
-	
-	}
-
-}
-
 @media only screen and (max-width: 600px) {
 	.myth1Animation {
 		border: none;
@@ -447,5 +432,12 @@ body {
 		left: 20%;
 		top: 140px;
 		width: 100px;
+	}
+
+	
+	.dropdown {
+		font-size: 14pt;
+		max-height: 105px;
+		letter-spacing: 1px;
 	}
 }
