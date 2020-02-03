@@ -27,8 +27,6 @@ $(document).ready(function() {
     $('#screen7_bg').parallax("20%", 0.3);
 })
 
-$("#bubbleScr2").hide();
-$("#bubbleScr3").hide();
 window.onload = function(){
   // reference the pages
   let body = document.querySelector("body");
@@ -179,6 +177,14 @@ let bubbleScr2Red = document.getElementById('bubbleScr2');
     
   let t1 = new TimelineMax()
     .to (visitorScr2Char, 5, { x:200},0)
+    .to (visLeftFeet, 0.5, { y:-100},0.5)
+    .to (visLeftPant, 0.5, { y:-100},0.5)
+    .to (visRightFeet, 1, { y:-100},1)
+    .to (visRightPant, 1, { y:-100},)
+    .to (visLeftFeet, 1.5, { y:0},1.5)
+    .to (visLeftPant, 1.5, { y:0},1.5)
+    .to (visRightFeet, 2, { y:0},2)
+    .to (visRightPant, 2, { y:0},2)
     .call(changeText, ["Do you think that all patients who come to CTs get treatment like an experimental object?"], this, 6)
     .call(changeText1, ["Clinical research has enforced oversight, and patients also have rights that help protect them. Before participating, you are given in-depth information about the study."], this, "+=6")
     .call(changeText, ["What about the medicines which we are getting from ct?"], this, "+=6")
@@ -188,21 +194,30 @@ let bubbleScr2Red = document.getElementById('bubbleScr2');
     .call(changeText1, ["Government and international regulations are also in place to make sure that research involving people is done according to strict scientific and ethical guidelines"], this, "+=6")
     .call(changeText, ["Wow, that’s great now I can trust cts. I would also suggest my friends and family members too."], this, "+=6")
 
-    
       function changeText1(newtext){
         $("#bubbleScr3").show();
         $("#bubbleScr3").text(newtext)
         $("#bubbleScr2").hide();
       }
 
-      
       function changeText(newtext){
         $("#bubbleScr2").show();
         $("#bubbleScr2").text(newtext)
         $("#bubbleScr3").hide();
 
-
       }
+
+      
+    
+    // function myFunction() {
+    //   var x = document.getElementById("bubbleSrc2");
+    //   if (x.style.display === "none") {
+    //     x.style.display = changeText;
+    //   } else {
+    //     x.style.display = changeText1;
+    //   }
+    // }
+
 }
 
 
