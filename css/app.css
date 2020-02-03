@@ -285,7 +285,7 @@ top: 250px;
 /* list item */
 .dropdown {
 	font-size: 14pt;
-	max-height: 105px;
+	max-height: 75px;
 	letter-spacing: 1px;
 }
 
@@ -403,6 +403,20 @@ right: 100px;
 		padding-top: 20px;
 	}
 
+
+	
+}
+
+
+/* For Mobile Device Only */
+@media screen and (max-width: 39.9375em) {
+
+
+	.dropdown {
+		font-size: 14pt;
+		max-height: 105px;
+		letter-spacing: 1px;
+	}
 
 	
 }
