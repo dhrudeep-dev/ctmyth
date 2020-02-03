@@ -81,7 +81,7 @@ body {
 } */
 
 /* myth 1 */
-.screenThree {
+.screenTwo {
 
 	background: url(../images/myth1BgNew.svg) top repeat fixed;
 	height: 1000px;
@@ -170,25 +170,29 @@ body {
 	border-radius: 10px;
 }
 
+.characters{
+	margin: ;
+}
+
 .ftImg {
 	max-width: 200px;
 	max-height: 200px;
+    border: none;
+	max-width: 80%;
+	width: 130px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.myth1Animation {
+	
 	border: none;
 	max-width: 90%;
 	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
-}
-
-.myth1Animation {
-	max-width: 200px;
-	max-height: 200px;
-	border: none;
-	max-width: 80%;
-	width: 130px;
-	padding: 20px;
-	text-align: center;
-	border-radius: 10px;
+	margin-top: -20%;
 }
 
 .speech-bubble {
@@ -378,12 +382,12 @@ right: 100px;
 /* screen2 styles*/
 
 
-.featuredHeaderScr2{
-	background-color: rgb(0, 0, 0);
+/* .featuredHeaderScr2{
+	background-color: rgb(0, 0, 0); */
 	/* Fallback color */
-	background-color: rgba(0, 0, 0, 0.5);
+	/* background-color: rgba(0, 0, 0, 0.5); */
 	/* Black w/opacity/see-through */
-	color: white;
+	/* color: white;
 	font-weight: bold;
 	border: none;
 	position: absolute;
@@ -391,7 +395,7 @@ right: 100px;
 	width: 80% !important;
 	text-align: center;
 	border-radius: 10px;
-}
+} */
 
 .bblCon{
 	margin-top: 5%;
