@@ -177,7 +177,7 @@ let visLayer = visitorScr2.getElementById('Layer_2');
 let bubbleScr2Red = document.getElementById('bubbleScr2');
     
   let t1 = new TimelineMax()
-  .to (visitorScr2Char, 5, { x:200},0)
+  .to (visitorScr2Char, 5, { x:150},0)
   .to (visLeftFeet, 0.5, { y:-100},0.5)
   .to (visLeftPant, 0.5, { y:-100},0.5)
   .to (visRightFeet, 1, { y:-100},1)
@@ -210,14 +210,14 @@ let bubbleScr2Red = document.getElementById('bubbleScr2');
 
       
     
-    // function myFunction() {
-    //   var x = document.getElementById("bubbleSrc2");
-    //   if (x.style.display === "none") {
-    //     x.style.display = changeText;
-    //   } else {
-    //     x.style.display = changeText1;
-    //   }
-    // }
+  function myFunction() {
+    var x = document.getElementById("bubbleSrc2");
+    if (x.style.display === "none") {
+    x.style.display = changeText;
+  } else {
+    x.style.display = changeText1;
+    }
+  }
 
     var $rows = $("#rowone.one, #rowtwo.three, #rowthree.two").addClass("pageLoad");
 
