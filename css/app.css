@@ -197,7 +197,7 @@ body {
 	text-align: center;
 	border-radius: 10px;
 	position: relative;
-	top: 145px;
+	top: 240px;
 }
 
 .myth1Animation {
@@ -209,6 +209,7 @@ body {
 	border-radius: 10px;
 	margin-top: -20%;
 }
+
 .myth1FocusArea {
 	background: url(../images/myth1Bg.svg);
 	background-size: cover;
@@ -225,9 +226,10 @@ body {
 	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
-	width: 600px;
-height: 350px;
+	width: 800px;
+	height: 450px;
 }
+
 .speech-bubble {
 	position: relative;
 	background: #a53d38;
@@ -348,7 +350,7 @@ height: 350px;
 	left: 0 !important;
 }
 
-.slideIn{
+.slideIn {
 	position: absolute;
 	left: -80px;
 	transition: 0.3s;
@@ -451,8 +453,8 @@ height: 350px;
 	.top-bar ul {
 		background-color: #FFFFFF;
 
-	
-}
+
+	}
 }
 
 
@@ -485,4 +487,35 @@ height: 350px;
 		letter-spacing: 1px;
 	}
 
+	.myth1FocusArea {
+		background: url(../images/myth1Bg.svg);
+		background-size: cover;
+		background-position: center;
+		/* Black w/opacity/see-through */
+		color: white;
+		font-weight: bold;
+		border: none;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 80%;
+		max-height: auto;
+		padding: 20px;
+		text-align: center;
+		border-radius: 10px;
+		width: 400px;
+		height: 550px;
+	}
+
+	.myth1Img {
+		max-height: 300px;
+		border: none;
+		max-width: 80%;
+		width: 130px;
+		padding: 20px;
+		text-align: center;
+		border-radius: 10px;
+		position: relative;
+		top: 220px;
+	}
 }
