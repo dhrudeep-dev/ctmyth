@@ -525,4 +525,16 @@ body {
 		position: relative;
 		top: 220px;
 	}
+
+	.bubbleScr2 {
+	left: 15%;
+	top: 130px;
+	width: 300px;
+	}
+
+	.bubbleScr3 {
+	left: 15%;
+	top: 130px;
+	width: 300px;
+	}
 }
