@@ -248,8 +248,8 @@ body {
 }
 
 .bubbleScr2 {
-	left: 30%;
-	top: 230px;
+	left: 40%;
+	top: 210px;
 	z-index: 1;
 }
 
@@ -269,7 +269,7 @@ body {
 }
 
 .bubbleScr3 {
-	left: 50%;
+	left: 40%;
 	top: 210px;
 	z-index: 1;
 }
