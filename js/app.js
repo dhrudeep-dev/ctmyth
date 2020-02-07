@@ -182,14 +182,14 @@ window.onload = function () {
       x: 150
     }, 0)
 
-  .call(changeText, ["Do you think that all patients who come to CTs get treatment like an experimental object?"], this, 6)
+  .call(changeText, ["Do you think that all patients who come to Clinical Trials get treatment like an experimental object?"], this, 6)
     .call(changeText1, ["Clinical research has enforced oversight, and patients also have rights that help protect them. Before participating, you are given in-depth information about the study."], this, "+=6")
-    .call(changeText, ["What about the medicines which we are getting from ct?"], this, "+=6")
+    .call(changeText, ["What about the medicines which we are getting from clinical trial?"], this, "+=6")
     .call(changeText1, ["Investigational medicines are researched extensively in a laboratory before they are ready for clinical trials with human volunteers"], this, "+=6")
     .call(changeText1, ["Before medicines can be approved for use, they must undergo extensive clinical research to ensure they are safe and effective."], this, "+=6")
     .call(changeText, ["How can I believe that medicines are safe to use?"], this, "+=6")
     .call(changeText1, ["Government and international regulations are also in place to make sure that research involving people is done according to strict scientific and ethical guidelines"], this, "+=6")
-    .call(changeText, ["Wow, that’s great now I can trust cts. I would also suggest my friends and family members too."], this, "+=6")
+    .call(changeText, ["Wow, that’s great now I can trust clinical trials. I would also suggest my friends and family members too."], this, "+=6")
     
     function docTalking() {
       TweenMax.fromTo(docMouth, 1, {
