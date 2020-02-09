@@ -217,7 +217,7 @@ window.onload = function () {
 
 
   function myFunction() {
-    var x = document.getElementById("bubbleSrc2");
+    let x = document.getElementById("bubbleSrc2");
     if (x.style.display === "none") {
       x.style.display = changeText;
     } else {
@@ -225,7 +225,7 @@ window.onload = function () {
     }
   }
 
-  var $rows = $("#rowone.one, #rowtwo.three, #rowthree.two").addClass("pageLoad");
+  let $rows = $("#rowone.one, #rowtwo.three, #rowthree.two").addClass("pageLoad");
 
   setTimeout(function () {
     $rows.removeClass("pageLoad");
