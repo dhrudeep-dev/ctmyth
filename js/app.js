@@ -160,6 +160,22 @@ window.onload = function () {
   });
 
 
+
+
+}
+
+$(".innerNav").hover(function () {
+  $(this).addClass("hover");
+});
+
+setInterval(function () {
+  $(".hover").addClass("slideIn");
+  $(".hover").removeClass("hover");
+}, 2200);
+
+window.onscroll = function() {myFunction()};
+
+function startAnim(){
   //Myth2 ANIMATION
   let visitorScr2Char = document.getElementById('visitorScr2')
   let doctorScr2 = document.getElementById('doctorScr2').contentDocument;
@@ -200,6 +216,8 @@ window.onload = function () {
         yoyo: true
       });
     }
+
+  }
   function changeText1(newtext) {
     docTalking();
     $("#bubbleScr3").show();
@@ -232,17 +250,9 @@ window.onload = function () {
   }, 800);
 
 
-
+function myFunction() {
+  if (document.body.scrollTop > 768 || document.documentElement.scrollTop > 768) {
+      startAnim();
+  }
 }
-
-
-$(".innerNav").hover(function () {
-  $(this).addClass("hover");
-});
-
-setInterval(function () {
-  $(".hover").addClass("slideIn");
-  $(".hover").removeClass("hover");
-}, 2200);
-
 /* assigning active class to current Myth */
