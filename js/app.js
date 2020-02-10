@@ -178,10 +178,12 @@ setInterval(function () {
   $(".hover").removeClass("hover");
 }, 2200);
 
+window.onscroll = function() {startAnm1()};
+
 var executed = false;
 
 function startAnim(){
-
+alert('called one');
   executed = true;
 
   TweenMax.fromTo("#scr2Anim", 1.5, {
@@ -262,19 +264,21 @@ function startAnim(){
       $("#bubbleScr3").hide();
   
     }
-  }
 
-
-
-
-  function myFunction() {
-    let x = document.getElementById("bubbleSrc2");
-    if (x.style.display === "none") {
-      x.style.display = changeText;
-    } else {
-      x.style.display = changeText1;
+    function myFunction() {
+      let x = document.getElementById("bubbleSrc2");
+      if (x.style.display === "none") {
+        x.style.display = changeText;
+      } else {
+        x.style.display = changeText1;
+      }
     }
   }
+
+
+
+
+  
 
   let $rows = $("#rowone.one, #rowtwo.three, #rowthree.two").addClass("pageLoad");
 
@@ -283,9 +287,11 @@ function startAnim(){
   }, 800);
 
 
-function myFunction() {
+function startAnm1() {
   if (document.body.scrollTop > 768 || document.documentElement.scrollTop > 768) {
+    if(executed != true){
       startAnim();
+    }
   }
 }
 /* assigning active class to current Myth */
