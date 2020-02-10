@@ -225,8 +225,7 @@ body {
 #visitorScr2 {
 	left: -150px;
 }
-
-
+/* speech bubble */
 .speech-bubble {
 	position: relative;
 	background: #556b2f;
@@ -246,7 +245,7 @@ body {
 	z-index: 1;
 }
 
-
+/* speech bubble of visitor arrow */
 .speech-bubble:after {
 	content: '';
 	position: absolute;
@@ -262,12 +261,13 @@ body {
 	margin-bottom: -20px;
 	
 }
-
+/* speech bubble of doctor */
 .bubbleScr3 {
 	left: 40%;
 	top: 210px;
 	z-index: 1;
 }
+
 
 .speech-bubble1 {
 	position: relative;
@@ -281,6 +281,7 @@ body {
 	display: none;
 }
 
+/* speech bubble of doctor arrow */
 .speech-bubble1:after {
 	content: '';
 	position: absolute;
@@ -297,12 +298,12 @@ body {
 	margin-bottom: -20px;
 }
 
-/* .featureHeaderContent{
-	
-} */
+/* screen 2 animation */
 #scr2Anim{
 	opacity: 0;
 }
+
+/* downarrow of featured page */
 .downArrow {
 	width: 20px;
 	position: absolute;
@@ -421,6 +422,8 @@ body {
 
 
 /* Scroll bar */
+
+/* progress container, the top one */
 .progress-container {
 	width: 100%;
 	height: 8px;
@@ -428,6 +431,7 @@ body {
 	z-index: 1600;
 }
 
+/* the moving progress bar */
 .progress-bar {
 	height: 8px;
 	background: #EFB700;
@@ -436,6 +440,7 @@ body {
 }
 
 /* screen2 styles*/
+
 .featuredHeaderScr2 {}
 
 .bblCon {
@@ -543,12 +548,14 @@ body {
 		opacity:0;
 	}
 	
+	/* bubble 2 position(visitor) */
 	.bubbleScr2 {
 	left: 15%;
 	top: 130px;
 	width: 300px;
 	}
 
+	/* bubble 2 position(doctor) */
 	.bubbleScr3 {
 	left: 10%;
 	top: 130px;
