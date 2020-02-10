@@ -190,13 +190,9 @@ var executed = false;
 
 function startAnim(){
   executed = true;
+  TweenMax.to("#scr2Anim", 1, {    opacity: 1  });
 
-  TweenMax.fromTo("#scr2Anim", 1.5, {
-    opacity: 0
-  }, {
-    opacity: 1,
-    delay: 1
-  });
+ 
   
 
   //Myth2 ANIMATION

@@ -306,7 +306,9 @@ body {
 /* .featureHeaderContent{
 	
 } */
-
+#scr2Anim{
+	opacity: 0;
+}
 .downArrow {
 	width: 20px;
 	position: absolute;
