@@ -237,7 +237,7 @@ body {
 
 .speech-bubble {
 	position: relative;
-	background: #a53d38;
+	background: #556b2f;
 	color: #fff;
 	border-radius: 10px;
 	padding: 20px;
@@ -261,7 +261,7 @@ body {
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
-	border-top-color: #a53d38;
+	border-top-color: #556b2f;
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -10px;
@@ -276,7 +276,7 @@ body {
 
 .speech-bubble1 {
 	position: relative;
-	background: #a53d38;
+	background: #556b2f;
 	color: #fff;
 	border-radius: 10px;
 	padding: 20px;
@@ -295,7 +295,7 @@ body {
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
-	border-top-color: #a53d38;
+	border-top-color: #556b2f;
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -10px;
