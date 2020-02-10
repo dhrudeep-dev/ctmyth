@@ -543,6 +543,9 @@ body {
 		position: relative;
 	}
 
+	#scr2Anim {
+		opacity:0
+	}
 	.bubbleScr2 {
 	left: 15%;
 	top: 130px;
