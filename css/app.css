@@ -227,7 +227,7 @@ body {
 }
 
 
-/* .speech-bubble {
+.speech-bubble {
 	position: relative;
 	background: #556b2f;
 	color: #fff;
@@ -237,7 +237,7 @@ body {
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 1rem;
 	display: none;
-} */
+}
 
 /* speech bubble of visitor */
 .bubbleScr2 {
