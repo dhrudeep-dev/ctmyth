@@ -168,7 +168,19 @@
 
 
 
+  <script>
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function () {
+      myFunction()
+    };
 
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
 
 
   <!-- link for foundation js -->
@@ -186,20 +198,6 @@
   <script src="js/jquery.scrollTo-1.4.2-min.js"></script>
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-
-    <script>
-    // When the user scrolls the page, execute myFunction 
-    window.onscroll = function () {
-      myFunction()
-    };
-
-    function myFunction() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    }
-  </script>
 </body>
 
 </html>
