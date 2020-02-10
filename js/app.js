@@ -5,9 +5,6 @@ $(document).foundation();
 
 
 
-
-
-
 $(document).ready(function () {
   $('#nav').localScroll(800);
 
