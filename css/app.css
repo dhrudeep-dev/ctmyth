@@ -310,7 +310,7 @@ body {
 	width: 30px;
 	position: absolute;
 	left: 50%;
-	top: 100%;
+	top: 90%;
 	color: #707070;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
@@ -497,15 +497,15 @@ body {
 	}
 
 	.downArrow {
-		width: 40px;
+		/* width: 40px; */
 		position: absolute;
 		left: 50%;
-		top: 90%;
+		top: 93.50%;
 		color: #707070;
-		transform: translate(-50%, -50%);
-		-webkit-transform: translate(-50%, -50%);
-		-o-transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%) !important;
+		-webkit-transform: translate(-50%, -50%) !important;
+		-o-transform: translate(-50%, -50%) !important;
+		-ms-transform: translate(-50%, -50%) !important;
 	}
 
 	.myth1FocusArea {
