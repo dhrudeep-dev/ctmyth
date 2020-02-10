@@ -1,26 +1,26 @@
 $(document).foundation();
 $(document).ready(function () {
   $('#nav').localScroll(800);
- 
-  //  featured page
+
+  // featured page
   $('#screen1_bgOne').parallax("50%", 0.1);
 
-  //  myth 1
+  // myth 1
   $('#screen2_bgOne').parallax("50%", 0.1);
 
-  //  myth 2 
+  // myth 2 
   $('#threeSceen').parallax("50%", 0.2);
 
-  //  myth 3 
+  // myth 3 
   $('.screenFour').parallax("50%", 0.3);
 
-  //  myth 4
+  // myth 4
   $('#screen5_bg').parallax("30%", 0.5);
 
-  //  myth 5
+  // myth 5
   $('#screen6_bg').parallax("20%", 0.5);
 
-  //  myth 6
+  // myth 6
   $('#screen7_bg').parallax("20%", 0.3);
 })
 
@@ -49,7 +49,7 @@ window.onload = function () {
 
   // onload reveal animation
 
-  //nav for mobile changes
+  // nav for mobile changes
   $(".innerNav").hover(function () {
     $(this).addClass("hover");
   });
@@ -105,7 +105,7 @@ window.onload = function () {
     delay: 3
   });
 
-  //  head animation
+  // head animation
   TweenMax.fromTo(docHead, 1, {
     xPercent: -10,
     rotation: -5
@@ -118,7 +118,7 @@ window.onload = function () {
     delay: 3
   });
 
-  //  head animation
+  // head animation
   TweenMax.fromTo(visHead, 1, {
     xPercent: 10,
     rotation: 5
@@ -179,26 +179,25 @@ window.onload = function () {
 
 /* onScroll anmation effect start here */
 window.onscroll = function () {
-  //progressbar effect
+  // progressbar effect
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 
-  //firstanimation starts here
+  // first animation starts here
   startAnm1();
 };
 
-//variable to stop calling myth1 function onscroll
+// variable to stop calling myth1 function onscroll
 var executed = false;
 
-//first myth's animation start here
+// first myth's animation start here
 function startAnim() {
   executed = true;
   TweenMax.to("#scr2Anim", 3, {    opacity: 1  });
 
-
-  //Myth2 ANIMATION
+  // variables for characters
   let visitorScr2Char = document.getElementById('visitorScr2');
   let doctorScr2 = document.getElementById('doctorScr2').contentDocument;
   let visitorScr2 = document.getElementById('visitorScr2').contentDocument;
