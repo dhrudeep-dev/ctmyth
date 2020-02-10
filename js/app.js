@@ -266,14 +266,6 @@ function startAnim(){
 
 function myFunction() {
   if (document.body.scrollTop > 768 || document.documentElement.scrollTop > 768) {
-    
-    TweenMax.fromTo(mythOneFocusArea, 1, {
-      opacity: 0
-    }, {
-      opacity: 1,
-      delay: 1
-    });
-
       startAnim();
   }
 }
