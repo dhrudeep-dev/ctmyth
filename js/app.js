@@ -1,10 +1,4 @@
 $(document).foundation();
-
-
-
-
-
-// Sakith was here
 $(document).ready(function () {
   $('#nav').localScroll(800);
 
