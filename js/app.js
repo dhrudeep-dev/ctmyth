@@ -1,10 +1,7 @@
 $(document).foundation()
 $(document).ready(function () {
   $('#nav').localScroll(800);
-  //.parallax(xPosition, speedFactor) options:
-  //xPosition - Horizontal position of the element
-  //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-
+ 
   //  featured page
   $('#screen1_bgOne').parallax("50%", 0.1);
 
@@ -27,8 +24,6 @@ $(document).ready(function () {
   $('#screen7_bg').parallax("20%", 0.3);
 })
 
-// $("#bubbleScr2").hide();
-// $("#bubbleScr3").hide();
 window.onload = function () {
   // reference the pages
   let body = document.querySelector("body");
@@ -53,6 +48,16 @@ window.onload = function () {
   let mythOneFocusArea = document.querySelector('#mythOneFocusArea');
 
   // onload reveal animation
+
+  //nav for mobile changes
+  $(".innerNav").hover(function () {
+    $(this).addClass("hover");
+  });
+  
+  setInterval(function () {
+    $(".hover").addClass("slideIn");
+    $(".hover").removeClass("hover");
+  }, 2200);
 
   TweenMax.fromTo(introductionPage, 1, {
     opacity: 0
@@ -172,25 +177,22 @@ window.onload = function () {
   });
 }
 
-$(".innerNav").hover(function () {
-  $(this).addClass("hover");
-});
-
-setInterval(function () {
-  $(".hover").addClass("slideIn");
-  $(".hover").removeClass("hover");
-}, 2200);
-
+/* onScroll anmation effect start here */
 window.onscroll = function () {
+  //progressbar effect
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
+
+  //firstanimation starts here
   startAnm1();
 };
 
+//variable to stop calling myth1 function onscroll
 var executed = false;
 
+//first myth's animation start here
 function startAnim() {
   executed = true;
   TweenMax.to("#scr2Anim", 3, {    opacity: 1  });
@@ -277,18 +279,7 @@ function startAnim() {
   }
 }
 
-
-
-
-
-
-let $rows = $("#rowone.one, #rowtwo.three, #rowthree.two").addClass("pageLoad");
-
-setTimeout(function () {
-  $rows.removeClass("pageLoad");
-}, 800);
-
-
+/* calling first myth animation here */
 function startAnm1() {
   if (document.body.scrollTop > 768 || document.documentElement.scrollTop > 768) {
     if (executed != true) {
