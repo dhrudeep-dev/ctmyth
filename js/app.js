@@ -193,10 +193,8 @@ var executed = false;
 
 function startAnim() {
   executed = true;
-  TweenMax.to("#scr2Anim", 1, {    opacity: 1  });
+  TweenMax.to("#scr2Anim", 3, {    opacity: 1  });
 
- 
-  
 
   //Myth2 ANIMATION
   let visitorScr2Char = document.getElementById('visitorScr2');
