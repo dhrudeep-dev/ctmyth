@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto Condensed', sans-serif;
+	outline: none;
 }
 
 /* font family */
@@ -497,15 +498,15 @@ body {
 	}
 
 	.downArrow {
-		width: 40px;
+		/* width: 40px; */
 		position: absolute;
 		left: 50%;
-		top: 90%;
+		top: 93.50%;
 		color: #707070;
-		transform: translate(-50%, -50%);
-		-webkit-transform: translate(-50%, -50%);
-		-o-transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%) !important;
+		-webkit-transform: translate(-50%, -50%) !important;
+		-o-transform: translate(-50%, -50%) !important;
+		-ms-transform: translate(-50%, -50%) !important;
 	}
 
 	.myth1FocusArea {
@@ -543,7 +544,7 @@ body {
 	}
 
 	.bubbleScr2 {
-	left: 10%;
+	left: 15%;
 	top: 130px;
 	width: 300px;
 	}
