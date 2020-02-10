@@ -310,7 +310,7 @@ body {
 	width: 30px;
 	position: absolute;
 	left: 50%;
-	top: 90%;
+	top: 100%;
 	color: #707070;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
@@ -494,6 +494,18 @@ body {
 		font-size: 14pt;
 		max-height: 150px;
 		letter-spacing: 1px;
+	}
+
+	.downArrow {
+		width: 40px;
+		position: absolute;
+		left: 50%;
+		top: 90%;
+		color: #707070;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
 	}
 
 	.myth1FocusArea {
