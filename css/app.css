@@ -2,7 +2,6 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto Condensed', sans-serif;
-	outline: none;
 }
 
 /* font family */
@@ -311,7 +310,7 @@ body {
 	width: 30px;
 	position: absolute;
 	left: 50%;
-	top: 90%;
+	top: 100%;
 	color: #707070;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
@@ -493,8 +492,20 @@ body {
 
 	.dropdown {
 		font-size: 14pt;
-		max-height: 105px;
+		max-height: 150px;
 		letter-spacing: 1px;
+	}
+
+	.downArrow {
+		width: 40px;
+		position: absolute;
+		left: 50%;
+		top: 90%;
+		color: #707070;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
 	}
 
 	.myth1FocusArea {

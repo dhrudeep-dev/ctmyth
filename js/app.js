@@ -26,6 +26,7 @@ $(document).ready(function () {
   //  myth 6
   $('#screen7_bg').parallax("20%", 0.3);
 })
+
 // $("#bubbleScr2").hide();
 // $("#bubbleScr3").hide();
 window.onload = function () {
@@ -218,7 +219,6 @@ function startAnim(){
   });
 
   let t1 = new TimelineMax()
-    
     .to(visitorScr2Char, 4, {
       x: 170
     }, 3)
@@ -285,12 +285,7 @@ function startAnim(){
 
 function myFunction() {
   if (document.body.scrollTop > 768 || document.documentElement.scrollTop > 768) {
-    
-   
-    if(executed != true){
       startAnim();
-
-    }
   }
 }
 /* assigning active class to current Myth */
