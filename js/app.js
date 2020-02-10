@@ -164,9 +164,12 @@ window.onload = function () {
     delay: 6
   });
 
-
-
-
+  TweenMax.fromTo("#scr2Anim", 1.5, {
+    opacity: 0
+  }, {
+    opacity: 1,
+    delay: 1
+  });
 }
 
 $(".innerNav").hover(function () {
@@ -178,17 +181,17 @@ setInterval(function () {
   $(".hover").removeClass("hover");
 }, 2200);
 
-window.onscroll = function() {
+window.onscroll = function () {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
-    startAnm1();
-  };
+  startAnm1();
+};
 
 var executed = false;
 
-function startAnim(){
+function startAnim() {
   executed = true;
   TweenMax.to("#scr2Anim", 1, {    opacity: 1  });
 
@@ -226,11 +229,11 @@ function startAnim(){
       x: 170
     }, 3)
 
-    .to (visEyes, 8, {
+    .to(visEyes, 8, {
       x: 10
     }, 3)
 
-    .to (docEyes, 8, {
+    .to(docEyes, 8, {
       x: -10
     }, 3)
     .call(changeText, ["Do you think that all patients who come to Clinical Trials get treatment like an experimental object?"], this, 6)
@@ -241,56 +244,56 @@ function startAnim(){
     .call(changeText, ["How can I believe that medicines are safe to use?"], this, "+=6")
     .call(changeText1, ["Government and international regulations are also in place to make sure that research involving people is done according to strict scientific and ethical guidelines"], this, "+=6")
     .call(changeText, ["Wow, that’s great now I can trust clinical trials. I would also suggest my friends and family members too."], this, "+=6")
-    
-    function docTalking() {
-      TweenMax.fromTo(docMouth, 1, {
-        scaleY: 1,
-      }, {
-        scaleY: 0.5,
-        repeat: 5,
-        yoyo: true
-      });
-    }
 
-    function changeText1(newtext) {
-      docTalking();
-      $("#bubbleScr3").show();
-      $("#bubbleScr3").text(newtext)
-      $("#bubbleScr2").hide();
-    }
-  
-    function changeText(newtext) {
-      $("#bubbleScr2").show();
-      $("#bubbleScr2").text(newtext)
-      $("#bubbleScr3").hide();
-  
-    }
-
-    function myFunction() {
-      let x = document.getElementById("bubbleSrc2");
-      if (x.style.display === "none") {
-        x.style.display = changeText;
-      } else {
-        x.style.display = changeText1;
-      }
-    }
+  function docTalking() {
+    TweenMax.fromTo(docMouth, 1, {
+      scaleY: 1,
+    }, {
+      scaleY: 0.5,
+      repeat: 5,
+      yoyo: true
+    });
   }
 
+  function changeText1(newtext) {
+    docTalking();
+    $("#bubbleScr3").show();
+    $("#bubbleScr3").text(newtext)
+    $("#bubbleScr2").hide();
+  }
+
+  function changeText(newtext) {
+    $("#bubbleScr2").show();
+    $("#bubbleScr2").text(newtext)
+    $("#bubbleScr3").hide();
+
+  }
+
+  function myFunction() {
+    let x = document.getElementById("bubbleSrc2");
+    if (x.style.display === "none") {
+      x.style.display = changeText;
+    } else {
+      x.style.display = changeText1;
+    }
+  }
+}
 
 
 
-  
 
-  let $rows = $("#rowone.one, #rowtwo.three, #rowthree.two").addClass("pageLoad");
 
-  setTimeout(function () {
-    $rows.removeClass("pageLoad");
-  }, 800);
+
+let $rows = $("#rowone.one, #rowtwo.three, #rowthree.two").addClass("pageLoad");
+
+setTimeout(function () {
+  $rows.removeClass("pageLoad");
+}, 800);
 
 
 function startAnm1() {
   if (document.body.scrollTop > 768 || document.documentElement.scrollTop > 768) {
-    if(executed != true){
+    if (executed != true) {
       startAnim();
     }
   }
