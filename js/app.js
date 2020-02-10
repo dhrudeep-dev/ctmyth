@@ -178,12 +178,17 @@ setInterval(function () {
   $(".hover").removeClass("hover");
 }, 2200);
 
-window.onscroll = function() {startAnm1()};
+window.onscroll = function() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+    startAnm1();
+  };
 
 var executed = false;
 
 function startAnim(){
-alert('called one');
   executed = true;
 
   TweenMax.fromTo("#scr2Anim", 1.5, {
