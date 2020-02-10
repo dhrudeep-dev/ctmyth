@@ -307,10 +307,10 @@ body {
 } */
 
 .downArrow {
-	width: 30px;
+	width: 20px;
 	position: absolute;
 	left: 50%;
-	top: 100%;
+	top: 95%;
 	color: #707070;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
