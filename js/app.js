@@ -177,8 +177,10 @@ setInterval(function () {
 }, 2200);
 
 window.onscroll = function() {myFunction()};
+var executed = false;
 
 function startAnim(){
+  executed = true;
   //Myth2 ANIMATION
   let visitorScr2Char = document.getElementById('visitorScr2');
   let doctorScr2 = document.getElementById('doctorScr2').contentDocument;
@@ -198,7 +200,9 @@ function startAnim(){
 
   let bubbleScr2Red = document.getElementById('bubbleScr2');
 
+
   let t1 = new TimelineMax()
+    
     .to(visitorScr2Char, 4, {
       x: 170
     }, 0)
@@ -210,8 +214,7 @@ function startAnim(){
     .to (docEyes, 8, {
       x: -10
     }, 0)
-
-  .call(changeText, ["Do you think that all patients who come to Clinical Trials get treatment like an experimental object?"], this, 6)
+    .call(changeText, ["Do you think that all patients who come to Clinical Trials get treatment like an experimental object?"], this, 6)
     .call(changeText1, ["Clinical research has enforced oversight, and patients also have rights that help protect them. Before participating, you are given in-depth information about the study."], this, "+=6")
     .call(changeText, ["What about the medicines which we are getting from clinical trial?"], this, "+=6")
     .call(changeText1, ["Investigational medicines are researched extensively in a laboratory before they are ready for clinical trials with human volunteers"], this, "+=6")
@@ -267,14 +270,11 @@ function startAnim(){
 function myFunction() {
   if (document.body.scrollTop > 768 || document.documentElement.scrollTop > 768) {
     
-    TweenMax.fromTo(mythOneFocusArea, 1, {
-      opacity: 0
-    }, {
-      opacity: 1,
-      delay: 1
-    });
-
+   
+    if(executed != true){
       startAnim();
+
+    }
   }
 }
 /* assigning active class to current Myth */
