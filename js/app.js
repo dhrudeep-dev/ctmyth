@@ -263,6 +263,7 @@ function startAnim(){
 
 function myFunction() {
   if (document.body.scrollTop > 768 || document.documentElement.scrollTop > 768) {
+    
       startAnim();
   }
 }
