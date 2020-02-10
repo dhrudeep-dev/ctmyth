@@ -48,6 +48,9 @@ window.onload = function () {
   let docHead = doctor.getElementById('head');
   let visHead = visitor.getElementById('head');
 
+  // myth1 references
+  let mythOneFocusArea = document.querySelector('#mythOneFocusArea');
+
   // onload reveal animation
   TweenMax.fromTo(introductionPage, 1, {
     opacity: 0
@@ -177,7 +180,7 @@ window.onscroll = function() {myFunction()};
 
 function startAnim(){
   //Myth2 ANIMATION
-  let visitorScr2Char = document.getElementById('visitorScr2')
+  let visitorScr2Char = document.getElementById('visitorScr2');
   let doctorScr2 = document.getElementById('doctorScr2').contentDocument;
   let visitorScr2 = document.getElementById('visitorScr2').contentDocument;
 
@@ -264,6 +267,13 @@ function startAnim(){
 function myFunction() {
   if (document.body.scrollTop > 768 || document.documentElement.scrollTop > 768) {
     
+    TweenMax.fromTo(mythOneFocusArea, 1, {
+      opacity: 0
+    }, {
+      opacity: 1,
+      delay: 1
+    });
+
       startAnim();
   }
 }
