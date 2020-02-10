@@ -1,4 +1,4 @@
-$(document).foundation()
+$(document).foundation();
 $(document).ready(function () {
   $('#nav').localScroll(800);
   //.parallax(xPosition, speedFactor) options:
