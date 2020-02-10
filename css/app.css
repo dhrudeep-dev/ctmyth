@@ -468,7 +468,7 @@ body {
 	}
 }
 
-
+/* mobile side */
 @media only screen and (max-width: 600px) {
 	.myth1Animation {
 		border: none;
