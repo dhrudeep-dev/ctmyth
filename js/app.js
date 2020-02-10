@@ -185,17 +185,27 @@ function startAnim(){
   let visRightFeet = visitorScr2.getElementById('rightFeet');
   let visRightPant = visitorScr2.getElementById('rightLeg');
   let visLeftPant = visitorScr2.getElementById('leftLeg');
+  let visEyes = visitorScr2.getElementById('visEyes');
 
 
   let docLayer = doctorScr2.getElementById('Layer_2');
   let docMouth = doctorScr2.getElementById('mouth');
+  let docEyes = doctorScr2.getElementById('docEyes');
   let visLayer = visitorScr2.getElementById('Layer_2');
 
   let bubbleScr2Red = document.getElementById('bubbleScr2');
 
   let t1 = new TimelineMax()
-    .to(visitorScr2Char, 5, {
-      x: 150
+    .to(visitorScr2Char, 4, {
+      x: 170
+    }, 0)
+
+    .to (visEyes, 8, {
+      x: 10
+    }, 0)
+
+    .to (docEyes, 8, {
+      x: -10
     }, 0)
 
   .call(changeText, ["Do you think that all patients who come to Clinical Trials get treatment like an experimental object?"], this, 6)
@@ -217,20 +227,21 @@ function startAnim(){
       });
     }
 
-  }
-  function changeText1(newtext) {
-    docTalking();
-    $("#bubbleScr3").show();
-    $("#bubbleScr3").text(newtext)
-    $("#bubbleScr2").hide();
+    function changeText1(newtext) {
+      docTalking();
+      $("#bubbleScr3").show();
+      $("#bubbleScr3").text(newtext)
+      $("#bubbleScr2").hide();
+    }
+  
+    function changeText(newtext) {
+      $("#bubbleScr2").show();
+      $("#bubbleScr2").text(newtext)
+      $("#bubbleScr3").hide();
+  
+    }
   }
 
-  function changeText(newtext) {
-    $("#bubbleScr2").show();
-    $("#bubbleScr2").text(newtext)
-    $("#bubbleScr3").hide();
-
-  }
 
 
 
