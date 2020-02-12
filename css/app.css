@@ -93,13 +93,26 @@ body {
 
 /* myth 3 */
 
-#screen4_bg {
+#screen3_bg {
 
 	background: url(../images/mythTwobg.svg) top repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
-	background-size: 100%;
+	background-size:cover;
+	z-index: 204;
+	clear: both;
+}
+
+/* myth 3 */
+
+#screen4_bg {
+
+	background: url(../images/photo3.jpeg) top repeat fixed;
+	height: 1000px;
+	overflow: hidden;
+	width: 100%;
+	background-size: 50%;
 	z-index: 204;
 	clear: both;
 }
@@ -545,6 +558,11 @@ body {
 	}
 
 	#scr2Anim {
+		opacity:0;
+	}
+	
+	/* for myth 3 */
+	#scr3Anim {
 		opacity:0;
 	}
 	
