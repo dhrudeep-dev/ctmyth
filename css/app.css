@@ -238,6 +238,11 @@ body {
 #visitorScr2 {
 	left: -150px;
 }
+
+/* visitor body */
+#visitorScr3 {
+	left: -150px;
+}
 /* speech bubble */
 .speech-bubble {
 	position: relative;
