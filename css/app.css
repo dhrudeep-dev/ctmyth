@@ -95,11 +95,11 @@ body {
 
 #screen4_bg {
 
-	background: url(../images/featureImage.svg) top repeat fixed;
+	background: url(../images/mythTwobg.svg) top repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
-	background-size: 50%;
+	background-size: 100%;
 	z-index: 204;
 	clear: both;
 }
