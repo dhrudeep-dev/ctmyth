@@ -327,6 +327,9 @@ function startAnimmyth2() {
 
   let bubbleScr2Red = document.getElementById('bubbleScr3');
 
+  //animation images
+  let currFadeinImg = document.getElementById('myth2Allimg');
+
   TweenMax.fromTo(visitorScr2Char, 3.5, {
     opacity: 0
   }, {
@@ -346,6 +349,7 @@ function startAnimmyth2() {
     .to(docEyes, 8, {
       x: -10
     }, 3)
+    .call(changeImgpath, ["images/myth2.svg"], this, "+=6")
     .call(changeText, ["Do you think that all patients who come to Clinical Trials get treatment like an experimental object?"], this, 6)
     .call(changeText1, ["Clinical research has enforced oversight, and patients also have rights that help protect them. Before participating, you are given in-depth information about the study."], this, "+=6")
     .call(changeText, ["What about the medicines which we are getting from clinical trial?"], this, "+=6")
@@ -367,15 +371,26 @@ function startAnimmyth2() {
 
   function changeText1(newtext) {
     docTalking();
+    $("#myth2Allimg").hide();
     $("#bubbleScr3sec").show();
     $("#bubbleScr3sec").text(newtext)
     $("#bubbleScr3first").hide();
   }
 
   function changeText(newtext) {
+    $("#myth2Allimg").hide();
     $("#bubbleScr3first").show();
     $("#bubbleScr3first").text(newtext)
     $("#bubbleScr3sec").hide();
+  }
+
+  function changeImgpath(newtext) {
+    $("#bubbleScr3first").hide();
+    $("#bubbleScr3sec").hide();
+    $("#myth2Allimg").show();
+    $("#myth2Allimg").attr("src", newtext);
+
+
 
   }
 

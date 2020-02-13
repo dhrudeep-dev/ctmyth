@@ -263,6 +263,14 @@ body {
 	z-index: 1;
 }
 
+.myth2AnimImages {
+	left: 47%;
+	position: relative;
+	z-index: 1;
+	top: 150px;
+	width: 300px;
+}
+
 /* speech bubble of visitor arrow */
 .speech-bubble:after {
 	content: '';
@@ -506,7 +514,7 @@ body {
 
 	.bubbleScr3 {
 		left: 20%;
-		top: 140px;
+		top: 155px;
 		width: 100px;
 	}
 
@@ -574,9 +582,18 @@ body {
 	/* bubble 2 position(visitor) */
 	.bubbleScr2 {
 	left: 15%;
-	top: 130px;
+	top: 155px;
 	width: 300px;
 	}
+
+.myth2AnimImages {
+	left: 7%;
+	position: relative;
+	z-index: 1;
+	top: 80px;
+	width: 300px;
+}
+	
 
 	/* bubble 2 position(doctor) */
 
