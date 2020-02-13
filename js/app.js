@@ -214,7 +214,8 @@ function startAnim() {
   let visRightPant = visitorScr2.getElementById('rightLeg');
   let visLeftPant = visitorScr2.getElementById('leftLeg');
   let visEyes = visitorScr2.getElementById('visEyes');
-
+  let visLipUpper = visitorScr2.getElementById('upperLip');
+  let visLipLower = visitorScr2.getElementById('lowerLip');
 
   let docLayer = doctorScr2.getElementById('Layer_2');
   let docMouth = doctorScr2.getElementById('mouth');
@@ -261,6 +262,26 @@ function startAnim() {
     });
   }
 
+  function visTalking() {
+    TweenMax.fromTo(visLipUpper, 1, {
+      y: 0,
+    }, {
+      y:-1.5,
+      repeat: 5,
+      yoyo: true
+    });
+
+    TweenMax.fromTo(visLipLower, 1, {
+      y: 0,
+    }, {
+      y: 1.5,
+      repeat: 5,
+      yoyo: true
+    });
+  }
+
+
+
   function changeText1(newtext) {
     docTalking();
     $("#bubbleScr3").show();
@@ -269,6 +290,7 @@ function startAnim() {
   }
 
   function changeText(newtext) {
+    visTalking();
     $("#bubbleScr2").show();
     $("#bubbleScr2").text(newtext)
     $("#bubbleScr3").hide();
