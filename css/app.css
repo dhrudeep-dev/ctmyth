@@ -234,6 +234,27 @@ body {
 	margin-top: 150px;
 }
 
+/* myth 2 focus area */
+.myth2FocusArea {
+	background: white;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	font-weight: bold;
+	border: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 80%;
+	max-height: auto;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	width: 800px;
+	height: 450px;
+	margin-top: 150px;
+}
+
 /* visitor body */
 #visitorScr2 {
 	left: -150px;
