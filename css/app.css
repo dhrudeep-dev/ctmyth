@@ -602,7 +602,7 @@ body {
 	
 	/* bubble 2 position(visitor) */
 	.bubbleScr2 {
-	left: 15%;
+	left: 10%;
 	top: 155px;
 	width: 300px;
 	}
@@ -613,6 +613,28 @@ body {
 	z-index: 1;
 	top: 80px;
 	width: 300px;
+}
+.myth2FocusArea {
+	background: url(../images/myth1Bg.svg);
+	background-size: cover;
+	background-position: center;
+	/* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	border: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 80%;
+	max-height: auto;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	width: 400px;
+	height: 550px;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
 }
 	
 
