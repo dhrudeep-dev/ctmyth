@@ -615,7 +615,7 @@ body {
 	width: 300px;
 }
 .myth2FocusArea {
-	background: url(../images/myth1Bg.svg);
+	/* background: url(../images/myth1Bg.svg); */
 	background-size: cover;
 	background-position: center;
 	/* Black w/opacity/see-through */
