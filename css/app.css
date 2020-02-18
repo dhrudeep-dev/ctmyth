@@ -93,9 +93,22 @@ body {
 
 /* myth 3 */
 
+#screen3_bg {
+
+	background: url(../images/mythTwobg.svg) top repeat fixed;
+	height: 1000px;
+	overflow: hidden;
+	width: 100%;
+	background-size:cover;
+	z-index: 204;
+	clear: both;
+}
+
+/* myth 3 */
+
 #screen4_bg {
 
-	background: url(../images/featureImage.svg) top repeat fixed;
+	background: url(../images/photo3.jpeg) top repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -221,8 +234,34 @@ body {
 	margin-top: 150px;
 }
 
+/* myth 2 focus area */
+.myth2FocusArea {
+	background: rgba(255, 255, 255, 0.5);
+	background-size: cover;
+	background-position: center;
+	color: white;
+	font-weight: bold;
+	border: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 80%;
+	max-height: auto;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	width: 800px;
+	height: 450px;
+	margin-top: 150px;
+}
+
 /* visitor body */
 #visitorScr2 {
+	left: -150px;
+}
+
+/* visitor body */
+#visitorScr3 {
 	left: -150px;
 }
 /* speech bubble */
@@ -243,6 +282,14 @@ body {
 	left: 40%;
 	top: 210px;
 	z-index: 1;
+}
+
+.myth2AnimImages {
+	left: 47%;
+	position: relative;
+	z-index: 1;
+	top: 150px;
+	width: 300px;
 }
 
 /* speech bubble of visitor arrow */
@@ -488,7 +535,7 @@ body {
 
 	.bubbleScr3 {
 		left: 20%;
-		top: 140px;
+		top: 155px;
 		width: 100px;
 	}
 
@@ -548,12 +595,48 @@ body {
 		opacity:0;
 	}
 	
+	/* for myth 3 */
+	#scr3Anim {
+		opacity:0;
+	}
+	
 	/* bubble 2 position(visitor) */
 	.bubbleScr2 {
-	left: 15%;
-	top: 130px;
+	left: 10%;
+	top: 155px;
 	width: 300px;
 	}
+
+.myth2AnimImages {
+	left: 7%;
+	position: relative;
+	z-index: 1;
+	top: 80px;
+	width: 300px;
+}
+.myth2FocusArea {
+	background: url(../images/myth1Bg.svg);
+	background-size: cover;
+	background-position: center;
+	/* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	border: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 80%;
+	max-height: auto;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	width: 400px;
+	height: 550px;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+	
 
 	/* bubble 2 position(doctor) */
 

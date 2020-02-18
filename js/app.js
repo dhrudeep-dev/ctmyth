@@ -175,6 +175,12 @@ window.onload = function () {
     opacity: 1,
     delay: 1
   });
+  TweenMax.fromTo("#scr3Anim", 1.5, {
+    opacity: 0
+  }, {
+    opacity: 1,
+    delay: 1
+  });
 }
 
 /* onScroll anmation effect start here */
@@ -191,6 +197,7 @@ window.onscroll = function () {
 
 // variable to stop calling myth1 function onscroll
 var executed = false;
+var executedscr2 = false;
 
 // first myth's animation start here
 function startAnim() {
@@ -207,7 +214,8 @@ function startAnim() {
   let visRightPant = visitorScr2.getElementById('rightLeg');
   let visLeftPant = visitorScr2.getElementById('leftLeg');
   let visEyes = visitorScr2.getElementById('visEyes');
-
+  let visLipUpper = visitorScr2.getElementById('upperLip');
+  let visLipLower = visitorScr2.getElementById('lowerLip');
 
   let docLayer = doctorScr2.getElementById('Layer_2');
   let docMouth = doctorScr2.getElementById('mouth');
@@ -254,6 +262,26 @@ function startAnim() {
     });
   }
 
+  function visTalking() {
+    TweenMax.fromTo(visLipUpper, 1, {
+      y: 0,
+    }, {
+      y:-1.5,
+      repeat: 5,
+      yoyo: true
+    });
+
+    TweenMax.fromTo(visLipLower, 1, {
+      y: 0,
+    }, {
+      y: 1.5,
+      repeat: 5,
+      yoyo: true
+    });
+  }
+
+
+
   function changeText1(newtext) {
     docTalking();
     $("#bubbleScr3").show();
@@ -262,6 +290,7 @@ function startAnim() {
   }
 
   function changeText(newtext) {
+    visTalking();
     $("#bubbleScr2").show();
     $("#bubbleScr2").text(newtext)
     $("#bubbleScr3").hide();
@@ -285,5 +314,111 @@ function startAnm1() {
       startAnim();
     }
   }
+  if (document.body.scrollTop > 1768 || document.documentElement.scrollTop > 1768) {
+    if (executedscr2 != true) {
+      startAnimmyth2();
+    }
+  }
 }
 /* assigning active class to current Myth */
+
+/* second myth animation */
+// first myth's animation start here
+function startAnimmyth2() {
+  executedscr2 = true;
+
+  console.log('getting call');
+  TweenMax.to("#scr3Anim", 3, {    opacity: 1  });
+
+  // variables for characters
+  let visitorScr2Char = document.getElementById('visitorScr3');
+  let doctorScr2 = document.getElementById('doctorScr3').contentDocument;
+  let visitorScr2 = document.getElementById('visitorScr3').contentDocument;
+
+  let visLeftFeet = visitorScr2.getElementById('leftFeet');
+  let visRightFeet = visitorScr2.getElementById('rightFeet');
+  let visRightPant = visitorScr2.getElementById('rightLeg');
+  let visLeftPant = visitorScr2.getElementById('leftLeg');
+  let visEyes = visitorScr2.getElementById('visEyes');
+
+
+  let docLayer = doctorScr2.getElementById('Layer_2');
+  let docMouth = doctorScr2.getElementById('mouth');
+  let docEyes = doctorScr2.getElementById('docEyes');
+  let visLayer = visitorScr2.getElementById('Layer_2');
+
+  let bubbleScr2Red = document.getElementById('bubbleScr3');
+
+  //animation images
+  let currFadeinImg = document.getElementById('myth2Allimg');
+
+  TweenMax.fromTo(visitorScr2Char, 3.5, {
+    opacity: 0
+  }, {
+    opacity: 1,
+    delay: 1
+  });
+
+  let t1 = new TimelineMax()
+    .to(visitorScr2Char, 4, {
+      x: 170
+    }, 3)
+
+    .to(visEyes, 8, {
+      x: 10
+    }, 3)
+
+    .to(docEyes, 8, {
+      x: -10
+    }, 3)
+    .call(changeImgpath, ["images/myth2.svg"], this, "+=6")
+    .call(changeText, ["Every trial uses a placebo as a comparison?"], this, 6)
+    .call(changeText1, ["Placebo only uses for – serious illness like cancer."], this, "+=6")
+    .call(changeText, ["Clinical Trials inform patients about placebo before treating them (if they are using placebo)"], this, "+=6")
+    .call(changeText1, ["Clinical Trials only use placebo if existing therapies are not effective enough."], this, "+=6")
+    .call(changeText1, ["Clinical Trials give all the necessary information about placebo to patients before the treatment."], this, "+=6")
+
+  function docTalking() {
+    TweenMax.fromTo(docMouth, 1, {
+      scaleY: 1,
+    }, {
+      scaleY: 0.5,
+      repeat: 5,
+      yoyo: true
+    });
+  }
+
+  function changeText1(newtext) {
+    docTalking();
+    $("#myth2Allimg").hide();
+    $("#bubbleScr3sec").show();
+    $("#bubbleScr3sec").text(newtext)
+    $("#bubbleScr3first").hide();
+  }
+
+  function changeText(newtext) {
+    $("#myth2Allimg").hide();
+    $("#bubbleScr3first").show();
+    $("#bubbleScr3first").text(newtext)
+    $("#bubbleScr3sec").hide();
+  }
+
+  function changeImgpath(newtext) {
+    $("#bubbleScr3first").hide();
+    $("#bubbleScr3sec").hide();
+    $("#myth2Allimg").show();
+    $("#myth2Allimg").attr("src", newtext);
+
+
+
+  }
+
+  function myFunction() {
+    let x = document.getElementById("bubbleSrc2");
+    if (x.style.display === "none") {
+      x.style.display = changeText;
+    } else {
+      x.style.display = changeText1;
+    }
+  }
+}
