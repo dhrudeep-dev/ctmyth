@@ -104,19 +104,6 @@ body {
 	clear: both;
 }
 
-/* myth 3 */
-
-#screen4_bg {
-
-	background: url(../images/photo3.jpeg) top repeat fixed;
-	height: 1000px;
-	overflow: hidden;
-	width: 100%;
-	background-size: 50%;
-	z-index: 204;
-	clear: both;
-}
-
 
 /*Screen five*/
 
@@ -648,6 +635,19 @@ body {
 }
 
 /* ------------------------- myth 3 ------------------------- */
+
+/* myth 3 */
+
+#screen4_bg {
+
+	background: url(../images/photo3.jpeg) top repeat fixed;
+	height: 1000px;
+	overflow: hidden;
+	width: 100%;
+	background-size: 50%;
+	z-index: 204;
+	clear: both;
+}
 
 #myth3FocusArea{
 	background: rgba(0, 0, 0, 0.5);
