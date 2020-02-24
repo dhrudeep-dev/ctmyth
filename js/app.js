@@ -438,9 +438,11 @@ function startAnimMyth3() {
 
   TweenMax.fromTo(myth3FocusArea, 1, {
     scale: 0,
-    opacity: 0
+    opacity: 0,
+    borderRadius: "100%"
   },{
     scale: 1,
-    opacity: 1
+    opacity: 1,
+    borderRadius: "10px"
   });
 }
