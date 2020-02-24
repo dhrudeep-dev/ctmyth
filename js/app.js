@@ -470,6 +470,9 @@ function startAnimMyth3() {
   let visitorMyth3 = officeMyth3SVG.querySelector("#visitor");
   let visitorMyth3Head = officeMyth3SVG.querySelector("#visitorMyth3Head");
   let clerkMyth3Head = officeMyth3SVG.querySelector("#head");
+  let visLipUpper = officeMyth3SVG.querySelector('#upperLip');
+  let visLipLower = officeMyth3SVG.querySelector('#lowerLip');
+  let clerkMouth = officeMyth3SVG.querySelector('#mouth');
 
   // animating focus area
   TweenMax.fromTo(myth3FocusArea, 1, {
@@ -556,6 +559,36 @@ function startAnimMyth3() {
     delay: 10
   });
 
+// animate clerk talking
+  function clerkTalking() {
+    TweenMax.fromTo(clerkMouth, 1, {
+      scaleY: 1,
+    }, {
+      scaleY: 0.5,
+      repeat: 5,
+      yoyo: true
+    });
+  }
+
+  // animate visitor talking
+  function visTalking() {
+    TweenMax.fromTo(visLipUpper, 1, {
+      y: 0,
+    }, {
+      y:-0.5,
+      repeat: 5,
+      yoyo: true
+    });
+
+    TweenMax.fromTo(visLipLower, 1, {
+      y: 0,
+    }, {
+      y: 0.5,
+      repeat: 5,
+      yoyo: true
+    });
+  }
+
 
   let t1 = new TimelineMax()
     .call(changeText, ["Every trial uses a placebo as a comparison!!!!!!"], this, 10)
@@ -571,12 +604,16 @@ function startAnimMyth3() {
     $("#bubbleScr4sec").show();
     $("#bubbleScr4sec").text(newtext)
     $("#bubbleScr4first").hide();
+
+    clerkTalking();
   }
 
   function changeText(newtext) {
     $("#bubbleScr4first").show();
     $("#bubbleScr4first").text(newtext)
     $("#bubbleScr4sec").hide();
+
+    visTalking();
   }
 
   function myFunction() {
