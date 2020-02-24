@@ -441,7 +441,10 @@ function startAnimMyth3() {
 
   let myth3FocusArea = document.querySelector("#myth3FocusArea");
   let officeMyth3 = document.querySelector("#officeMyth3");
+  let officeMyth3SVG = document.querySelector("#officeMyth3").contentDocument;
+  let visitorMyth3 = officeMyth3SVG.querySelector("#visitor");
 
+  // animating focus area
   TweenMax.fromTo(myth3FocusArea, 1, {
     scale: 0,
     opacity: 0,
@@ -452,6 +455,7 @@ function startAnimMyth3() {
     borderRadius: "10px"
   });
 
+  // animating office background
   TweenMax.fromTo(officeMyth3, 1, {
     scale: 0,
     opacity: 0,
@@ -461,6 +465,34 @@ function startAnimMyth3() {
     opacity: 1,
     borderRadius: "10px"
   });
+
+  // animate visitor
+  TweenMax.fromTo(visitorMyth3, 1, {
+    opacity: 0
+  },{
+    opacity: 1,
+    delay: 2
+  });
+
+  // animate visitor walking into office
+  TweenMax.fromTo(visitorMyth3, 2, {
+    x: 0,
+    y: 0,
+    scale: 1
+  },{
+    x: -50,
+    y:40,
+    scale: 3,
+    delay: 3
+  });
+
+  // animate visitor walking towards clerk
+  TweenMax.to(visitorMyth3, 3, {
+    x: 600,
+    y:40,
+    delay: 6
+  });
+
 }
 
 
