@@ -603,3 +603,6 @@ function startAnimMyth4() {
     delay: 3
   });
 }
+
+
+/* --------------------------- myth 5 animation --------------------------- */
