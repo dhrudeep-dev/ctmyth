@@ -109,7 +109,8 @@ body {
 
 #screen5_bg {
 
-	background: url(../images/photo00.jpeg) top center no-repeat fixed;
+	/* background: url(../images/photo00.jpeg) top center no-repeat fixed; */
+	background-color: rgb(146, 175, 228);
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -118,6 +119,10 @@ body {
 	clear: both;
 }
 
+.st3 {
+    fill: #2D60AA;
+    visibility: hidden !important;
+}
 
 
 /*Screen Six*/
