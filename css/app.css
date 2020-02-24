@@ -17,7 +17,6 @@ p {
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
-
 /* Nav */
 .navigation {
 	position: fixed !important;
@@ -95,7 +94,7 @@ body {
 
 #screen3_bg {
 
-	background: url(../images/myth2svgImage.svg) top repeat fixed;
+	background: url(../images/myth2svgImage.svg) top center no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -129,7 +128,7 @@ body {
 
 #screen6_bg {
 
-	background: url(../images/photo1.jpeg) top center no-repeat fixed;
+	background: url(../images/photo1.jpg) top center no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -496,6 +495,8 @@ body {
 	border-radius: 10px;
 	height: 650px;
 }
+
+/* myth 4 */
 .myth4Img {
 	max-width: 200px;
 	max-height: 200px;
@@ -507,6 +508,101 @@ body {
 	border-radius: 10px;
 	position: relative;
 	top: 240px;
+}
+/* ------------------------- myth 3 ------------------------- */
+
+#screen4_bg {
+
+	background: url(../images/myth3Bg\ copy.jpg) top repeat fixed;
+	height: 1000px;
+	overflow: hidden;
+	width: 100%;
+	background-size: cover;
+	z-index: 204;
+	clear: both;
+}
+
+#myth3FocusArea{
+	/* background: url(../images/myth3.svg); */
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	background-size: cover;
+	background-position: center;
+	color: white;
+	font-weight: bold;
+	border: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 80%;
+	max-height: auto;
+	padding: 20px;
+	text-align: center;
+	/* filter: blur(8px); */
+	border-radius: 100%;
+	width: 800px;
+	height: 450px;
+	margin-top: 150px;
+}
+
+#officeMyth3{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 800px;
+	height: 450px;
+	max-width: 100%;
+	/* filter: blur(8px); */
+	max-height: auto;
+	margin-top: 205px;
+	border-radius: 100%;
+	opacity: 0;
+	-webkit-box-shadow: 0px 5px 10px 5px #00000075;
+	box-shadow: 0px 5px 10px 5px #00000075;
+}
+
+/* --------------- myth 5 content and styles --------------------*/
+#frstChart{
+	position: relative;
+	float: left;
+	right: 5%;
+	bottom: 7%;
+}
+
+#secChart{
+	position: relative;
+	left: 52%;
+	bottom: 6%;
+	opacity: 1;
+}
+
+#myth4FocusArea{
+	/* background: url(../images/myth3.svg); */
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	background-size: cover;
+	background-position: center;
+	color: white;
+	font-weight: bold;
+	border: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 80%;
+	max-height: auto;
+	padding: 20px;
+	text-align: center;
+	/* filter: blur(8px); */
+	border-radius: 100%;
+	width: 800px;
+	height: 450px;
+	margin-top: 150px;
+}
+
+#secChart{
+	width: 200px;
+}
+
+#my_dataviz2{
+	width: 200px;
 }
 
 /* media query for web view */
@@ -750,4 +846,7 @@ body {
 	opacity: 0;
 	-webkit-box-shadow: 0px 5px 10px 5px #00000075;
 	box-shadow: 0px 5px 10px 5px #00000075;
+	
+	
 }
+

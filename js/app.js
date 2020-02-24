@@ -621,18 +621,18 @@ function startAnimMyth4() {
     // borderRadius: "10px"
   });
   
-  let visHead = visitor.getElementById('head');
-  TweenMax.fromTo(visHead, 1, {
-    xPercent: 10,
-    rotation: 5
+  // let visHead = visitor.getElementById('head');
+  // TweenMax.fromTo(visHead, 1, {
+  //   xPercent: 10,
+  //   rotation: 5
 
-  }, {
-    xPercent: -10,
-    rotation: -5,
-    yoyo: true,
-    repeat: -1,
-    delay: 3
-  });
+  // }, {
+  //   xPercent: -10,
+  //   rotation: -5,
+  //   yoyo: true,
+  //   repeat: -1,
+  //   delay: 3
+  // });
 }
 
 
