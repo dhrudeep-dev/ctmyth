@@ -509,6 +509,24 @@ body {
 	position: relative;
 	top: 240px;
 }
+
+
+.pills{
+
+	display: block;
+	width:5%;
+	left: 0;
+
+}
+.syringe{
+
+	display: block;
+	width:15%;
+	left: 0;
+	
+	
+
+}
 /* ------------------------- myth 3 ------------------------- */
 
 #screen4_bg {

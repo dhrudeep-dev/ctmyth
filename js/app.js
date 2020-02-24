@@ -592,7 +592,7 @@ function startAnimMyth4() {
 
   executedscr4 = true;
   
-  let visitor = document.querySelector("#visitorScr4").contentDocument;
+  let visitor = document.querySelector("#visitorScr4");
   let myth4FocusArea = document.querySelector(".myth4FocusArea");
   // let visitor1 = document.getElementById('visitor').contentDocument;
   // let visHead = visitor1.getElementById('head');
