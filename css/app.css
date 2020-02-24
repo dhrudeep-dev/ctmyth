@@ -603,6 +603,7 @@ body {
 	justify-content: space-around;
 	align-content: space-around;
 	flex-wrap: wrap;
+	opacity: 0;
 }
 
 #myth5FocusArea:first-child {
