@@ -592,23 +592,9 @@ body {
 }
 
 /* --------------- myth 5 content and styles --------------------*/
-#frstChart{
-	position: relative;
-	float: left;
-	right: 5%;
-	bottom: 7%;
-}
-
-#secChart{
-	position: relative;
-	left: 52%;
-	bottom: 6%;
-	opacity: 1;
-}
-
-#myth4FocusArea{
+#myth5FocusArea{
 	/* background: url(../images/myth3.svg); */
-	/* background-color: rgba(0, 0, 0, 0.5); */
+	background-color: rgba(0, 0, 0, 0.6);
 	background-size: cover;
 	background-position: center;
 	color: white;
@@ -626,14 +612,54 @@ body {
 	width: 800px;
 	height: 450px;
 	margin-top: 150px;
+	display: flex;
+	justify-content: space-around;
+	align-content: space-around;
+	flex-wrap: wrap;
+	opacity: 0;
+}
+
+#myth5FocusArea:first-child {
+	width: 100%;
+}
+
+#myth5FocusArea h6{
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: -30px;
+}
+
+#myth5FocusArea ul{
+	margin-top: -30px;
+}
+
+#myth5FocusArea li{
+	/* list-style: none; */
+	text-align: left;
+	margin: 0px 20px;
+	font-weight: lighter;
+}
+
+.heading{
+	display: inline-block;
+	justify-self: center;
+	flex-grow: 10;
+	color: #EFB700;
+}
+
+.heading > h4 > span{
+	font-weight: bolder;
+	color: #EFB700;
+}
+
+#frstChart{
+	display: inline-block;
+	max-width: 200px;
 }
 
 #secChart{
-	width: 200px;
-}
-
-#my_dataviz2{
-	width: 200px;
+	display: inline-block;
+	max-width: 200px;
 }
 
 /* media query for web view */
@@ -849,19 +875,19 @@ body {
 }
 
 /* --------------- myth 5 content and styles --------------------*/
-#frstChart{
+/* #frstChart{
 	position: relative;
 	float: left;
 	right: 5%;
 	bottom: 7%;
-}
+} */
 
-#secChart{
+/* #secChart{
 	position: relative;
 	left: 52%;
 	bottom: 6%;
 	opacity: 1;
-}
+} */
 
 #officeMyth3{
 	position: absolute;
