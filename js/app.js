@@ -592,7 +592,7 @@ function startAnimMyth4() {
 
   executedscr4 = true;
   
-  let visitor = document.querySelector("#visitorScr4");
+  let visitor = document.querySelector("#visitorScr4").contentDocument;
   let myth4FocusArea = document.querySelector(".myth4FocusArea");
   // let visitor1 = document.getElementById('visitor').contentDocument;
   // let visHead = visitor1.getElementById('head');
@@ -622,8 +622,6 @@ function startAnimMyth4() {
     delay: 2
     // borderRadius: "10px"
   });
-
-    
   
   // TweenMax.fromTo(visHead, 1, {
   //   xPercent: 10,
