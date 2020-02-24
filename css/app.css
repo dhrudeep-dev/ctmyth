@@ -95,7 +95,7 @@ body {
 
 #screen3_bg {
 
-	background: url(../images/myth2svgImage.svg) top repeat fixed;
+	background: url(../images/myth2svgImage.svg) top center no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -129,7 +129,7 @@ body {
 
 #screen6_bg {
 
-	background: url(../images/photo1.jpeg) top center no-repeat fixed;
+	background: url(../images/photo1.jpg) top center no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -572,7 +572,7 @@ body {
 	position: relative;
 	left: 52%;
 	bottom: 6%;
-	opacity: 0;
+	opacity: 1;
 }
 
 /* media query for web view */
