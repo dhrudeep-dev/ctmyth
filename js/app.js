@@ -592,7 +592,7 @@ function startAnimMyth4() {
 
   executedscr4 = true;
   
-  let visitor = document.querySelector("#visitorScr4").contentDocument;
+  let visitor = document.querySelector("#visitorScr4");
   let myth4FocusArea = document.querySelector(".myth4FocusArea");
 
 
@@ -609,6 +609,7 @@ function startAnimMyth4() {
   });
   
   console.log("sleeping")
+
   TweenMax.fromTo(visitor, 1, {
     scale: 0,
     opacity: 0
@@ -616,9 +617,10 @@ function startAnimMyth4() {
   },{
     scale: 1.9,
     opacity: 1,
-    delay: 2
+    // delay: 2
     // borderRadius: "10px"
   });
+  
 }
 
 
