@@ -457,3 +457,9 @@ function startAnimMyth3() {
     borderRadius: "10px"
   });
 }
+
+
+
+
+/* --------------------------- myth 4 animation --------------------------- */
+
