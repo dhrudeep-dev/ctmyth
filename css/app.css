@@ -617,35 +617,36 @@ body {
 	width: 300px;
 	}
 
-.myth2AnimImages {
-	left: 7%;
-	position: relative;
-	z-index: 1;
-	top: 80px;
-	width: 300px;
-}
-.myth2FocusArea {
-	/* background: url(../images/myth1Bg.svg); */
-	background-size: cover;
-	background-position: center;
-	/* Black w/opacity/see-through */
-	color: white;
-	font-weight: bold;
-	border: none;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 80%;
-	max-height: auto;
-	padding: 20px;
-	text-align: center;
-	border-radius: 10px;
-	width: 400px;
-	height: 550px;
-	display: flex;
-	justify-content: center;
-	padding: 20px;
-}
+	.myth2AnimImages {
+		left: 7%;
+		position: relative;
+		z-index: 1;
+		top: 80px;
+		width: 300px;
+	}
+
+	.myth2FocusArea {
+		/* background: url(../images/myth1Bg.svg); */
+		background-size: cover;
+		background-position: center;
+		/* Black w/opacity/see-through */
+		color: white;
+		font-weight: bold;
+		border: none;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 80%;
+		max-height: auto;
+		padding: 20px;
+		text-align: center;
+		border-radius: 10px;
+		width: 400px;
+		height: 550px;
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+	}
 	
 
 	/* bubble 2 position(doctor) */
@@ -655,11 +656,32 @@ body {
 	top: 130px;
 	width: 300px;
 	}
+
+	#myth3FocusArea{
+		/* background: url(../images/myth1Bg.svg); */
+		background-size: cover;
+		background-position: center;
+		/* Black w/opacity/see-through */
+		color: white;
+		font-weight: bold;
+		border: none;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 80%;
+		max-height: auto;
+		padding: 20px;
+		text-align: center;
+		border-radius: 10px;
+		width: 400px;
+		height: 550px;
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+	}
 }
 
 /* ------------------------- myth 3 ------------------------- */
-
-/* myth 3 */
 
 #screen4_bg {
 
