@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 406 406">
+  <title>stopIcon</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <path d="M203,20A183,183,0,1,1,20,203,183,183,0,0,1,203,20m0-20a203.05,203.05,0,0,0-79,390A203,203,0,0,0,282,16,201.74,201.74,0,0,0,203,0Z" style="fill: #ff8383"/>
+        <line x1="72" y1="334" x2="334" y2="72" style="fill: none;stroke: #ff8383;stroke-miterlimit: 10;stroke-width: 20px"/>
+      </g>
+    </g>
+  </g>
+</svg>

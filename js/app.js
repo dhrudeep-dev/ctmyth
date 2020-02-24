@@ -549,6 +549,38 @@ function startAnimMyth3() {
     delay: 10
   });
 
+
+  let t1 = new TimelineMax()
+    .call(changeText, ["Every trial uses a placebo as a comparison!!!!!!"], this, 10)
+    .call(changeText1, ["Cts only use placebo on patient if the patient is suffering from serious illness like cancer."], this, "+=6")
+    .call(changeText1, ["Cts only use placebo if existing therapies are not effective enough."], this, "+=6")
+    .call(changeText, ["How does patient can know if they are getting treatement with the placebo effect?"], this, "+=6")
+    .call(changeText1, ["Cts inform patients about placebo before treating them."], this, "+=6")
+    .call(changeText1, ["Cts give all the necessary information about placebo to patients before the treatment."], this, "+=6")
+    .call(changeText, ["Wow that’s good, at east patient has informed before the treatment."], this, "+=6")
+
+
+  function changeText1(newtext) {
+    $("#bubbleScr4sec").show();
+    $("#bubbleScr4sec").text(newtext)
+    $("#bubbleScr4first").hide();
+  }
+
+  function changeText(newtext) {
+    $("#bubbleScr4first").show();
+    $("#bubbleScr4first").text(newtext)
+    $("#bubbleScr4sec").hide();
+  }
+
+  function myFunction() {
+    let x = document.getElementById("bubbleSrc2");
+    if (x.style.display === "none") {
+      x.style.display = changeText;
+    } else {
+      x.style.display = changeText1;
+    }
+  }
+
 }
 
 
