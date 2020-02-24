@@ -196,9 +196,10 @@ window.onscroll = function () {
 };
 
 // variable to stop calling myth1 function onscroll
-var executed = false;
-var executedscr2 = false;
+let executed = false;
+let executedscr2 = false;
 let executedscr3 = false;
+let executedscr4 = false;
 // first myth's animation start here
 function startAnim() {
   executed = true;
@@ -324,6 +325,11 @@ function startAnm1() {
       startAnimMyth3();
     }
   }
+  if (document.body.scrollTop > 3768 || document.documentElement.scrollTop > 3768) {
+    if (executedscr4 != true) {
+      startAnimMyth4();
+    }
+  }
 }
 /* assigning active class to current Myth */
 
@@ -435,6 +441,7 @@ function startAnimMyth3() {
   executedscr3 = true;
 
   let myth3FocusArea = document.querySelector("#myth3FocusArea");
+  let officeMyth3 = document.querySelector("#officeMyth3");
 
   TweenMax.fromTo(myth3FocusArea, 1, {
     scale: 0,
@@ -444,5 +451,37 @@ function startAnimMyth3() {
     scale: 1,
     opacity: 1,
     borderRadius: "10px"
+  });
+
+  TweenMax.fromTo(officeMyth3, 1, {
+    scale: 0,
+    opacity: 0,
+    borderRadius: "100%"
+  },{
+    scale: 1,
+    opacity: 1,
+    borderRadius: "10px"
+  });
+}
+
+
+
+
+/* --------------------------- myth 4 animation --------------------------- */
+
+function startAnimMyth4() {
+
+  executedscr4 = true;
+
+  let visitorScr3 = document.getElementById("#visitorScr3");
+  console.log("sleeping")
+  TweenMax.fromTo(visitorScr3, 1, {
+    scale: 0,
+    opacity: 0
+    // borderRadius: "100%"
+  },{
+    scale: 2,
+    opacity: 1
+    // borderRadius: "10px"
   });
 }

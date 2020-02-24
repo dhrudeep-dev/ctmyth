@@ -110,7 +110,7 @@ body {
 #screen5_bg {
 
 	/* background: url(../images/photo00.jpeg) top center no-repeat fixed; */
-	background-color: rgb(146, 175, 228);
+	background-color: black;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -661,7 +661,8 @@ body {
 }
 
 #myth3FocusArea{
-	background: rgba(0, 0, 0, 0.5);
+	/* background: url(../images/myth3.svg); */
+	/* background-color: rgba(0, 0, 0, 0.5); */
 	background-size: cover;
 	background-position: center;
 	color: white;
@@ -678,5 +679,18 @@ body {
 	width: 800px;
 	height: 450px;
 	margin-top: 150px;
+	opacity: 0;
+}
+
+#officeMyth3{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 800px;
+	height: 450px;
+	max-width: 100%;
+	max-height: auto;
+	margin-top: 205px;
+	border-radius: 100%;
 	opacity: 0;
 }
