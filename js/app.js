@@ -472,9 +472,9 @@ function startAnimMyth4() {
 
   executedscr4 = true;
 
-  let myth4FocusArea = document.querySelector("#myth4FocusArea");
+  let visitorScr3 = document.querySelector("#visitorScr3");
 
-  TweenMax.fromTo(myth4FocusArea, 1, {
+  TweenMax.fromTo(visitorScr3, 1, {
     scale: 0,
     opacity: 0,
     borderRadius: "100%"
