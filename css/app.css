@@ -104,25 +104,13 @@ body {
 	clear: both;
 }
 
-/* myth 3 */
-
-#screen4_bg {
-
-	background: url(../images/photo3.jpeg) top repeat fixed;
-	height: 1000px;
-	overflow: hidden;
-	width: 100%;
-	background-size: 50%;
-	z-index: 204;
-	clear: both;
-}
-
 
 /*Screen five*/
 
 #screen5_bg {
 
-	background: url(../images/photo00.jpeg) top center no-repeat fixed;
+	/* background: url(../images/photo00.jpeg) top center no-repeat fixed; */
+	background-color: black;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -131,6 +119,10 @@ body {
 	clear: both;
 }
 
+.st3 {
+    fill: #2D60AA;
+    visibility: hidden !important;
+}
 
 
 /*Screen Six*/
@@ -497,7 +489,25 @@ body {
 	border-radius: 10px;
 	height: 150px;
 }
-
+.bblCon1 {
+	margin-top: 30%;
+	width: 80% !important;
+	text-align: center;
+	border-radius: 10px;
+	height: 650px;
+}
+.myth4Img {
+	max-width: 200px;
+	max-height: 200px;
+	border: none;
+	max-width: 80%;
+	width: 130px;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	position: relative;
+	top: 240px;
+}
 
 /* media query for web view */
 @media only screen and (min-width: 768px) {
@@ -607,35 +617,36 @@ body {
 	width: 300px;
 	}
 
-.myth2AnimImages {
-	left: 7%;
-	position: relative;
-	z-index: 1;
-	top: 80px;
-	width: 300px;
-}
-.myth2FocusArea {
-	/* background: url(../images/myth1Bg.svg); */
-	background-size: cover;
-	background-position: center;
-	/* Black w/opacity/see-through */
-	color: white;
-	font-weight: bold;
-	border: none;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 80%;
-	max-height: auto;
-	padding: 20px;
-	text-align: center;
-	border-radius: 10px;
-	width: 400px;
-	height: 550px;
-	display: flex;
-	justify-content: center;
-	padding: 20px;
-}
+	.myth2AnimImages {
+		left: 7%;
+		position: relative;
+		z-index: 1;
+		top: 80px;
+		width: 300px;
+	}
+
+	.myth2FocusArea {
+		/* background: url(../images/myth1Bg.svg); */
+		background-size: cover;
+		background-position: center;
+		/* Black w/opacity/see-through */
+		color: white;
+		font-weight: bold;
+		border: none;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 80%;
+		max-height: auto;
+		padding: 20px;
+		text-align: center;
+		border-radius: 10px;
+		width: 400px;
+		height: 550px;
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+	}
 	
 
 	/* bubble 2 position(doctor) */
@@ -645,12 +656,47 @@ body {
 	top: 130px;
 	width: 300px;
 	}
+
+	#myth3FocusArea{
+		/* background: url(../images/myth1Bg.svg); */
+		background-size: cover;
+		background-position: center;
+		/* Black w/opacity/see-through */
+		color: white;
+		font-weight: bold;
+		border: none;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 80%;
+		max-height: auto;
+		padding: 20px;
+		text-align: center;
+		border-radius: 10px;
+		width: 400px;
+		height: 550px;
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+	}
 }
 
 /* ------------------------- myth 3 ------------------------- */
 
+#screen4_bg {
+
+	background: url(../images/myth3Bg\ copy.jpg) top repeat fixed;
+	height: 1000px;
+	overflow: hidden;
+	width: 100%;
+	background-size: cover;
+	z-index: 204;
+	clear: both;
+}
+
 #myth3FocusArea{
-	background: rgba(0, 0, 0, 0.5);
+	/* background: url(../images/myth3.svg); */
+	/* background-color: rgba(0, 0, 0, 0.5); */
 	background-size: cover;
 	background-position: center;
 	color: white;
@@ -663,10 +709,12 @@ body {
 	max-height: auto;
 	padding: 20px;
 	text-align: center;
-	border-radius: 5px;
+	/* filter: blur(8px); */
+	border-radius: 100%;
 	width: 800px;
 	height: 450px;
 	margin-top: 150px;
+<<<<<<< HEAD
 }
 
 /* --------------- myth 5 content and styles --------------------*/
@@ -681,4 +729,23 @@ body {
 	position: relative;
 	left: 52%;
 	bottom: 6%;
+=======
+	opacity: 0;
+}
+
+#officeMyth3{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 800px;
+	height: 450px;
+	max-width: 100%;
+	/* filter: blur(8px); */
+	max-height: auto;
+	margin-top: 205px;
+	border-radius: 100%;
+	opacity: 0;
+	-webkit-box-shadow: 0px 5px 10px 5px #00000075;
+	box-shadow: 0px 5px 10px 5px #00000075;
+>>>>>>> 1aa38f928ffb22296e0555dc60b603db5820afc7
 }
