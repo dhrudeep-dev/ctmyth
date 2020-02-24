@@ -109,7 +109,8 @@ body {
 
 #screen5_bg {
 
-	background: url(../images/photo00.jpeg) top center no-repeat fixed;
+	/* background: url(../images/photo00.jpeg) top center no-repeat fixed; */
+	background-color: black;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
