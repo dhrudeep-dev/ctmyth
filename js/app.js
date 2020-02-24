@@ -435,8 +435,19 @@ function startAnimMyth3() {
   executedscr3 = true;
 
   let myth3FocusArea = document.querySelector("#myth3FocusArea");
+  let officeMyth3 = document.querySelector("#officeMyth3");
 
   TweenMax.fromTo(myth3FocusArea, 1, {
+    scale: 0,
+    opacity: 0,
+    borderRadius: "100%"
+  },{
+    scale: 1,
+    opacity: 1,
+    borderRadius: "10px"
+  });
+
+  TweenMax.fromTo(officeMyth3, 1, {
     scale: 0,
     opacity: 0,
     borderRadius: "100%"
