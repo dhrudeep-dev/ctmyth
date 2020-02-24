@@ -95,7 +95,7 @@ body {
 
 #screen3_bg {
 
-	background: url(../images/myth2svgImage.svg) top repeat fixed;
+	background: url(../images/myth2svgImage.svg) top center no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -129,7 +129,7 @@ body {
 
 #screen6_bg {
 
-	background: url(../images/photo1.jpeg) top center no-repeat fixed;
+	background: url(../images/photo1.jpg) top center no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -685,7 +685,7 @@ body {
 
 #screen4_bg {
 
-	background: url(../images/myth3Bg\ copy.jpg) top repeat fixed;
+	background: url(../images/myth3Bg\ copy.jpg) top center no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -745,4 +745,27 @@ body {
 	opacity: 0;
 	-webkit-box-shadow: 0px 5px 10px 5px #00000075;
 	box-shadow: 0px 5px 10px 5px #00000075;
+}
+
+#myth4FocusArea{
+	/* background: url(../images/myth3.svg); */
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	background-size: cover;
+	background-position: center;
+	color: white;
+	font-weight: bold;
+	border: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 80%;
+	max-height: auto;
+	padding: 20px;
+	text-align: center;
+	/* filter: blur(8px); */
+	border-radius: 100%;
+	width: 800px;
+	height: 450px;
+	margin-top: 150px;
+	opacity: 1;
 }
