@@ -6,6 +6,7 @@
 	outline: none;
 }
 
+
 /* font family */
 h1,
 h2,
@@ -496,7 +497,8 @@ body {
 	height: 650px;
 }
 
-/* myth 4 */
+/* ------------------------- myth 4 ------------------------- */
+
 .myth4Img {
 	max-width: 200px;
 	max-height: 200px;
@@ -523,10 +525,21 @@ body {
 	display: block;
 	width:15%;
 	left: 0;
-	
-	
-
 }
+/* @keyframes pills{
+	0%{
+		x:0 !important;
+  		y:0 !important;	
+	}
+	50%{
+		x:370 !important;
+  		y:-200 !important;
+	}
+	100%{
+		x:720 !important;
+   		y:0 !important;
+	}
+} */
 /* ------------------------- myth 3 ------------------------- */
 
 #screen4_bg {
@@ -581,7 +594,7 @@ body {
 /* --------------- myth 5 content and styles --------------------*/
 #myth5FocusArea{
 	/* background: url(../images/myth3.svg); */
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.6);
 	background-size: cover;
 	background-position: center;
 	color: white;
@@ -602,17 +615,51 @@ body {
 	display: flex;
 	justify-content: space-around;
 	align-content: space-around;
+	flex-wrap: wrap;
+	opacity: 0;
+}
+
+#myth5FocusArea:first-child {
+	width: 100%;
+}
+
+#myth5FocusArea h6{
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: -30px;
+}
+
+#myth5FocusArea ul{
+	margin-top: -30px;
+}
+
+#myth5FocusArea li{
+	/* list-style: none; */
+	text-align: left;
+	margin: 0px 20px;
+	font-weight: lighter;
+}
+
+.heading{
+	display: inline-block;
+	justify-self: center;
+	flex-grow: 10;
+	color: #EFB700;
+}
+
+.heading > h4 > span{
+	font-weight: bolder;
+	color: #EFB700;
 }
 
 #frstChart{
+	display: inline-block;
 	max-width: 200px;
-	position: relative;
 }
 
 #secChart{
+	display: inline-block;
 	max-width: 200px;
-	position: relative;
-
 }
 
 /* media query for web view */

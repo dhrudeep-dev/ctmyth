@@ -2,6 +2,10 @@ $(document).foundation();
 $(document).ready(function () {
   $('#nav').localScroll(800);
 
+  //hide pill
+  $("#pills").hide();
+  // hide syringe
+  $("#syringe").hide();
   // featured page
   $('#screen1_bgOne').parallax("50%", 0.1);
 
@@ -638,7 +642,8 @@ function startAnimMyth4() {
   
   let visitor = document.querySelector("#visitorScr4");
   let myth4FocusArea = document.querySelector(".myth4FocusArea");
-
+  let pills = document.querySelector("#pills");
+  let syringe = document.querySelector("syringe");
 
    // animating focus area
   TweenMax.fromTo(myth4FocusArea, 1, {
@@ -664,7 +669,36 @@ function startAnimMyth4() {
     // delay: 2
     // borderRadius: "10px"
   });
+  $("#pills").show();
+  TweenMax.fromTo("#pills",1,{
+  x:0,
+  y:0,
+  opacity:1
+},{
+  x:370,
+  y:-200
+});
+// TweenMax.to("#pills", 1, {
+//   x:720,
+//    y:0
+// });
+// $("pills").fadeOut();
+// TweenMax.fromTo("#pills",6,{
+//   x:370,
+//   y:-200
+// },{
+//   x:100,
+//   y:100
+// });
+$("#syringe").show();
+  TweenMax.fromTo("#syringe",7,{
+  x:0,
+  y:0,
   
+},{
+  x:320,
+  y:-300,
+});
 }
 
 
