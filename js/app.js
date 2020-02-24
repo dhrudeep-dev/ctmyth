@@ -376,12 +376,15 @@ function startAnimmyth2() {
     .to(docEyes, 8, {
       x: -10
     }, 3)
+    .call(changeText, ["Every trial uses a placebo as a comparison!!!!!!"], this, 6)
+    .call(changeText1, ["Cts only use placebo on patient if the patient is suffering from serious illness like cancer."], this, "+=6")
     .call(changeImgpath, ["images/myth2.svg"], this, "+=6")
-    .call(changeText, ["Every trial uses a placebo as a comparison?"], this, 6)
-    .call(changeText1, ["Placebo only uses for – serious illness like cancer."], this, "+=6")
-    .call(changeText, ["Clinical Trials inform patients about placebo before treating them (if they are using placebo)"], this, "+=6")
-    .call(changeText1, ["Clinical Trials only use placebo if existing therapies are not effective enough."], this, "+=6")
-    .call(changeText1, ["Clinical Trials give all the necessary information about placebo to patients before the treatment."], this, "+=6")
+    .call(changeText1, ["Cts only use placebo if existing therapies are not effective enough."], this, "+=6")
+    .call(changeImgpath, ["images/placeboImg.png"], this, "+=6")
+    .call(changeText, ["How does patient can know if they are getting treatement with the placebo effect?"], this, "+=6")
+    .call(changeText1, ["Cts inform patients about placebo before treating them."], this, "+=6")
+    .call(changeText1, ["Cts give all the necessary information about placebo to patients before the treatment."], this, "+=6")
+    .call(changeText, ["Wow that’s good, at east patient has informed before the treatment."], this, "+=6")
 
   function docTalking() {
     TweenMax.fromTo(docMouth, 1, {
@@ -413,9 +416,6 @@ function startAnimmyth2() {
     $("#bubbleScr3sec").hide();
     $("#myth2Allimg").show();
     $("#myth2Allimg").attr("src", newtext);
-
-
-
   }
 
   function myFunction() {
