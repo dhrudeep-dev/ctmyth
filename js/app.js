@@ -561,6 +561,21 @@ function startAnimMyth4() {
   executedscr4 = true;
   
   let visitor = document.querySelector("#visitorScr4");
+  let myth4FocusArea = document.querySelector(".myth4FocusArea");
+
+
+   // animating focus area
+  TweenMax.fromTo(myth4FocusArea, 1, {
+    scale: 0,
+    opacity: 0,
+    borderRadius: "100%"
+  },{
+    scale: 1,
+    opacity: 1,
+    borderRadius: "5px",
+    ease: Expo.easeOut
+    
+  });
   
   console.log("sleeping")
   TweenMax.fromTo(visitor, 1, {
@@ -569,9 +584,11 @@ function startAnimMyth4() {
     // borderRadius: "100%"
   },{
     scale: 1.9,
-    opacity: 1
+    opacity: 1,
+    delay: 2
     // borderRadius: "10px"
   });
+  
   let visHead = visitor.getElementById('head');
   TweenMax.fromTo(visHead, 1, {
     xPercent: 10,
