@@ -496,6 +496,18 @@ body {
 	border-radius: 10px;
 	height: 650px;
 }
+.myth4Img {
+	max-width: 200px;
+	max-height: 200px;
+	border: none;
+	max-width: 80%;
+	width: 130px;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	position: relative;
+	top: 240px;
+}
 
 /* media query for web view */
 @media only screen and (min-width: 768px) {

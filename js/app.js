@@ -559,16 +559,29 @@ function startAnimMyth3() {
 function startAnimMyth4() {
 
   executedscr4 = true;
-
-  let visitorScr3 = document.getElementById("#visitorScr3");
+  
+  let visitor = document.querySelector("#visitorScr4");
+  
   console.log("sleeping")
-  TweenMax.fromTo(visitorScr3, 1, {
+  TweenMax.fromTo(visitor, 1, {
     scale: 0,
     opacity: 0
     // borderRadius: "100%"
   },{
-    scale: 2,
+    scale: 1.9,
     opacity: 1
     // borderRadius: "10px"
+  });
+  let visHead = visitor.getElementById('head');
+  TweenMax.fromTo(visHead, 1, {
+    xPercent: 10,
+    rotation: 5
+
+  }, {
+    xPercent: -10,
+    rotation: -5,
+    yoyo: true,
+    repeat: -1,
+    delay: 3
   });
 }
