@@ -324,6 +324,11 @@ function startAnm1() {
       startAnimMyth3();
     }
   }
+  if (document.body.scrollTop > 3768 || document.documentElement.scrollTop > 3768) {
+    if (executedscr4 != true) {
+      startAnimMyth4();
+    }
+  }
 }
 /* assigning active class to current Myth */
 
@@ -452,3 +457,19 @@ function startAnimMyth3() {
 
 /* --------------------------- myth 4 animation --------------------------- */
 
+function startAnimMyth4() {
+
+  executedscr4 = true;
+
+  let myth4FocusArea = document.querySelector("#myth4FocusArea");
+
+  TweenMax.fromTo(myth4FocusArea, 1, {
+    scale: 0,
+    opacity: 0,
+    borderRadius: "100%"
+  },{
+    scale: 1,
+    opacity: 1,
+    borderRadius: "10px"
+  });
+}
