@@ -509,6 +509,24 @@ body {
 	position: relative;
 	top: 240px;
 }
+
+
+.pills{
+
+	display: block;
+	width:5%;
+	left: 0;
+
+}
+.syringe{
+
+	display: block;
+	width:15%;
+	left: 0;
+	
+	
+
+}
 /* ------------------------- myth 3 ------------------------- */
 
 #screen4_bg {
@@ -694,9 +712,9 @@ body {
 	}
 	
 	/* for myth 3 */
-	#scr3Anim {
+	/* #scr3Anim {
 		opacity:0;
-	}
+	} */
 	
 	/* bubble 2 position(visitor) */
 	.bubbleScr2 {
