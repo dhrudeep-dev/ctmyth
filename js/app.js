@@ -444,3 +444,9 @@ function startAnimMyth3() {
     opacity: 1
   });
 }
+
+
+
+
+/* --------------------------- myth 4 animation --------------------------- */
+
