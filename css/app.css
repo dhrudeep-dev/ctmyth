@@ -94,7 +94,7 @@ body {
 
 #screen3_bg {
 
-	background: url(../images/myth2svgImage.svg) top repeat fixed;
+	background: url(../images/myth2svgImage.svg) top center no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -118,17 +118,17 @@ body {
 	clear: both;
 }
 
-/* .st3 {
+.st3 {
     fill: #2D60AA;
     visibility: hidden !important;
-} */
+}
 
 
 /*Screen Six*/
 
 #screen6_bg {
 
-	background: url(../images/photo1.jpeg) top center no-repeat fixed;
+	background: url(../images/photo1.jpg) top center no-repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -495,6 +495,8 @@ body {
 	border-radius: 10px;
 	height: 650px;
 }
+
+/* myth 4 */
 .myth4Img {
 	max-width: 200px;
 	max-height: 200px;
@@ -509,15 +511,13 @@ body {
 }
 /* ------------------------- myth 3 ------------------------- */
 
-/* myth 3 */
-
 #screen4_bg {
 
-	/* background: url(../images/photo3.jpeg) top repeat fixed; */
+	background: url(../images/myth3Bg\ copy.jpg) top repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
-	background-size: 50%;
+	background-size: cover;
 	z-index: 204;
 	clear: both;
 }
@@ -537,13 +537,12 @@ body {
 	max-height: auto;
 	padding: 20px;
 	text-align: center;
+	/* filter: blur(8px); */
 	border-radius: 100%;
 	width: 800px;
 	height: 450px;
 	margin-top: 150px;
-	opacity: 0;
 }
-
 #officeMyth3{
 	position: absolute;
 	left: 50%;
@@ -551,10 +550,28 @@ body {
 	width: 800px;
 	height: 450px;
 	max-width: 100%;
+	/* filter: blur(8px); */
 	max-height: auto;
 	margin-top: 205px;
 	border-radius: 100%;
 	opacity: 0;
+	-webkit-box-shadow: 0px 5px 10px 5px #00000075;
+	box-shadow: 0px 5px 10px 5px #00000075;
+}
+
+/* --------------- myth 5 content and styles --------------------*/
+#frstChart{
+	position: relative;
+	float: left;
+	right: 5%;
+	bottom: 7%;
+}
+
+#secChart{
+	position: relative;
+	left: 52%;
+	bottom: 6%;
+	opacity: 1;
 }
 
 /* media query for web view */
@@ -652,10 +669,12 @@ body {
 	#scr2Anim {
 		opacity:0;
 	}
+	
 	/* for myth 3 */
-	/* #scr3Anim {
+	#scr3Anim {
 		opacity:0;
-	} */
+	}
+	
 	/* bubble 2 position(visitor) */
 	.bubbleScr2 {
 	left: 10%;
@@ -663,45 +682,16 @@ body {
 	width: 300px;
 	}
 
-.myth2AnimImages {
-	left: 7%;
-	position: relative;
-	z-index: 1;
-	top: 80px;
-	width: 300px;
-}
-.myth2FocusArea {
-	/* background: url(../images/myth1Bg.svg); */
-	background-size: cover;
-	background-position: center;
-	/* Black w/opacity/see-through */
-	color: white;
-	font-weight: bold;
-	border: none;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 80%;
-	max-height: auto;
-	padding: 20px;
-	text-align: center;
-	border-radius: 10px;
-	width: 400px;
-	height: 550px;
-	display: flex;
-	justify-content: center;
-	padding: 20px;
-}
-	/* bubble 2 position(doctor) */
-
-	.bubbleScr3 {
-	left: 10%;
-	top: 130px;
-	width: 300px;
+	.myth2AnimImages {
+		left: 7%;
+		position: relative;
+		z-index: 1;
+		top: 80px;
+		width: 300px;
 	}
-	/* myth3 css */
 
-	.myth3FocusArea {
+	.myth2FocusArea {
+		/* background: url(../images/myth1Bg.svg); */
 		background-size: cover;
 		background-position: center;
 		/* Black w/opacity/see-through */
@@ -710,7 +700,38 @@ body {
 		border: none;
 		position: absolute;
 		left: 50%;
-    	/* margin-left: 25%; */
+		transform: translate(-50%, -50%);
+		max-width: 80%;
+		max-height: auto;
+		padding: 20px;
+		text-align: center;
+		border-radius: 10px;
+		width: 400px;
+		height: 550px;
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+	}
+	
+
+	/* bubble 2 position(doctor) */
+
+	.bubbleScr3 {
+	left: 10%;
+	top: 130px;
+	width: 300px;
+	}
+
+	#myth3FocusArea{
+		/* background: url(../images/myth1Bg.svg); */
+		background-size: cover;
+		background-position: center;
+		/* Black w/opacity/see-through */
+		color: white;
+		font-weight: bold;
+		border: none;
+		position: absolute;
+		left: 50%;
 		transform: translate(-50%, -50%);
 		max-width: 80%;
 		max-height: auto;
@@ -724,82 +745,19 @@ body {
 		padding: 20px;
 	}
 	#officeMyth3{
-		background-size: cover;
 		position: absolute;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 800px;
 		height: 450px;
 		max-width: 100%;
+		/* filter: blur(8px); */
 		max-height: auto;
 		margin-top: 205px;
 		border-radius: 100%;
 		opacity: 0;
+		-webkit-box-shadow: 0px 5px 10px 5px #00000075;
+		box-shadow: 0px 5px 10px 5px #00000075;
 	}
-}
-
-/* ------------------------- myth 3 ------------------------- */
-
-#screen4_bg {
-
-	background: url(../images/myth3Bg\ copy.jpg) top repeat fixed;
-	height: 1000px;
-	overflow: hidden;
-	width: 100%;
-	background-size: cover;
-	z-index: 204;
-	clear: both;
-}
-
-#myth3FocusArea{
-	/* background: url(../images/myth3.svg); */
-	/* background-color: rgba(0, 0, 0, 0.5); */
-	background-size: cover;
-	background-position: center;
-	color: white;
-	font-weight: bold;
-	border: none;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 80%;
-	max-height: auto;
-	padding: 20px;
-	text-align: center;
-	/* filter: blur(8px); */
-	border-radius: 100%;
-	width: 800px;
-	height: 450px;
-	margin-top: 150px;
-}
-
-/* --------------- myth 5 content and styles --------------------*/
-#frstChart{
-	position: relative;
-	float: left;
-	right: 5%;
-	bottom: 7%;
-}
-
-#secChart{
-	position: relative;
-	left: 52%;
-	bottom: 6%;
-	opacity: 1;
-}
-
-#officeMyth3{
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 800px;
-	height: 450px;
-	max-width: 100%;
-	/* filter: blur(8px); */
-	max-height: auto;
-	margin-top: 205px;
-	border-radius: 100%;
-	opacity: 0;
-	-webkit-box-shadow: 0px 5px 10px 5px #00000075;
-	box-shadow: 0px 5px 10px 5px #00000075;
+	
 }
