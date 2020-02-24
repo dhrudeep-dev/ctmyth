@@ -437,8 +437,10 @@ function startAnimMyth3() {
   let myth3FocusArea = document.querySelector("#myth3FocusArea");
 
   TweenMax.fromTo(myth3FocusArea, 1, {
-    scale: 0
+    scale: 0,
+    opacity: 0
   },{
-    scale: 1
+    scale: 1,
+    opacity: 1
   });
 }
