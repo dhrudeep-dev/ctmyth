@@ -198,7 +198,7 @@ window.onscroll = function () {
 // variable to stop calling myth1 function onscroll
 var executed = false;
 var executedscr2 = false;
-
+let executedscr3 = false;
 // first myth's animation start here
 function startAnim() {
   executed = true;
@@ -319,6 +319,11 @@ function startAnm1() {
       startAnimmyth2();
     }
   }
+  if (document.body.scrollTop > 2768 || document.documentElement.scrollTop > 2768) {
+    if (executedscr3 != true) {
+      startAnimMyth3();
+    }
+  }
 }
 /* assigning active class to current Myth */
 
@@ -421,4 +426,19 @@ function startAnimmyth2() {
       x.style.display = changeText1;
     }
   }
+}
+
+/* --------------------------- myth 3 animation --------------------------- */
+
+function startAnimMyth3() {
+
+  executedscr3 = true;
+
+  let myth3FocusArea = document.querySelector("#myth3FocusArea");
+
+  TweenMax.fromTo(myth3FocusArea, 1, {
+    scale: 0
+  },{
+    scale: 1
+  });
 }
