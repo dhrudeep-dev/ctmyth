@@ -561,23 +561,9 @@ body {
 }
 
 /* --------------- myth 5 content and styles --------------------*/
-#frstChart{
-	position: relative;
-	float: left;
-	right: 5%;
-	bottom: 7%;
-}
-
-#secChart{
-	position: relative;
-	left: 52%;
-	bottom: 6%;
-	opacity: 1;
-}
-
-#myth4FocusArea{
+#myth5FocusArea{
 	/* background: url(../images/myth3.svg); */
-	/* background-color: rgba(0, 0, 0, 0.5); */
+	background-color: rgba(0, 0, 0, 0.5);
 	background-size: cover;
 	background-position: center;
 	color: white;
@@ -595,14 +581,20 @@ body {
 	width: 800px;
 	height: 450px;
 	margin-top: 150px;
+	display: flex;
+	justify-content: space-around;
+	align-content: space-around;
+}
+
+#frstChart{
+	max-width: 200px;
+	position: relative;
 }
 
 #secChart{
-	width: 200px;
-}
+	max-width: 200px;
+	position: relative;
 
-#my_dataviz2{
-	width: 200px;
 }
 
 /* media query for web view */
@@ -818,19 +810,19 @@ body {
 }
 
 /* --------------- myth 5 content and styles --------------------*/
-#frstChart{
+/* #frstChart{
 	position: relative;
 	float: left;
 	right: 5%;
 	bottom: 7%;
-}
+} */
 
-#secChart{
+/* #secChart{
 	position: relative;
 	left: 52%;
 	bottom: 6%;
 	opacity: 1;
-}
+} */
 
 #officeMyth3{
 	position: absolute;

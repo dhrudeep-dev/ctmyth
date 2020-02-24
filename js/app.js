@@ -217,6 +217,8 @@ let executed = false;
 let executedscr2 = false;
 let executedscr3 = false;
 let executedscr4 = false;
+let executedscr5 = false;
+
 // first myth's animation start here
 function startAnim() {
   executed = true;
@@ -345,6 +347,11 @@ function startAnm1() {
   if (document.body.scrollTop > 3768 || document.documentElement.scrollTop > 3768) {
     if (executedscr4 != true) {
       startAnimMyth4();
+    }
+  }
+  if (document.body.scrollTop > 4768 || document.documentElement.scrollTop > 4768) {
+    if (executedscr5 != true) {
+      startAnimMyth5();
     }
   }
 }
@@ -638,3 +645,22 @@ function startAnimMyth4() {
 
 
 /* --------------------------- myth 5 animation --------------------------- */
+
+function startAnimMyth5() {
+  executedscr5 = true;
+
+  let myth5FocusArea = document.querySelector("#myth5FocusArea");
+  
+  // animating focus area
+  TweenMax.fromTo(myth5FocusArea, 1, {
+    scale: 0,
+    opacity: 0,
+    borderRadius: "100%",
+    transformOrigin: "center center"
+  },{
+    scale: 1,
+    opacity: 1,
+    ease: Power1.easeInOut,
+    borderRadius: "10px"
+  });
+}
