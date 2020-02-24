@@ -668,3 +668,17 @@ body {
 	height: 450px;
 	margin-top: 150px;
 }
+
+/* --------------- myth 5 content and styles --------------------*/
+#frstChart{
+	position: relative;
+	float: left;
+	right: 5%;
+	bottom: 7%;
+}
+
+#secChart{
+	position: relative;
+	left: 52%;
+	bottom: 6%;
+}
