@@ -544,6 +544,7 @@ body {
 	height: 450px;
 	margin-top: 150px;
 }
+
 #officeMyth3{
 	position: absolute;
 	left: 50%;
@@ -573,6 +574,36 @@ body {
 	left: 52%;
 	bottom: 6%;
 	opacity: 1;
+}
+
+#myth4FocusArea{
+	/* background: url(../images/myth3.svg); */
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	background-size: cover;
+	background-position: center;
+	color: white;
+	font-weight: bold;
+	border: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 80%;
+	max-height: auto;
+	padding: 20px;
+	text-align: center;
+	/* filter: blur(8px); */
+	border-radius: 100%;
+	width: 800px;
+	height: 450px;
+	margin-top: 150px;
+}
+
+#secChart{
+	width: 200px;
+}
+
+#my_dataviz2{
+	width: 200px;
 }
 
 /* media query for web view */
