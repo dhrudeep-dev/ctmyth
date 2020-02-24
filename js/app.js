@@ -63,6 +63,7 @@ window.onload = function () {
     opacity: 0
   }, {
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 1
   });
 
@@ -71,6 +72,7 @@ window.onload = function () {
     opacity: 0,
   }, {
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 1
   });
 
@@ -79,6 +81,7 @@ window.onload = function () {
     opacity: 0,
   }, {
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 1
   });
 
@@ -87,6 +90,7 @@ window.onload = function () {
     opacity: 0,
   }, {
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 1
   });
 
@@ -95,6 +99,7 @@ window.onload = function () {
     opacity: 0,
   }, {
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 2
   });
 
@@ -102,33 +107,38 @@ window.onload = function () {
     opacity: 0
   }, {
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 3
   });
 
   // head animation
   TweenMax.fromTo(docHead, 1, {
-    xPercent: -10,
-    rotation: -5
+    xPercent: -5,
+    rotation: -5,
+    transformOrigin: "center center",
 
   }, {
-    xPercent: 10,
+    xPercent: 5,
     rotation: 5,
     yoyo: true,
+    ease: Power1.easeInOut,
     repeat: -1,
     delay: 3
   });
 
   // head animation
   TweenMax.fromTo(visHead, 1, {
-    xPercent: 10,
-    rotation: 5
+    xPercent: -5,
+    rotation: -5,
+    transformOrigin: "center center"
 
   }, {
-    xPercent: -10,
-    rotation: -5,
+    xPercent: 5,
+    rotation: 5,
     yoyo: true,
+    ease: Power1.easeInOut,
     repeat: -1,
-    delay: 3
+    delay: 4
   });
 
 
@@ -136,6 +146,7 @@ window.onload = function () {
     opacity: 0,
   }, {
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 3.5
   });
 
@@ -143,6 +154,7 @@ window.onload = function () {
     opacity: 0,
   }, {
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 4
   });
 
@@ -150,6 +162,7 @@ window.onload = function () {
     opacity: 0,
   }, {
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 4.5
   });
 
@@ -157,7 +170,8 @@ window.onload = function () {
     opacity: 0,
   }, {
     opacity: 1,
-    delay: 6
+    ease: Power1.easeInOut,
+    delay: 5
   });
 
   TweenMax.fromTo(downArrow, 1, {
@@ -166,6 +180,7 @@ window.onload = function () {
     y: -5,
     yoyo: true,
     repeat: -1,
+    ease: Power1.easeInOut,
     delay: 6
   });
 
@@ -173,12 +188,14 @@ window.onload = function () {
     opacity: 0
   }, {
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 1
   });
   TweenMax.fromTo("#scr3Anim", 1.5, {
     opacity: 0
   }, {
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 1
   });
 }
@@ -444,15 +461,19 @@ function startAnimMyth3() {
   let officeMyth3 = document.querySelector("#officeMyth3");
   let officeMyth3SVG = document.querySelector("#officeMyth3").contentDocument;
   let visitorMyth3 = officeMyth3SVG.querySelector("#visitor");
+  let visitorMyth3Head = officeMyth3SVG.querySelector("#visitorMyth3Head");
+  let clerkMyth3Head = officeMyth3SVG.querySelector("#head");
 
   // animating focus area
   TweenMax.fromTo(myth3FocusArea, 1, {
     scale: 0,
     opacity: 0,
-    borderRadius: "100%"
+    borderRadius: "100%",
+    transformOrigin: "center center"
   },{
     scale: 1,
     opacity: 1,
+    ease: Power1.easeInOut,
     borderRadius: "10px"
   });
 
@@ -460,18 +481,21 @@ function startAnimMyth3() {
   TweenMax.fromTo(officeMyth3, 1, {
     scale: 0,
     opacity: 0,
-    borderRadius: "100%"
+    borderRadius: "100%",
+    transformOrigin: "center center"
   },{
     scale: 1,
     opacity: 1,
+    ease: Power1.easeInOut,
     borderRadius: "10px"
   });
 
   // animate visitor
   TweenMax.fromTo(visitorMyth3, 1, {
-    opacity: 0
+    opacity: 0,
   },{
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 2
   });
 
@@ -484,6 +508,7 @@ function startAnimMyth3() {
     x: -50,
     y:40,
     scale: 3,
+    ease: Power1.easeInOut,
     delay: 3
   });
 
@@ -492,6 +517,36 @@ function startAnimMyth3() {
     x: 600,
     y:40,
     delay: 6
+  });
+
+  // animate visitor head movement
+  TweenMax.fromTo(visitorMyth3Head, 1, {
+    xPercent: -5,
+    rotation: -5,
+    transformOrigin: "center center"
+
+  }, {
+    xPercent: 5,
+    rotation: 5,
+    yoyo: true,
+    ease: Power1.easeInOut,
+    repeat: -1,
+    delay: 9
+  });
+
+  // animate clerk head movement
+  TweenMax.fromTo(clerkMyth3Head, 1, {
+    xPercent: -5,
+    rotation: -5,
+    transformOrigin: "center center"
+
+  }, {
+    xPercent: 5,
+    rotation: 5,
+    yoyo: true,
+    ease: Power1.easeInOut,
+    repeat: -1,
+    delay: 10
   });
 
 }
