@@ -57,7 +57,7 @@ window.onload = function () {
   $(".innerNav").hover(function () {
     $(this).addClass("hover");
   });
-  
+
   setInterval(function () {
     $(".hover").addClass("slideIn");
     $(".hover").removeClass("hover");
@@ -226,7 +226,9 @@ let executedscr5 = false;
 // first myth's animation start here
 function startAnim() {
   executed = true;
-  TweenMax.to("#scr2Anim", 3, {    opacity: 1  });
+  TweenMax.to("#scr2Anim", 3, {
+    opacity: 1
+  });
 
   // variables for characters
   let visitorScr2Char = document.getElementById('visitorScr2');
@@ -290,7 +292,7 @@ function startAnim() {
     TweenMax.fromTo(visLipUpper, 1, {
       y: 0,
     }, {
-      y:-1.5,
+      y: -1.5,
       repeat: 5,
       yoyo: true
     });
@@ -367,7 +369,9 @@ function startAnimmyth2() {
   executedscr2 = true;
 
   console.log('getting call');
-  TweenMax.to("#scr3Anim", 3, {    opacity: 1  });
+  TweenMax.to("#scr3Anim", 3, {
+    opacity: 1
+  });
 
   // variables for characters
   let visitorScr2Char = document.getElementById('visitorScr3');
@@ -481,28 +485,45 @@ function startAnimMyth3() {
   let visLipUpper = visitorMyth3Animation.getElementById('upperLip');
   let visLipLower = visitorMyth3Animation.getElementById('lowerLip');
 
-
+  let clerkScr4Char = document.getElementById('clerkScr4');
   let clerkMyth3Animation = document.getElementById("clerkScr4").contentDocument;
-  
+
   // head of clerk
   let clerkMyth3Head = clerkMyth3Animation.getElementById("head");
 
   // mouth of clerk
   let clerkMouth = clerkMyth3Animation.getElementById('mouth');
 
-  // animating focus area
-  TweenMax.fromTo(myth3FocusArea, 1, {
-    scale: 0,
-    opacity: 0,
-    borderRadius: "100%",
-    transformOrigin: "center center"
-  },{
-    scale: 1,
-    opacity: 1,
-    ease: Power1.easeInOut,
-    borderRadius: "10px"
-  });
 
+
+    // animating focus area
+    TweenMax.fromTo(myth3FocusArea, 1, {
+      scale: 0,
+      opacity: 0,
+      borderRadius: "100%",
+      transformOrigin: "center center"
+    }, {
+      scale: 1,
+      opacity: 1,
+      ease: Power1.easeInOut,
+      borderRadius: "10px"
+    });
+
+// animate visitor
+TweenMax.fromTo(visitorScr4Char, 1, {
+  opacity: 1,
+}, {
+  opacity: 1,
+  ease: Power1.easeInOut,
+  delay: 2
+});
+
+
+  let responsiveAnimation = window.matchMedia("(max-width: 570px)");
+  if (responsiveAnimation.matches) {
+    // mobile animation
+    
+  
 
   TweenMax.fromTo(myth3FocusArea, 1, {
     backgroundPosition: "left center"
@@ -513,23 +534,14 @@ function startAnimMyth3() {
   });
 
 
-  // animate visitor
-  TweenMax.fromTo(visitorScr4Char, 1, {
-    opacity: 1,
-  },{
-    opacity: 1,
-    ease: Power1.easeInOut,
-    delay: 2
-  });
-
   // animate visitor walking into office
   TweenMax.fromTo(visitorScr4Char, 2, {
     x: 0,
     y: 0,
     scale: 0.5
-  },{
+  }, {
     x: -10,
-    y:40,
+    y: 40,
     scale: 1.5,
     ease: Power1.easeInOut,
     delay: 3
@@ -537,10 +549,53 @@ function startAnimMyth3() {
 
   // animate visitor walking towards clerk
   TweenMax.to(visitorScr4Char, 3, {
-    x: 300,
-    y:40,
+    x: 50,
+    y: 40,
     delay: 6
   });
+
+    TweenMax.fromTo(clerkScr4Char, 1, {
+      opacity: 0,
+    }, {
+      opacity: 1,
+      ease: Power1.easeInOut,
+      delay: 5
+    });
+
+  } else {
+    // desktop animations
+
+    // animate visitor walking into office
+    TweenMax.fromTo(visitorScr4Char, 2, {
+      x: 0,
+      y: 0,
+      scale: 0.5
+    }, {
+      x: -10,
+      y: 40,
+      scale: 1.5,
+      ease: Power1.easeInOut,
+      delay: 3
+    });
+
+    // animate visitor walking towards clerk
+    TweenMax.to(visitorScr4Char, 3, {
+      x: 300,
+      y: 40,
+      delay: 6
+    });
+
+
+    TweenMax.fromTo(clerkScr4Char, 1, {
+      opacity: 1,
+    }, {
+      opacity: 1,
+      ease: Power1.easeInOut,
+      delay: 2
+    });
+
+  }
+
 
   // animate visitor head movement
   TweenMax.fromTo(visitorMyth3Head, 1, {
@@ -572,7 +627,7 @@ function startAnimMyth3() {
     delay: 10
   });
 
-// animate clerk talking
+  // animate clerk talking
   function clerkTalking() {
     TweenMax.fromTo(clerkMouth, 1, {
       scaleY: 1,
@@ -588,7 +643,7 @@ function startAnimMyth3() {
     TweenMax.fromTo(visLipUpper, 1, {
       y: 0,
     }, {
-      y:-0.5,
+      y: -0.5,
       repeat: 5,
       yoyo: true
     });
@@ -648,66 +703,66 @@ function startAnimMyth3() {
 function startAnimMyth4() {
 
   executedscr4 = true;
-  
+
   let visitor = document.querySelector("#visitorScr5");
   let myth4FocusArea = document.querySelector(".myth4FocusArea");
   let pills = document.querySelector("#pills");
   let syringe = document.querySelector("syringe");
 
-   // animating focus area
+  // animating focus area
   TweenMax.fromTo(myth4FocusArea, 1, {
     scale: 0,
     opacity: 0,
     borderRadius: "100%"
-  },{
+  }, {
     scale: 1,
     opacity: 1,
     borderRadius: "5px",
     ease: Expo.easeOut
   });
-  
+
   console.log("sleeping")
 
   TweenMax.fromTo(visitor, 1, {
     scale: 0,
     opacity: 0
     // borderRadius: "100%"
-  },{
+  }, {
     scale: 1.9,
     opacity: 1,
     // delay: 2
     // borderRadius: "10px"
   });
   $("#pills").show();
-  TweenMax.fromTo("#pills",1,{
-  x:0,
-  y:0,
-  opacity:1
-},{
-  x:370,
-  y:-200
-});
-// TweenMax.to("#pills", 1, {
-//   x:720,
-//    y:0
-// });
-// $("pills").fadeOut();
-// TweenMax.fromTo("#pills",6,{
-//   x:370,
-//   y:-200
-// },{
-//   x:100,
-//   y:100
-// });
-$("#syringe").show();
-  TweenMax.fromTo("#syringe",7,{
-  x:0,
-  y:0,
-  
-},{
-  x:320,
-  y:-300,
-});
+  TweenMax.fromTo("#pills", 1, {
+    x: 0,
+    y: 0,
+    opacity: 1
+  }, {
+    x: 370,
+    y: -200
+  });
+  // TweenMax.to("#pills", 1, {
+  //   x:720,
+  //    y:0
+  // });
+  // $("pills").fadeOut();
+  // TweenMax.fromTo("#pills",6,{
+  //   x:370,
+  //   y:-200
+  // },{
+  //   x:100,
+  //   y:100
+  // });
+  $("#syringe").show();
+  TweenMax.fromTo("#syringe", 7, {
+    x: 0,
+    y: 0,
+
+  }, {
+    x: 320,
+    y: -300,
+  });
 }
 
 
@@ -717,14 +772,14 @@ function startAnimMyth5() {
   executedscr5 = true;
 
   let myth5FocusArea = document.querySelector("#myth5FocusArea");
-  
+
   // animating focus area
   TweenMax.fromTo(myth5FocusArea, 1, {
     scale: 0,
     opacity: 0,
     borderRadius: "100%",
     transformOrigin: "center center"
-  },{
+  }, {
     scale: 1,
     opacity: 1,
     ease: Power1.easeInOut,
