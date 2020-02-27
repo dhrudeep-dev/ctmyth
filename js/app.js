@@ -470,29 +470,28 @@ function startAnimMyth3() {
 
   let myth3FocusArea = document.querySelector("#myth3FocusArea");
   let officeMyth3 = document.querySelector("#officeMyth3");
-  let officeMyth3SVG = document.querySelector("#officeMyth3").contentDocument;
-  let visitorMyth3 = officeMyth3SVG.querySelector("#visitor");
-  let visitorMyth3Head = officeMyth3SVG.querySelector("#visitorMyth3Head");
-  let clerkMyth3Head = officeMyth3SVG.querySelector("#head");
-  let visLipUpper = officeMyth3SVG.querySelector('#upperLip');
-  let visLipLower = officeMyth3SVG.querySelector('#lowerLip');
-  let clerkMouth = officeMyth3SVG.querySelector('#mouth');
+  // let officeMyth3SVG = document.querySelector("#officeMyth3").contentDocument;
+
+  let visitorMyth3Animation = document.getElementById("visitorScr4").contentDocument;
+  // full body of visitor
+  let visitorMyth3 = visitorMyth3Animation.getElementById("visitor");
+  // head of visitor
+  // let visitorMyth3Head = visitorMyth3Animation.getElementById("head");
+  // lips of visitor
+  let visLipUpper = visitorMyth3Animation.getElementById('upperLip');
+  let visLipLower = visitorMyth3Animation.getElementById('lowerLip');
+
+
+  // let clerkMyth3Animation = document.getElementById("clerkScr4").contentDocument;
+  // // full body of clerk
+  // let clerkMyth3 = clerkMyth3Animation.getElementById("clerk");
+  // // head of clerk
+  // let clerkMyth3Head = clerkMyth3.getElementById("head");
+  // // mouth of clerk
+  // let clerkMouth = clerkMyth3Animation.getElementById('mouth');
 
   // animating focus area
   TweenMax.fromTo(myth3FocusArea, 1, {
-    scale: 0,
-    opacity: 0,
-    borderRadius: "100%",
-    transformOrigin: "center center"
-  },{
-    scale: 1,
-    opacity: 1,
-    ease: Power1.easeInOut,
-    borderRadius: "10px"
-  });
-
-  // animating office background
-  TweenMax.fromTo(officeMyth3, 1, {
     scale: 0,
     opacity: 0,
     borderRadius: "100%",

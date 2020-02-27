@@ -555,7 +555,7 @@ body {
 	box-shadow: 0px 5px 10px 5px #00000075;
 }
 
-/* myth1 image */
+/* myth3 image */
 .myth3Img {
 	max-width: 200px;
 	max-height: 200px;
@@ -570,7 +570,6 @@ body {
 }
 
 #visitorScr4 {
-	position: relative;
 	right: 235px;
 	bottom: 50px;
 	top: 130px;
@@ -578,7 +577,6 @@ body {
 }
 
 #clerkScr4 {
-	position: relative; 
 	left: 55px;
 	bottom: 50px;
 	top: 105px;
