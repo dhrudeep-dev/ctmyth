@@ -99,7 +99,7 @@ body {
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
-	background-size:cover;
+	background-size: cover;
 	z-index: 204;
 	clear: both;
 }
@@ -119,8 +119,8 @@ body {
 }
 
 .st3 {
-    fill: #2D60AA;
-    visibility: hidden !important;
+	fill: #2D60AA;
+	visibility: hidden !important;
 }
 
 
@@ -180,6 +180,7 @@ body {
 	text-align: center;
 	border-radius: 10px;
 }
+
 /* myth1 image */
 .myth1Img {
 	max-width: 200px;
@@ -193,6 +194,7 @@ body {
 	position: relative;
 	top: 240px;
 }
+
 /* myth animation */
 .myth1Animation {
 
@@ -255,11 +257,12 @@ body {
 #visitorScr3 {
 	left: -150px;
 }
+
 /* speech bubble */
 .speech-bubble {
 	position: relative;
 	background: #EFB700;
-	color:black;
+	color: black;
 	border-radius: 10px;
 	padding: 20px;
 	max-width: 400px;
@@ -297,8 +300,9 @@ body {
 	border-left: 0;
 	margin-left: -10px;
 	margin-bottom: -20px;
-	
+
 }
+
 /* speech bubble of doctor */
 .bubbleScr3 {
 	left: 40%;
@@ -337,7 +341,7 @@ body {
 }
 
 /* screen 2 animation */
-#scr2Anim{
+#scr2Anim {
 	opacity: 0;
 }
 
@@ -488,6 +492,7 @@ body {
 	border-radius: 10px;
 	height: 150px;
 }
+
 .bblCon1 {
 	margin-top: 30%;
 	width: 80% !important;
@@ -496,54 +501,10 @@ body {
 	height: 650px;
 }
 
-/* ------------------------- myth 4 ------------------------- */
-
-.myth4Img {
-	max-width: 200px;
-	max-height: 200px;
-	border: none;
-	max-width: 80%;
-	width: 130px;
-	padding: 20px;
-	text-align: center;
-	border-radius: 10px;
-	position: relative;
-	top: 240px;
-}
-
-
-.pills{
-
-	display: block;
-	width:5%;
-	left: 0;
-
-}
-.syringe{
-
-	display: block;
-	width:15%;
-	left: 0;
-}
-/* @keyframes pills{
-	0%{
-		x:0 !important;
-  		y:0 !important;	
-	}
-	50%{
-		x:370 !important;
-  		y:-200 !important;
-	}
-	100%{
-		x:720 !important;
-   		y:0 !important;
-	}
-} */
 /* ------------------------- myth 3 ------------------------- */
 
 #screen4_bg {
-
-	background: url(../images/myth3Bg.svg) top repeat fixed;
+	background: url(../images/myth3Bg\ copy.jpg) top repeat fixed;
 	height: 1000px;
 	overflow: hidden;
 	width: 100%;
@@ -552,8 +513,8 @@ body {
 	clear: both;
 }
 
-#myth3FocusArea{
-	/* background: url(../images/myth3.svg); */
+#myth3FocusArea {
+	background: url(../images/myth3Bg.svg);
 	/* background-color: rgba(0, 0, 0, 0.5); */
 	background-size: cover;
 	background-position: center;
@@ -573,7 +534,12 @@ body {
 	margin-top: 150px;
 }
 
-#officeMyth3{
+.bubbleScr4 {
+	top: 130px;
+	left: 54%;
+}
+
+#officeMyth3 {
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -603,8 +569,71 @@ body {
 	top: 240px;
 }
 
+#visitorScr4 {
+	position: relative;
+	right: 235px;
+	bottom: 50px;
+	top: 130px;
+	transform: scale(0.5);
+}
+
+#clerkScr4 {
+	position: relative; 
+	left: 55px;
+	bottom: 50px;
+	top: 105px;
+	transform:scale(0.7);
+}
+
+
+/* ------------------------- myth 4 ------------------------- */
+
+.myth4Img {
+	max-width: 200px;
+	max-height: 200px;
+	border: none;
+	max-width: 80%;
+	width: 130px;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	position: relative;
+	top: 240px;
+}
+
+
+.pills {
+
+	display: block;
+	width: 5%;
+	left: 0;
+
+}
+
+.syringe {
+
+	display: block;
+	width: 15%;
+	left: 0;
+}
+
+/* @keyframes pills{
+	0%{
+		x:0 !important;
+  		y:0 !important;	
+	}
+	50%{
+		x:370 !important;
+  		y:-200 !important;
+	}
+	100%{
+		x:720 !important;
+   		y:0 !important;
+	}
+} */
+
 /* --------------- myth 5 content and styles --------------------*/
-#myth5FocusArea{
+#myth5FocusArea {
 	/* background: url(../images/myth3.svg); */
 	background-color: rgba(0, 0, 0, 0.6);
 	background-size: cover;
@@ -635,41 +664,41 @@ body {
 	width: 100%;
 }
 
-#myth5FocusArea h6{
+#myth5FocusArea h6 {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	margin-bottom: -30px;
 }
 
-#myth5FocusArea ul{
+#myth5FocusArea ul {
 	margin-top: -30px;
 }
 
-#myth5FocusArea li{
+#myth5FocusArea li {
 	/* list-style: none; */
 	text-align: left;
 	margin: 0px 20px;
 	font-weight: lighter;
 }
 
-.heading{
+.heading {
 	display: inline-block;
 	justify-self: center;
 	flex-grow: 10;
 	color: #EFB700;
 }
 
-.heading > h4 > span{
+.heading>h4>span {
 	font-weight: bolder;
 	color: #EFB700;
 }
 
-#frstChart{
+#frstChart {
 	display: inline-block;
 	max-width: 200px;
 }
 
-#secChart{
+#secChart {
 	display: inline-block;
 	max-width: 200px;
 }
@@ -767,19 +796,19 @@ body {
 	}
 
 	#scr2Anim {
-		opacity:0;
+		opacity: 0;
 	}
-	
+
 	/* for myth 3 */
 	/* #scr3Anim {
 		opacity:0;
 	} */
-	
+
 	/* bubble 2 position(visitor) */
 	.bubbleScr2 {
-	left: 10%;
-	top: 155px;
-	width: 300px;
+		left: 10%;
+		top: 155px;
+		width: 300px;
 	}
 
 	.myth2AnimImages {
@@ -812,23 +841,23 @@ body {
 		justify-content: center;
 		padding: 20px;
 	}
-	
+
 
 	/* bubble 2 position(doctor) */
 
 	.bubbleScr3 {
-	left: 10%;
-	top: 130px;
-	width: 300px;
+		left: 10%;
+		top: 130px;
+		width: 300px;
 	}
 
-	
+
 	/* #myth3FocusArea {
 		background: url(../images/myth1Bg.svg);
 		background-size: cover;
 		background-position: center;
 		/* Black w/opacity/see-through */
-		/* color: white;
+	/* color: white;
 		font-weight: bold;
 		border: none;
 		position: absolute;
@@ -844,48 +873,11 @@ body {
 		display: flex;
 		justify-content: center;
 		padding: 20px;
-	}   */ 
+	}   */
+
+
 }
 
-/* ------------------------- myth 3 ------------------------- */
-
-#screen4_bg {
-
-	background: url(../images/myth3Bg\ copy.jpg) top repeat fixed;
-	height: 1000px;
-	overflow: hidden;
-	width: 100%;
-	background-size: cover;
-	z-index: 204;
-	clear: both;
-}
-
-#myth3FocusArea{
-	background: url(../images/myth3Bg.svg);
-	/* background-color: rgba(0, 0, 0, 0.5); */
-	background-size: cover;
-	background-position: center;
-	color: white;
-	font-weight: bold;
-	border: none;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 80%;
-	max-height: auto;
-	padding: 20px;
-	text-align: center;
-	/* filter: blur(8px); */
-	
-	width: 800px;
-	height: 450px;
-	margin-top: 150px;
-}
-
-.bubbleScr4{
-	top: 130px;
-	left: 54%;
-}
 
 /* --------------- myth 5 content and styles --------------------*/
 /* #frstChart{
@@ -902,7 +894,7 @@ body {
 	opacity: 1;
 } */
 
-#officeMyth3{
+#officeMyth3 {
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -916,7 +908,6 @@ body {
 	opacity: 0;
 	-webkit-box-shadow: 0px 5px 10px 5px #00000075;
 	box-shadow: 0px 5px 10px 5px #00000075;
-	
-	
-}
 
+
+}

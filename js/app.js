@@ -640,7 +640,7 @@ function startAnimMyth4() {
 
   executedscr4 = true;
   
-  let visitor = document.querySelector("#visitorScr4");
+  let visitor = document.querySelector("#visitorScr5");
   let myth4FocusArea = document.querySelector(".myth4FocusArea");
   let pills = document.querySelector("#pills");
   let syringe = document.querySelector("syringe");
