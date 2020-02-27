@@ -469,26 +469,26 @@ function startAnimMyth3() {
   executedscr3 = true;
 
   let myth3FocusArea = document.querySelector("#myth3FocusArea");
-  let officeMyth3 = document.querySelector("#officeMyth3");
+  // let officeMyth3 = document.querySelector("#officeMyth3");
   // let officeMyth3SVG = document.querySelector("#officeMyth3").contentDocument;
 
+  let visitorScr4Char = document.getElementById('visitorScr4');
   let visitorMyth3Animation = document.getElementById("visitorScr4").contentDocument;
-  // full body of visitor
-  let visitorMyth3 = visitorMyth3Animation.getElementById("visitor");
+
   // head of visitor
-  // let visitorMyth3Head = visitorMyth3Animation.getElementById("head");
+  let visitorMyth3Head = visitorMyth3Animation.getElementById("head");
   // lips of visitor
   let visLipUpper = visitorMyth3Animation.getElementById('upperLip');
   let visLipLower = visitorMyth3Animation.getElementById('lowerLip');
 
 
-  // let clerkMyth3Animation = document.getElementById("clerkScr4").contentDocument;
-  // // full body of clerk
-  // let clerkMyth3 = clerkMyth3Animation.getElementById("clerk");
-  // // head of clerk
-  // let clerkMyth3Head = clerkMyth3.getElementById("head");
-  // // mouth of clerk
-  // let clerkMouth = clerkMyth3Animation.getElementById('mouth');
+  let clerkMyth3Animation = document.getElementById("clerkScr4").contentDocument;
+  
+  // head of clerk
+  let clerkMyth3Head = clerkMyth3Animation.getElementById("head");
+
+  // mouth of clerk
+  let clerkMouth = clerkMyth3Animation.getElementById('mouth');
 
   // animating focus area
   TweenMax.fromTo(myth3FocusArea, 1, {
@@ -503,9 +503,19 @@ function startAnimMyth3() {
     borderRadius: "10px"
   });
 
+
+  TweenMax.fromTo(myth3FocusArea, 1, {
+    backgroundPosition: "left center"
+
+  }, {
+    backgroundPosition: "center center",
+    delay: 5
+  });
+
+
   // animate visitor
-  TweenMax.fromTo(visitorMyth3, 1, {
-    opacity: 0,
+  TweenMax.fromTo(visitorScr4Char, 1, {
+    opacity: 1,
   },{
     opacity: 1,
     ease: Power1.easeInOut,
@@ -513,21 +523,21 @@ function startAnimMyth3() {
   });
 
   // animate visitor walking into office
-  TweenMax.fromTo(visitorMyth3, 2, {
+  TweenMax.fromTo(visitorScr4Char, 2, {
     x: 0,
     y: 0,
-    scale: 1
+    scale: 0.5
   },{
-    x: -50,
+    x: -10,
     y:40,
-    scale: 3,
+    scale: 1.5,
     ease: Power1.easeInOut,
     delay: 3
   });
 
   // animate visitor walking towards clerk
-  TweenMax.to(visitorMyth3, 3, {
-    x: 600,
+  TweenMax.to(visitorScr4Char, 3, {
+    x: 300,
     y:40,
     delay: 6
   });
