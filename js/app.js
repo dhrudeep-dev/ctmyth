@@ -529,8 +529,8 @@ TweenMax.fromTo(visitorScr4Char, 1, {
     backgroundPosition: "left center"
 
   }, {
-    backgroundPosition: "center center",
-    delay: 5
+    backgroundPosition: "60% 50%",
+    delay: 6
   });
 
 
@@ -549,17 +549,15 @@ TweenMax.fromTo(visitorScr4Char, 1, {
 
   // animate visitor walking towards clerk
   TweenMax.to(visitorScr4Char, 3, {
-    x: 50,
+    x: 60,
     y: 40,
     delay: 6
   });
 
-    TweenMax.fromTo(clerkScr4Char, 1, {
-      opacity: 0,
-    }, {
-      opacity: 1,
-      ease: Power1.easeInOut,
-      delay: 5
+    TweenMax.to(clerkScr4Char, 2, {
+      x: -10,
+      visibility: 'visible',
+      delay: 7
     });
 
   } else {
@@ -580,7 +578,7 @@ TweenMax.fromTo(visitorScr4Char, 1, {
 
     // animate visitor walking towards clerk
     TweenMax.to(visitorScr4Char, 3, {
-      x: 300,
+      x: 320,
       y: 40,
       delay: 6
     });
