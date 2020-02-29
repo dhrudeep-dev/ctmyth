@@ -724,7 +724,7 @@ function startAnimMyth4() {
   TweenMax.fromTo(visitor, 1, {
     scale: 0,
     opacity: 0
-    // borderRadius: "100%"
+    
   }, {
     scale: 1.9,
     opacity: 1,
@@ -740,6 +740,7 @@ function startAnimMyth4() {
     x: 370,
     y: -200
   });
+  
   // TweenMax.to("#pills", 1, {
   //   x:720,
   //    y:0
@@ -752,6 +753,7 @@ function startAnimMyth4() {
   //   x:100,
   //   y:100
   // });
+  // $("#pills").hide();
   $("#syringe").show();
   TweenMax.fromTo("#syringe", 7, {
     x: 0,
