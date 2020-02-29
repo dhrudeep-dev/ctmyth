@@ -700,12 +700,30 @@ TweenMax.fromTo(visitorScr4Char, 1, {
 
 function startAnimMyth4() {
 
+
+  let visitorScr2Char = document.getElementById('visitorScr3');
+  let doctorScr2 = document.getElementById('doctorScr3').contentDocument;
+  let visitorScr2 = document.getElementById('visitorScr3').contentDocument;
+
+  let visLeftFeet = visitorScr2.getElementById('leftFeet');
+  let visRightFeet = visitorScr2.getElementById('rightFeet');
+  let visRightPant = visitorScr2.getElementById('rightLeg');
+  let visLeftPant = visitorScr2.getElementById('leftLeg');
+  let visEyes = visitorScr2.getElementById('visEyes');
+
+
+  // let doctor = document.getElementById('doctor').contentDocument;
+
+  // let docHead = doctor.getElementById('head');
+
   executedscr4 = true;
 
-  let visitor = document.querySelector("#visitorScr5");
+  let visitorOne = document.querySelector("#visitorScr5").contentDocument;
+  let visitor =  document.querySelector("#visitorScr5");
   let myth4FocusArea = document.querySelector(".myth4FocusArea");
   let pills = document.querySelector("#pills");
   let syringe = document.querySelector("syringe");
+  let visHead = visitorOne.getElementById('head');
 
   // animating focus area
   TweenMax.fromTo(myth4FocusArea, 1, {
@@ -732,13 +750,13 @@ function startAnimMyth4() {
     // borderRadius: "10px"
   });
   $("#pills").show();
-  TweenMax.fromTo("#pills", 1, {
+  TweenMax.fromTo("#pills", 1.5, {
     x: 0,
-    y: 0,
+    y: -180,
     opacity: 1
   }, {
-    x: 370,
-    y: -200
+    
+    x: 320
   });
   
   // TweenMax.to("#pills", 1, {
@@ -755,15 +773,58 @@ function startAnimMyth4() {
   // });
   // $("#pills").hide();
   $("#syringe").show();
-  TweenMax.fromTo("#syringe", 7, {
-    x: 0,
-    y: 0,
+  TweenMax.fromTo("#syringe", 1.5, {
+    opacity:1,
+    delay: 1.5,
+    x: 700,
+    y: -260
 
   }, {
-    x: 320,
-    y: -300,
+
+    x: 370
   });
+
+  TweenMax.from(".stopIcon", 1,{
+    opacity:0,
+    delay: 2,
+    scale:0
+  });
+
+
+   // head animation
+   TweenMax.fromTo(visHead, 1, {
+    yPercent: -5,
+    rotation: -5,
+    transformOrigin: "center center",
+    transform: "-webkit-rotate3d(-1, 1, 0, 360deg)"
+
+  }, {
+    zPercent: 5,
+    rotation: 5,
+    yoyo: true,
+    ease: Power1.easeInOut,
+    repeat: -1,
+    delay: 4
+  });
+
+  
+
+  // TweenMax.to(visHead, 1, {
+  //   rotation:180,
+  //   repeat:-1
+
+  // })
+
+//   TweenMax.to(visHead, 0.5, {
+//     rotation: 100,
+//     transformOrigin: "center",
+//     rep
+// });
+
+  // TweenMax.to(visHead, 1, {rotation: -70, transformOrigin:"left top",  transformStyle:"preserve-3d"});
+
 }
+
 
 
 /* --------------------------- myth 5 animation --------------------------- */

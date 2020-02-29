@@ -649,7 +649,7 @@ body {
 .pills {
 
 	display: block;
-	width: 5%;
+	width: 4%;
 	left: 0;
 
 }
@@ -657,9 +657,23 @@ body {
 .syringe {
 
 	display: block;
-	width: 15%;
+	width: 10%;
 	left: 0;
 }
+.stopIcon {
+
+	display: block;
+	width: 17%;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* svg #head{
+	transform: rotateY(180deg) translateZ(100px);
+    background-repeat: repeat-x;
+} */
 
 /* @keyframes pills{
 	0%{
