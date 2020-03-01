@@ -950,6 +950,12 @@ body {
 		padding: 20px;
 	}  
 
+	/* myth 5 mobile view */
+	#myth5FocusArea{
+		height: 850px;
+		margin-top: 330px !important;
+	}
+
 
 }
 
