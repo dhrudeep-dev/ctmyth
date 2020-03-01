@@ -754,8 +754,7 @@ function startAnimMyth4() {
     x: 0,
     y: -180,
     opacity: 1
-  }, {
-    
+  },{
     x: 320
   });
   
@@ -778,7 +777,6 @@ function startAnimMyth4() {
     delay: 1.5,
     x: 700,
     y: -260
-
   }, {
 
     x: 370
