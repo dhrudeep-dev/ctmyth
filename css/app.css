@@ -917,24 +917,22 @@ body {
 	#clerkScr4 {
 		visibility: hidden;
 		left: 40px;
-		bottom: 40px;
-		top: 104px;
+		top: 171px !important;
 		transform: scale(0.7);
 	}
 
 	#visitorScr4 {
 		right: 0px;
-		bottom: 50px;
-		top: 130px;
+		top: 220px !important;
 		transform: scale(0.5);
 	}
 
-	/* #myth3FocusArea {
-		background: url(../images/myth1Bg.svg);
+	#myth3FocusArea {
+		background: url(../images/myth3Bg.svg);
 		background-size: cover;
 		background-position: center;
 		/* Black w/opacity/see-through */
-	/* color: white;
+	 	color: white;
 		font-weight: bold;
 		border: none;
 		position: absolute;
@@ -950,7 +948,7 @@ body {
 		display: flex;
 		justify-content: center;
 		padding: 20px;
-	}   */
+	}  
 
 
 }

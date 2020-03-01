@@ -536,8 +536,8 @@ TweenMax.fromTo(visitorScr4Char, 1, {
 
   // animate visitor walking into office
   TweenMax.fromTo(visitorScr4Char, 2, {
-    x: 0,
-    y: 0,
+    x: 20,
+    y: -40,
     scale: 0.5
   }, {
     x: -10,
