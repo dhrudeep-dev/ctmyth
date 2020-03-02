@@ -72,9 +72,9 @@ const animateFeaturePage = () => {
   featurePageTimeline.fromTo(featureHeaderContent, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
   featurePageTimeline.fromTo(featureHeaderContent2, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut, delay:0.3}, "+=0")
   featurePageTimeline.fromTo(featureHeaderContent3, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut, delay:0.3}, "+=0")
-  featurePageTimeline.fromTo(featurePageReplay, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
-  featurePageTimeline.fromTo(downArrow, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut,delay: 3}, "+=0")
-  featurePageTimeline.fromTo(downArrow, 1, {y: 0,},{y: -5, yoyo: true, repeat: -1, ease: Power1.easeInOut, delay: 3.5}, "+=0")}
+  featurePageTimeline.fromTo(featurePageReplay, 0.8, {opacity: 0, rotation: 360},{opacity: 1, rotation: 0, yoyo: true, ease: Back.easeInOut, transformOrigin: "center center"}, "+=0")
+  featurePageTimeline.fromTo(downArrow, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut,delay: 1}, "+=0")
+  featurePageTimeline.fromTo(downArrow, 1, {y: 0,},{y: -5, yoyo: true, repeat: -1, ease: Power1.easeInOut}, "+=0")}
 
   // onload reveal animation
   animateFeaturePage();
