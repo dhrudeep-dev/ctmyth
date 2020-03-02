@@ -623,8 +623,7 @@ body {
 }
 
 #clerkScr4 {
-	left: 55px;
-	bottom: 50px;
+	left: 40px;
 	top: 104px;
 	transform: scale(0.7);
 }
@@ -915,7 +914,7 @@ body {
 	}	
 
 	#clerkScr4 {
-		visibility: hidden;
+		
 		left: 40px;
 		top: 171px !important;
 		transform: scale(0.7);
