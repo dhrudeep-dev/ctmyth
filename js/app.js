@@ -222,6 +222,8 @@ let executedscr2 = false;
 let executedscr3 = false;
 let executedscr4 = false;
 let executedscr5 = false;
+let executedscr6 = false;
+
 
 // first myth's animation start here
 function startAnim() {
@@ -358,6 +360,12 @@ function startAnm1() {
   if (document.body.scrollTop > 4768 || document.documentElement.scrollTop > 4768) {
     if (executedscr5 != true) {
       startAnimMyth5();
+    }
+  }
+
+  if (document.body.scrollTop > 5768 || document.documentElement.scrollTop > 5768) {
+    if (executedscr6 != true) {
+      startAnimMyth6();
     }
   }
 }
@@ -693,7 +701,7 @@ function startAnimMyth3() {
 function startAnimMyth4() {
 
 
-  let visitorScr2Char = document.getElementById('visitorScr3');
+  // let visitorScr2Char = document.getElementById('visitorScr3');
   let visitorScr2 = document.getElementById('visitorScr3').contentDocument;
 
   let visLeftFeet = visitorScr2.getElementById('leftFeet');
@@ -701,10 +709,10 @@ function startAnimMyth4() {
   let visRightPant = visitorScr2.getElementById('rightLeg');
   let visLeftPant = visitorScr2.getElementById('leftLeg');
   let visEyes = visitorScr2.getElementById('visEyes');
-  let visitorMyth3Animation = document.getElementById("visitorScr4").contentDocument;
+  let visitorMyth4Animation = document.getElementById("visitorScr5").contentDocument;
 
-  let visLipUpper = visitorMyth3Animation.getElementById('upperLip');
-  let visLipLower = visitorMyth3Animation.getElementById('lowerLip');
+  let visLipUpper = visitorMyth4Animation.getElementById('upperLip');
+  let visLipLower = visitorMyth4Animation.getElementById('lowerLip');
 
   // let doctor = document.getElementById('doctor').contentDocument;
 
@@ -818,13 +826,12 @@ function startAnimMyth4() {
   }
   // $("#explain4").hide();
   let t1 = new TimelineMax()
-    .call(changeText, ["Every trial uses a placebo as a comparison!!!!!!"], this, 10)
-    .call(changeText, ["How does patient can know if they are getting treatement with the placebo effect?"], this, "+=6")
-    .call(changeText, ["Wow that’s good, at east patient has informed before the treatment."], this, "+=6")
+    .call(changeText, ["Is Clinical trials are for patients who have run out of options?"], this,1)
 
   function changeText(newtext) {
-    $("#bubbleScr4first").show();
-    $("#bubbleScr4first").text(newtext);
+    $("#bubbleScr5sec").show();
+    $("#bubbleScr5sec").text(newtext);
+    console.log(newtext);
     // $(visitor).hide();
     // $("#explain4").show();
     visTalking();
@@ -866,6 +873,28 @@ function startAnimMyth4() {
 
 function startAnimMyth5() {
   executedscr5 = true;
+
+  let myth5FocusArea = document.querySelector("#myth5FocusArea");
+
+  // animating focus area
+  TweenMax.fromTo(myth5FocusArea, 1, {
+    scale: 0,
+    opacity: 0,
+    borderRadius: "100%",
+    transformOrigin: "center center"
+  }, {
+    scale: 1,
+    opacity: 1,
+    ease: Power1.easeInOut,
+    borderRadius: "10px"
+  });
+}
+
+/* --------------------------- myth 6 animation --------------------------- */
+
+
+function startAnimMyth6() {
+  executedscr6 = true;
 
   let myth5FocusArea = document.querySelector("#myth5FocusArea");
 

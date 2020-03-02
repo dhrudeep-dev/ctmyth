@@ -693,7 +693,7 @@ body {
 	top: 50px;
 }
 
-.speech-bubble4 {
+.speech-bubble5 {
 	position: relative;
 	background: #EFB700;
 	color: black;
@@ -705,7 +705,7 @@ body {
 	/* display: none; */
 }
 
-.speech-bubble4:after {
+.speech-bubble5:after {
 	content: '';
 	position: absolute;
 	transform: rotate(90deg);
@@ -718,7 +718,7 @@ body {
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -10px;
-	margin-bottom: -20px;
+	margin-bottom: -10px;
 }
 
 /* svg #head{
@@ -1064,6 +1064,87 @@ body {
 		justify-content: center;
 		padding: 20px;
 	}
+		/* --------------- myth 4 content and styles --------------------*/
+		.myth4Img {
+			max-width: 200px;
+			max-height: 200px;
+			border: none;
+			max-width: 80%;
+			width: 130px;
+			padding: 20px;
+			text-align: center;
+			border-radius: 10px;
+			position: relative;
+			top: 240px;
+			margin-top: -60px !important;
+		}
+		
+		
+		.pills {
+		
+			display: block;
+			width: 4%;
+			left: 0;
+		
+		}
+		
+		.syringe {
+		
+			display: block;
+			width: 10%;
+			left: 0;
+		}
+		
+		.stopIcon {
+		
+			display: block;
+			width: 17%;
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		
+		.bblCon3 {
+			margin-top: 5%;
+			width: 80% !important;
+			text-align: center;
+			border-radius: 10px;
+			height: 150px;
+			position: relative;
+			left: 60px;
+			top: 50px;
+		}
+		
+		.speech-bubble5 {
+			position: relative;
+			background: #EFB700;
+			color: black;
+			border-radius: 10px;
+			padding: 20px;
+			max-width: 400px;
+			font-family: 'Roboto Condensed', sans-serif;
+			font-size: 1rem;
+			/* display: none; */
+		}
+		
+		.speech-bubble5:after {
+			content: '';
+			position: absolute;
+			transform: rotate(90deg);
+			bottom: 0;
+			left: 50%;
+			width: 0;
+			height: 0;
+			border: 20px solid transparent;
+			border-top-color: #EFB700;
+			border-bottom: 0;
+			border-left: 0;
+			margin-left: -10px;
+			margin-bottom: -10px;
+		}
+		
+		
 
 	/* myth 5 mobile view */
 	#myth5FocusArea {
