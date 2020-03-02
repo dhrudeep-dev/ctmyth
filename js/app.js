@@ -693,7 +693,7 @@ function startAnimMyth3() {
 function startAnimMyth4() {
 
 
-  let visitorScr2Char = document.getElementById('visitorScr3');
+  // let visitorScr2Char = document.getElementById('visitorScr3');
   let visitorScr2 = document.getElementById('visitorScr3').contentDocument;
 
   let visLeftFeet = visitorScr2.getElementById('leftFeet');
@@ -701,10 +701,10 @@ function startAnimMyth4() {
   let visRightPant = visitorScr2.getElementById('rightLeg');
   let visLeftPant = visitorScr2.getElementById('leftLeg');
   let visEyes = visitorScr2.getElementById('visEyes');
-  let visitorMyth3Animation = document.getElementById("visitorScr4").contentDocument;
+  let visitorMyth4Animation = document.getElementById("visitorScr5").contentDocument;
 
-  let visLipUpper = visitorMyth3Animation.getElementById('upperLip');
-  let visLipLower = visitorMyth3Animation.getElementById('lowerLip');
+  let visLipUpper = visitorMyth4Animation.getElementById('upperLip');
+  let visLipLower = visitorMyth4Animation.getElementById('lowerLip');
 
   // let doctor = document.getElementById('doctor').contentDocument;
 
@@ -818,13 +818,12 @@ function startAnimMyth4() {
   }
   // $("#explain4").hide();
   let t1 = new TimelineMax()
-    .call(changeText, ["Every trial uses a placebo as a comparison!!!!!!"], this, 10)
-    .call(changeText, ["How does patient can know if they are getting treatement with the placebo effect?"], this, "+=6")
-    .call(changeText, ["Wow that’s good, at east patient has informed before the treatment."], this, "+=6")
+    .call(changeText, ["Is Clinical trials are for patients who have run out of options?"], this,1)
 
   function changeText(newtext) {
-    $("#bubbleScr4first").show();
-    $("#bubbleScr4first").text(newtext);
+    $("#bubbleScr5sec").show();
+    $("#bubbleScr5sec").text(newtext);
+    console.log(newtext);
     // $(visitor).hide();
     // $("#explain4").show();
     visTalking();

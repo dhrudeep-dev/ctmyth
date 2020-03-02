@@ -693,7 +693,7 @@ body {
 	top: 50px;
 }
 
-.speech-bubble4 {
+.speech-bubble5 {
 	position: relative;
 	background: #EFB700;
 	color: black;
@@ -705,7 +705,7 @@ body {
 	/* display: none; */
 }
 
-.speech-bubble4:after {
+.speech-bubble5:after {
 	content: '';
 	position: absolute;
 	transform: rotate(90deg);
@@ -718,7 +718,7 @@ body {
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -10px;
-	margin-bottom: -20px;
+	margin-bottom: -10px;
 }
 
 /* svg #head{
