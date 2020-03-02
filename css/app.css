@@ -523,6 +523,17 @@ body {
 	height: 150px;
 }
 
+.bblCon2 {
+	margin-top: 5%;
+	width: 80% !important;
+	text-align: center;
+	border-radius: 10px;
+	height: 150px;
+	position: relative;
+	left: 130px;
+	top: 50px;
+}
+
 .bblCon1 {
 	margin-top: 30%;
 	width: 80% !important;
@@ -564,8 +575,8 @@ body {
 }
 
 .bubbleScr4 {
-	left: 55%;
-	top: 125px;
+	/* left: 55%; */
+	top: 75px;
 	width: 300px;
 }
 
@@ -623,8 +634,7 @@ body {
 }
 
 #clerkScr4 {
-	left: 55px;
-	bottom: 50px;
+	left: 40px;
 	top: 104px;
 	transform: scale(0.7);
 }
@@ -660,6 +670,7 @@ body {
 	width: 10%;
 	left: 0;
 }
+
 .stopIcon {
 
 	display: block;
@@ -802,8 +813,23 @@ body {
 	}
 
 	.bubbleScr4 {
+		/* width: 150px !important; */
 		top: 110px !important;
-		left: 46px !important;
+		/* left: 0px !important; */
+	}
+
+	.bblCon3 {
+		margin-top: 5%;
+		width: 80% !important;
+		text-align: center;
+		border-radius: 10px;
+		height: 150px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		left: 0px;
+		top: 0px;
 	}
 
 	.dropdown {
@@ -912,10 +938,10 @@ body {
 		left: 10%;
 		top: 130px;
 		width: 300px;
-	}	
+	}
 
 	#clerkScr4 {
-		visibility: hidden;
+
 		left: 40px;
 		top: 171px !important;
 		transform: scale(0.7);
@@ -932,7 +958,7 @@ body {
 		background-size: cover;
 		background-position: center;
 		/* Black w/opacity/see-through */
-	 	color: white;
+		color: white;
 		font-weight: bold;
 		border: none;
 		position: absolute;
@@ -948,7 +974,13 @@ body {
 		display: flex;
 		justify-content: center;
 		padding: 20px;
-	}  
+	}
+
+	/* myth 5 mobile view */
+	#myth5FocusArea {
+		height: 850px;
+		margin-top: 330px !important;
+	}
 
 	.myth4Img{
 		margin-top: -50px !important;

@@ -496,67 +496,64 @@ function startAnimMyth3() {
 
 
 
-    // animating focus area
-    TweenMax.fromTo(myth3FocusArea, 1, {
-      scale: 0,
-      opacity: 0,
-      borderRadius: "100%",
-      transformOrigin: "center center"
-    }, {
-      scale: 1,
-      opacity: 1,
-      ease: Power1.easeInOut,
-      borderRadius: "10px"
-    });
+  // animating focus area
+  TweenMax.fromTo(myth3FocusArea, 1, {
+    // scale: 0,
+    opacity: 0
+    // borderRadius: "100%"
+    // transformOrigin: "center center"
+  }, {
+    // scale: 1,
+    opacity: 1,
+    ease: Power1.easeInOut
+    // borderRadius: "10px"
+  });
 
-// animate visitor
-TweenMax.fromTo(visitorScr4Char, 1, {
-  opacity: 1,
-}, {
-  opacity: 1,
-  ease: Power1.easeInOut,
-  delay: 2
-});
+  // animate visitor
+  TweenMax.fromTo(visitorScr4Char, 1, {
+    opacity: 1,
+  }, {
+    opacity: 1,
+    ease: Power1.easeInOut,
+    delay: 2
+  });
 
 
   let responsiveAnimation = window.matchMedia("(max-width: 570px)");
   if (responsiveAnimation.matches) {
     // mobile animation
-    
-  
+    TweenMax.fromTo(myth3FocusArea, 1, {
+      backgroundPosition: "left center"
 
-  TweenMax.fromTo(myth3FocusArea, 1, {
-    backgroundPosition: "left center"
+    }, {
+      backgroundPosition: "60% 50%",
+      delay: 6
+    });
 
-  }, {
-    backgroundPosition: "60% 50%",
-    delay: 6
-  });
+    // animate visitor walking into office
+    TweenMax.fromTo(visitorScr4Char, 2, {
+      x: 60,
+      y: -40,
+      scale: 0.5
+    }, {
+      y: 40,
+      scale: 1.5,
+      ease: Power1.easeInOut,
+      delay: 3
+    });
 
+    // animate visitor walking towards clerk
+    TweenMax.to(visitorScr4Char, 3, {
+      x: 60,
+      y: 40,
+      delay: 6
+    });
 
-  // animate visitor walking into office
-  TweenMax.fromTo(visitorScr4Char, 2, {
-    x: 20,
-    y: -40,
-    scale: 0.5
-  }, {
-    x: -10,
-    y: 40,
-    scale: 1.5,
-    ease: Power1.easeInOut,
-    delay: 3
-  });
-
-  // animate visitor walking towards clerk
-  TweenMax.to(visitorScr4Char, 3, {
-    x: 60,
-    y: 40,
-    delay: 6
-  });
-
-    TweenMax.to(clerkScr4Char, 2, {
-      x: -10,
+    TweenMax.fromTo(clerkScr4Char, 2, {
+      visibility: 'hidden'
+    },{
       visibility: 'visible',
+      x: -10,
       delay: 7
     });
 
@@ -593,7 +590,6 @@ TweenMax.fromTo(visitorScr4Char, 1, {
     });
 
   }
-
 
   // animate visitor head movement
   TweenMax.fromTo(visitorMyth3Head, 1, {
@@ -690,7 +686,6 @@ TweenMax.fromTo(visitorScr4Char, 1, {
       x.style.display = changeText1;
     }
   }
-
 }
 
 // /* --------------------------- myth 4 animation --------------------------- */
@@ -718,7 +713,7 @@ function startAnimMyth4() {
   executedscr4 = true;
 
   let visitorOne = document.querySelector("#visitorScr5").contentDocument;
-  let visitor =  document.querySelector("#visitorScr5");
+  let visitor = document.querySelector("#visitorScr5");
   let myth4FocusArea = document.querySelector(".myth4FocusArea");
   let pills = document.querySelector("#pills");
   let syringe = document.querySelector("syringe");
@@ -742,7 +737,7 @@ function startAnimMyth4() {
   TweenMax.fromTo(visitor, 1, {
     scale: 0,
     opacity: 0
-    
+
   }, {
     scale: 1.9,
     opacity: 1,
