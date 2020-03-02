@@ -1,0 +1,45 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 418.71 406">
+  <defs>
+    <style>
+      .cls-1, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4, .cls-6 {
+        fill: #1ef208;
+      }
+
+      .cls-5, .cls-6 {
+        stroke: #1ef208;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        stroke-width: 22.34px;
+      }
+
+      .cls-6 {
+        stroke-width: 1.57px;
+      }
+    </style>
+    <clipPath id="clip-path" transform="translate(-455.72 -322.21)">
+      <rect class="cls-1" x="7.72" y="-7.79" width="1280" height="1024"/>
+    </clipPath>
+  </defs>
+  <title>yesIcon</title>
+  <g class="cls-2">
+    <path class="cls-3" d="M658.72,718.21c-106.42,0-193-86.57-193-193s86.58-193,193-193,193,86.58,193,193-86.58,193-193,193" transform="translate(-455.72 -322.21)"/>
+    <path class="cls-4" d="M658.72,342.21c101.07,0,183,81.94,183,183a183,183,0,0,1-366,0c0-101.06,81.93-183,183-183m0-20a202.56,202.56,0,1,0,79,16,201.6,201.6,0,0,0-79-16" transform="translate(-455.72 -322.21)"/>
+  </g>
+  <rect class="cls-5" x="571.08" y="371.62" width="13.68" height="253.52" transform="translate(-522.86 -231.61) rotate(-8.47)"/>
+  <rect class="cls-6" x="542.72" y="514.21" width="365.81" height="25.11" transform="translate(-624.27 271.39) rotate(-40.25)"/>
+  <line class="cls-1" x1="128.24" y1="267.74" x2="128.24" y2="267.74"/>
+</svg>
