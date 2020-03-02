@@ -497,17 +497,17 @@ function startAnimMyth3() {
 
 
   // animating focus area
-  // TweenMax.fromTo(myth3FocusArea, 1, {
-  //   scale: 0,
-  //   opacity: 0,
-  //   borderRadius: "100%",
-  //   transformOrigin: "center center"
-  // }, {
-  //   scale: 1,
-  //   opacity: 1,
-  //   ease: Power1.easeInOut,
-  //   borderRadius: "10px"
-  // });
+  TweenMax.fromTo(myth3FocusArea, 1, {
+    // scale: 0,
+    opacity: 0
+    // borderRadius: "100%"
+    // transformOrigin: "center center"
+  }, {
+    // scale: 1,
+    opacity: 1,
+    ease: Power1.easeInOut
+    // borderRadius: "10px"
+  });
 
   // animate visitor
   TweenMax.fromTo(visitorScr4Char, 1, {
@@ -532,11 +532,10 @@ function startAnimMyth3() {
 
     // animate visitor walking into office
     TweenMax.fromTo(visitorScr4Char, 2, {
-      x: 20,
+      x: 60,
       y: -40,
       scale: 0.5
     }, {
-      x: -10,
       y: 40,
       scale: 1.5,
       ease: Power1.easeInOut,
@@ -591,92 +590,6 @@ function startAnimMyth3() {
     });
 
   }
-
-  $(window).on('resize', function () {
-    
-    t1.restart();
-
-    if ($(window).width() <= 600) {
-      
-      // mobile animations
-      TweenMax.fromTo(myth3FocusArea, 1, {
-        backgroundPosition: "left center"
-
-      }, {
-        backgroundPosition: "60% 50%",
-        delay: 6
-      });
-
-      // animate visitor walking into office
-      TweenMax.fromTo(visitorScr4Char, 2, {
-        x: 20,
-        y: -40,
-        scale: 0.5
-      }, {
-        x: -10,
-        y: 40,
-        scale: 1.5,
-        ease: Power1.easeInOut,
-        delay: 3
-      });
-
-      // animate visitor walking towards clerk
-      TweenMax.to(visitorScr4Char, 3, {
-        x: 60,
-        y: 40,
-        delay: 6
-      });
-
-      TweenMax.fromTo(clerkScr4Char, 2, {
-        visibility: 'hidden'
-      },{
-        visibility: 'visible',
-        x: -10,
-        delay: 7
-      });
-    } else if ($(window).width() >= 600) {
-      
-  
-      // desktop animations
-
-      // animate visitor walking into office
-      TweenMax.fromTo(visitorScr4Char, 2, {
-        x: 0,
-        y: 0,
-        scale: 0.5
-      }, {
-        x: -10,
-        y: 40,
-        scale: 1.5,
-        ease: Power1.easeInOut,
-        delay: 3
-      });
-
-      // animate visitor walking towards clerk
-      TweenMax.to(visitorScr4Char, 3, {
-        x: 320,
-        y: 40,
-        delay: 6
-      });
-
-      TweenMax.fromTo(clerkScr4Char, 1, {
-        opacity: 1,
-      }, {
-        opacity: 1,
-        ease: Power1.easeInOut,
-        delay: 2
-      });
-
-      TweenMax.fromTo(clerkScr4Char, 2, {
-        visibility: 'visible'
-      },{
-        visibility: 'visible',
-        delay: 7
-      });
-
-    }
-  });
-
 
   // animate visitor head movement
   TweenMax.fromTo(visitorMyth3Head, 1, {
@@ -773,7 +686,6 @@ function startAnimMyth3() {
       x.style.display = changeText1;
     }
   }
-
 }
 
 
