@@ -896,7 +896,7 @@ function startAnimMyth5() {
 
 function startAnimMyth6() {
   executedscr6 = true;
-  
+
   let myth5FocusArea = document.querySelector("#myth5FocusArea");
 
   // animating focus area
