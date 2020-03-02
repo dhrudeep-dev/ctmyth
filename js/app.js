@@ -3,9 +3,9 @@ $(document).ready(function () {
   $('#nav').localScroll(800);
 
   //hide pill
-  $("#pills").hide();
+  // $("#pills").hide();
   // hide syringe
-  $("#syringe").hide();
+  // $("#syringe").hide();
   // featured page
   $('#screen1_bgOne').parallax("50%", 0.1);
 
@@ -724,7 +724,9 @@ function startAnimMyth4() {
   let visitor = document.querySelector("#visitorScr5");
   let myth4FocusArea = document.querySelector(".myth4FocusArea");
   let pills = document.querySelector("#pills");
-  let syringe = document.querySelector("syringe");
+  let syringe = document.querySelector("#syringe");
+  let stopIcon = document.querySelector("#stopIcon");
+  let stopIconTwo = document.querySelector("#stopIconTwo");
   let visHead = visitorOne.getElementById('head');
 
   
@@ -750,44 +752,46 @@ function startAnimMyth4() {
     scale: 1.9,
     opacity: 1,
   });
-//   $("#pills").show();
-//   TweenMax.fromTo("#pills", 1.5, {
-//     x: 0,
-//     y: -180,
-//     opacity: 1
-//   },{
-//     x: 320
-//   });
+
+
+  // $("#pills").show();
+  // TweenMax.fromTo("#pills", 1.5, {
+  //   x: 0,
+  //   y: -180,
+  //   opacity: 1
+  // },{
+  //   x: 320
+  // });
   
-//   // TweenMax.to("#pills", 1, {
-//   //   x:720,
-//   //    y:0
-//   // });
-//   // $("pills").fadeOut();
-//   // TweenMax.fromTo("#pills",6,{
-//   //   x:370,
-//   //   y:-200
-//   // },{
-//   //   x:100,
-//   //   y:100
-//   // });
-//   // $("#pills").hide();
-//   $("#syringe").show();
-//   TweenMax.fromTo("#syringe", 1.5, {
-//     opacity:1,
-//     delay: 1.5,
-//     x: 700,
-//     y: -260
-//   }, {
+  // TweenMax.to("#pills", 1, {
+  //   x:720,
+  //    y:0
+  // });
+  // $("pills").fadeOut();
+  // TweenMax.fromTo("#pills",6,{
+  //   x:370,
+  //   y:-200
+  // },{
+  //   x:100,
+  //   y:100
+  // });
+  // $("#pills").hide();
+  // $("#syringe").show();
+  // TweenMax.fromTo("#syringe", 1.5, {
+  //   opacity:1,
+  //   delay: 1.5,
+  //   x: 700,
+  //   y: -260
+  // }, {
 
-//     x: 370
-//   });
+  //   x: 370
+  // });
 
-//   TweenMax.from(".stopIcon", 1,{
-//     opacity:0,
-//     delay: 2,
-//     scale:0
-//   });
+  // TweenMax.from(".stopIcon", 1,{
+  //   opacity:0,
+  //   delay: 2,
+  //   scale:0
+  // });
 
 
    // head animation
@@ -838,6 +842,67 @@ function startAnimMyth4() {
   }
 
   
+  let t2 = new TimelineMax()
+
+
+  //animation for pill
+  // .to(pills,3,{
+  //   opacity:0,
+  //   x:200
+  // })
+  TweenMax.fromTo(pills, 3, {
+    opacity:0
+    
+  }, {
+
+    opacity: 1,
+    x:200
+  } )
+
+
+  let t3 = new TimelineMax()
+
+
+  //animation for syringe
+  // .to(syringe,3,{
+  // x: -200
+  // })
+
+  TweenMax.fromTo(syringe, 3, {
+    opacity:0
+    
+  }, {
+
+    opacity: 1,
+    x:-200
+  } )
+
+
+  let t4 = new TimelineMax()
+
+  TweenMax.fromTo(stopIcon, 2, {
+    opacity:0
+    
+  }, {
+
+    delay: 3,
+    opacity: 1
+
+  } )
+
+  TweenMax.fromTo(stopIconTwo, 2, {
+    opacity:0
+    
+  }, {
+
+    delay: 3,
+    opacity: 1
+
+  } )
+
+
+
+
 
   // function myFunction() {
   //   let x = document.getElementById("bubbleSrc2");

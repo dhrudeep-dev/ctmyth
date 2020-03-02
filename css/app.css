@@ -659,26 +659,40 @@ body {
 
 .pills {
 
+	position: absolute;
 	display: block;
-	width: 4%;
-	left: 0;
+	width: 3%;
+	left: 10;
+	top: 45%;
 
 }
 
 .syringe {
 
 	display: block;
-	width: 10%;
-	left: 0;
+	position: absolute;
+	width: 6%;
+	top: 47%;
+	right: 20px;
 }
 
 .stopIcon {
 
 	display: block;
-	width: 17%;
+	width: 10%;
 	position: absolute;
-	top: 20%;
-	left: 50%;
+	top: 52%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+}
+
+.stopIconTwo {
+
+	display: block;
+	width: 10%;
+	position: absolute;
+	top: 52%;
+	left: 29%;
 	transform: translate(-50%, -50%);
 }
 
