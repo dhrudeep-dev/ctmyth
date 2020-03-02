@@ -812,6 +812,55 @@ body {
 	max-width: 200px;
 }
 
+/******************* Myth 6 *********************/
+
+.myth6FocusArea {
+	background: rgba(255, 255, 255, 0.7);
+	background-size: cover;
+	background-position: center;
+	color: white;
+	font-weight: bold;
+	border: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 80%;
+	max-height: auto;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	width: 800px;
+	height: 450px;
+	margin-top: 150px;
+}
+
+/* .myth6Img {
+	max-width: 200px;
+	max-height: 190px;
+	border: none;
+	max-width: 80%;
+	width: 130px;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	position: relative;
+	top: 240px;
+	margin-top: -60px !important;
+	width: 100%;
+} */
+
+#syringeMyth6 {
+	display: block;
+	width: 10%;
+	left: 500px;
+	top: 50px;
+	position: relative;
+}
+
+#patientMyth6 {
+	width: 50%;
+}
+
 /* media query for web view */
 @media only screen and (min-width: 768px) {
 
@@ -1022,8 +1071,37 @@ body {
 		margin-top: 330px !important;
 	}
 
+	/* myth 6 mobile view */
+	.myth6FocusArea {
+		/* background: url(../images/myth1Bg.svg); */
+		background-size: cover;
+		background-position: center;
+		/* Black w/opacity/see-through */
+		color: white;
+		font-weight: bold;
+		border: none;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 80%;
+		max-height: auto;
+		padding: 20px;
+		text-align: center;
+		border-radius: 10px;
+		width: 400px;
+		height: 550px;
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+	}
 
-
+	#syringeMyth6 {
+		display: block;
+		width: 20%;
+		left: 50px;
+		top: -100px;
+		position: relative;
+	}
 }
 
 
