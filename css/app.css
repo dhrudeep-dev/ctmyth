@@ -76,6 +76,13 @@ body {
 	background-size: 50%;
 }
 
+#featurePageReplay{
+	padding: 15px;
+	cursor: pointer;
+	width: 60px;
+}
+
+
 /* myth 1 */
 .screenTwo {
 

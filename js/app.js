@@ -29,29 +29,59 @@ $(document).ready(function () {
 })
 
 window.onload = function () {
+
   // reference the pages
-  let body = document.querySelector("body");
-  // feature page
-  let progressBar = document.querySelector('#progressBar');
-  let sideNav = document.querySelector('#mySidenav');
-  let introductionPage = document.querySelector('#screen1_bgOne');
-  let mainNav = document.querySelector('.navigation');
-  let featureHeader = document.querySelector('.featuredHeader');
-  let featureHeaderContent = document.querySelector('.featureHeaderContent');
-  let featureHeaderContent2 = document.querySelector('.featureHeaderContent2');
-  let featureHeaderContent3 = document.querySelector('.featureHeaderContent3');
-  let downArrow = document.querySelector('#featurePageArrow');
-  let bothCharacters = document.querySelector(".characters");
-  let doctor = document.getElementById('doctor').contentDocument;
-  let visitor = document.getElementById('visitor').contentDocument;
+let body = document.querySelector("body");
+// feature page
+let progressBar = document.querySelector('#progressBar');
+let sideNav = document.querySelector('#mySidenav');
+let introductionPage = document.querySelector('#screen1_bgOne');
+let mainNav = document.querySelector('.navigation');
+let featureHeader = document.querySelector('.featuredHeader');
+let featureHeaderContent = document.querySelector('.featureHeaderContent');
+let featureHeaderContent2 = document.querySelector('.featureHeaderContent2');
+let featureHeaderContent3 = document.querySelector('.featureHeaderContent3');
+let downArrow = document.querySelector('#featurePageArrow');
+let bothCharacters = document.querySelector(".characters");
+let doctor = document.getElementById('doctor').contentDocument;
+let visitor = document.getElementById('visitor').contentDocument;
+let featurePageReplay = document.querySelector("#featurePageReplay");
 
-  let docHead = doctor.getElementById('head');
-  let visHead = visitor.getElementById('head');
+let docHead = doctor.getElementById('head');
+let visHead = visitor.getElementById('head');
 
-  // myth1 references
-  let mythOneFocusArea = document.querySelector('#mythOneFocusArea');
+// myth1 references
+let mythOneFocusArea = document.querySelector('#mythOneFocusArea');
+
+let featurePageTimeline = gsap.timeline();
+let myth1Timeline = gsap.timeline();
+let myth2Timeline = gsap.timeline();
+let myth3Timeline = gsap.timeline();
+let myth4Timeline = gsap.timeline();
+let myth5Timeline = gsap.timeline();
+
+const animateFeaturePage = () => {
+  // featurePageTimeline.fromTo(introductionPage, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  // featurePageTimeline.fromTo(mainNav, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  // featurePageTimeline.fromTo(progressBar, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  // featurePageTimeline.fromTo(sideNav, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  featurePageTimeline.fromTo(featureHeader, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  featurePageTimeline.fromTo(bothCharacters, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  featurePageTimeline.fromTo(docHead, 0.6, {xPercent: -5, rotation: -5, transformOrigin: "center center"},{xPercent: 5, rotation: 5, yoyo: true, ease: Power1.easeInOut, repeat: -1}, "+=0")
+  featurePageTimeline.fromTo(visHead, 0.6, {xPercent: -5, rotation: -5, transformOrigin: "center center"},{xPercent: 5, rotation: 5, yoyo: true, ease: Power1.easeInOut, repeat: -1}, "+=0")
+  featurePageTimeline.fromTo(featureHeaderContent, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  featurePageTimeline.fromTo(featureHeaderContent2, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut, delay:0.3}, "+=0")
+  featurePageTimeline.fromTo(featureHeaderContent3, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut, delay:0.3}, "+=0")
+  featurePageTimeline.fromTo(featurePageReplay, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  featurePageTimeline.fromTo(downArrow, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut,delay: 3}, "+=0")
+  featurePageTimeline.fromTo(downArrow, 1, {y: 0,},{y: -5, yoyo: true, repeat: -1, ease: Power1.easeInOut, delay: 3.5}, "+=0")}
 
   // onload reveal animation
+  animateFeaturePage();
+
+  featurePageReplay.addEventListener("click", function () {
+    featurePageTimeline.restart();
+  })
 
   // nav for mobile changes
   $(".innerNav").hover(function () {
@@ -63,7 +93,7 @@ window.onload = function () {
     $(".hover").removeClass("hover");
   }, 2200);
 
-  TweenMax.fromTo(introductionPage, 1, {
+  /* TweenMax.fromTo(introductionPage, 1, {
     opacity: 0
   }, {
     opacity: 1,
@@ -186,7 +216,7 @@ window.onload = function () {
     repeat: -1,
     ease: Power1.easeInOut,
     delay: 6
-  });
+  }); */
 
   TweenMax.fromTo("#scr2Anim", 1.5, {
     opacity: 0
