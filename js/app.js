@@ -688,16 +688,12 @@ function startAnimMyth3() {
   }
 }
 
-
-
-
-/* --------------------------- myth 4 animation --------------------------- */
+// /* --------------------------- myth 4 animation --------------------------- */
 
 function startAnimMyth4() {
 
 
   let visitorScr2Char = document.getElementById('visitorScr3');
-  let doctorScr2 = document.getElementById('doctorScr3').contentDocument;
   let visitorScr2 = document.getElementById('visitorScr3').contentDocument;
 
   let visLeftFeet = visitorScr2.getElementById('leftFeet');
@@ -705,7 +701,10 @@ function startAnimMyth4() {
   let visRightPant = visitorScr2.getElementById('rightLeg');
   let visLeftPant = visitorScr2.getElementById('leftLeg');
   let visEyes = visitorScr2.getElementById('visEyes');
+  let visitorMyth3Animation = document.getElementById("visitorScr4").contentDocument;
 
+  let visLipUpper = visitorMyth3Animation.getElementById('upperLip');
+  let visLipLower = visitorMyth3Animation.getElementById('lowerLip');
 
   // let doctor = document.getElementById('doctor').contentDocument;
 
@@ -720,6 +719,9 @@ function startAnimMyth4() {
   let syringe = document.querySelector("syringe");
   let visHead = visitorOne.getElementById('head');
 
+  
+
+
   // animating focus area
   TweenMax.fromTo(myth4FocusArea, 1, {
     scale: 0,
@@ -732,8 +734,6 @@ function startAnimMyth4() {
     ease: Expo.easeOut
   });
 
-  console.log("sleeping")
-
   TweenMax.fromTo(visitor, 1, {
     scale: 0,
     opacity: 0
@@ -741,51 +741,49 @@ function startAnimMyth4() {
   }, {
     scale: 1.9,
     opacity: 1,
-    // delay: 2
-    // borderRadius: "10px"
   });
-  $("#pills").show();
-  TweenMax.fromTo("#pills", 1.5, {
-    x: 0,
-    y: -180,
-    opacity: 1
-  }, {
-    x: 320
-  });
+//   $("#pills").show();
+//   TweenMax.fromTo("#pills", 1.5, {
+//     x: 0,
+//     y: -180,
+//     opacity: 1
+//   },{
+//     x: 320
+//   });
+  
+//   // TweenMax.to("#pills", 1, {
+//   //   x:720,
+//   //    y:0
+//   // });
+//   // $("pills").fadeOut();
+//   // TweenMax.fromTo("#pills",6,{
+//   //   x:370,
+//   //   y:-200
+//   // },{
+//   //   x:100,
+//   //   y:100
+//   // });
+//   // $("#pills").hide();
+//   $("#syringe").show();
+//   TweenMax.fromTo("#syringe", 1.5, {
+//     opacity:1,
+//     delay: 1.5,
+//     x: 700,
+//     y: -260
+//   }, {
 
-  // TweenMax.to("#pills", 1, {
-  //   x:720,
-  //    y:0
-  // });
-  // $("pills").fadeOut();
-  // TweenMax.fromTo("#pills",6,{
-  //   x:370,
-  //   y:-200
-  // },{
-  //   x:100,
-  //   y:100
-  // });
-  // $("#pills").hide();
-  $("#syringe").show();
-  TweenMax.fromTo("#syringe", 1.5, {
-    opacity: 1,
-    delay: 1.5,
-    x: 700,
-    y: -260
-  }, {
+//     x: 370
+//   });
 
-    x: 370
-  });
-
-  TweenMax.from(".stopIcon", 1, {
-    opacity: 0,
-    delay: 2,
-    scale: 0
-  });
+//   TweenMax.from(".stopIcon", 1,{
+//     opacity:0,
+//     delay: 2,
+//     scale:0
+//   });
 
 
-  // head animation
-  TweenMax.fromTo(visHead, 1, {
+   // head animation
+    TweenMax.fromTo(visHead, 1, {
     yPercent: -5,
     rotation: -5,
     transformOrigin: "center center",
@@ -800,19 +798,63 @@ function startAnimMyth4() {
     delay: 4
   });
 
+  // animate visitor talking
+  function visTalking() {
+    TweenMax.fromTo(visLipUpper, 1, {
+      y: 0,
+    }, {
+      y: -0.5,
+      repeat: 5,
+      yoyo: true
+    });
+
+    TweenMax.fromTo(visLipLower, 1, {
+      y: 0,
+    }, {
+      y: 0.5,
+      repeat: 5,
+      yoyo: true
+    });
+  }
+  // $("#explain4").hide();
+  let t1 = new TimelineMax()
+    .call(changeText, ["Every trial uses a placebo as a comparison!!!!!!"], this, 10)
+    .call(changeText, ["How does patient can know if they are getting treatement with the placebo effect?"], this, "+=6")
+    .call(changeText, ["Wow that’s good, at east patient has informed before the treatment."], this, "+=6")
+
+  function changeText(newtext) {
+    $("#bubbleScr4first").show();
+    $("#bubbleScr4first").text(newtext);
+    // $(visitor).hide();
+    // $("#explain4").show();
+    visTalking();
+  }
+
+  
+
+  // function myFunction() {
+  //   let x = document.getElementById("bubbleSrc2");
+  //   if (x.style.display === "none") {
+  //     x.style.display = changeText;
+  //   } else {
+  //     x.style.display = changeText1;
+  //   }
+  // }
 
 
-  // TweenMax.to(visHead, 1, {
-  //   rotation:180,
-  //   repeat:-1
+  
 
-  // })
+//   TweenMax.to(visHead, 1, {
+//     rotation:180,
+//     repeat:-1
 
-  //   TweenMax.to(visHead, 0.5, {
-  //     rotation: 100,
-  //     transformOrigin: "center",
-  //     rep
-  // });
+//   })
+
+//   TweenMax.to(visHead, 0.5, {
+//     // rotation: 100,
+//     transformOrigin: "center",
+//     rep
+// });
 
   // TweenMax.to(visHead, 1, {rotation: -70, transformOrigin:"left top",  transformStyle:"preserve-3d"});
 
