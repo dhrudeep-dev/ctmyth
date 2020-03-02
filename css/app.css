@@ -117,7 +117,7 @@ body {
 #screen5_bg {
 
 	background: url(../images/mythfourbgOne.svg) top center no-repeat fixed;
-	height: 1000px;
+	height: 100vh;
 	overflow: hidden;
 	width: 100%;
 	background-size: cover;
@@ -648,6 +648,27 @@ body {
 
 
 /* ------------------------- myth 4 ------------------------- */
+/* myth 2 focus area */
+.myth4FocusArea {
+	background: rgba(255, 255, 255, 0.7);
+	background-size: cover;
+	background-position: center;
+	color: white;
+	font-weight: bold;
+	border: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 80%;
+	max-height: auto;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	width: 800px;
+	height: 450px;
+	margin-top: 150px;
+}
+
 
 .myth4Img {
 	max-width: 200px;
