@@ -887,10 +887,7 @@ function startAnimMyth4() {
 
     opacity: 1,
     x:200
-  } )
-
-
-  let t3 = new TimelineMax()
+  })
 
 
   //animation for syringe
@@ -908,27 +905,39 @@ function startAnimMyth4() {
   } )
 
 
-  let t4 = new TimelineMax()
+  
 
   TweenMax.fromTo(stopIcon, 2, {
     opacity:0
-    
   }, {
-
     delay: 3,
     opacity: 1
-
   } )
+
+  TweenMax.fromTo(stopIcon, 1, {
+    opacity:0
+  },{
+    opacity:0
+  })
+  // $(stopIcon).hide();
 
   TweenMax.fromTo(stopIconTwo, 2, {
     opacity:0
-    
   }, {
-
     delay: 3,
     opacity: 1
-
   } )
+  
+
+  // t2.to(stopIcon, 2,{
+  //   opacity:0
+  // })
+
+  // t2.to(stopIconTwo, 2,{
+  //   opacity:0
+  // })
+  
+  
 
 
 
