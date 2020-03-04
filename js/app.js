@@ -72,9 +72,9 @@ const animateFeaturePage = () => {
   featurePageTimeline.fromTo(featureHeaderContent, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
   featurePageTimeline.fromTo(featureHeaderContent2, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut, delay:0.3}, "+=0")
   featurePageTimeline.fromTo(featureHeaderContent3, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut, delay:0.3}, "+=0")
-  featurePageTimeline.fromTo(featurePageReplay, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
-  featurePageTimeline.fromTo(downArrow, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut,delay: 3}, "+=0")
-  featurePageTimeline.fromTo(downArrow, 1, {y: 0,},{y: -5, yoyo: true, repeat: -1, ease: Power1.easeInOut, delay: 3.5}, "+=0")}
+  featurePageTimeline.fromTo(featurePageReplay, 0.8, {opacity: 0, rotation: 360},{opacity: 1, rotation: 0, yoyo: true, ease: Back.easeInOut, transformOrigin: "center center"}, "+=0")
+  featurePageTimeline.fromTo(downArrow, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut,delay: 1}, "+=0")
+  featurePageTimeline.fromTo(downArrow, 1, {y: 0,},{y: -5, yoyo: true, repeat: -1, ease: Power1.easeInOut}, "+=0")}
 
   // onload reveal animation
   animateFeaturePage();
@@ -93,130 +93,7 @@ const animateFeaturePage = () => {
     $(".hover").removeClass("hover");
   }, 2200);
 
-  /* TweenMax.fromTo(introductionPage, 1, {
-    opacity: 0
-  }, {
-    opacity: 1,
-    ease: Power1.easeInOut,
-    delay: 1
-  });
 
-  // main nav animation
-  TweenMax.fromTo(mainNav, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    ease: Power1.easeInOut,
-    delay: 1
-  });
-
-  // progress bar animation
-  TweenMax.fromTo(progressBar, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    ease: Power1.easeInOut,
-    delay: 1
-  });
-
-  // side nav animation
-  TweenMax.fromTo(sideNav, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    ease: Power1.easeInOut,
-    delay: 1
-  });
-
-  // main content animation
-  TweenMax.fromTo(featureHeader, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    ease: Power1.easeInOut,
-    delay: 2
-  });
-
-  TweenMax.fromTo(bothCharacters, 1, {
-    opacity: 0
-  }, {
-    opacity: 1,
-    ease: Power1.easeInOut,
-    delay: 3
-  });
-
-  // head animation
-  TweenMax.fromTo(docHead, 1, {
-    xPercent: -5,
-    rotation: -5,
-    transformOrigin: "center center",
-
-  }, {
-    xPercent: 5,
-    rotation: 5,
-    yoyo: true,
-    ease: Power1.easeInOut,
-    repeat: -1,
-    delay: 3
-  });
-
-  // head animation
-  TweenMax.fromTo(visHead, 1, {
-    xPercent: -5,
-    rotation: -5,
-    transformOrigin: "center center"
-
-  }, {
-    xPercent: 5,
-    rotation: 5,
-    yoyo: true,
-    ease: Power1.easeInOut,
-    repeat: -1,
-    delay: 4
-  });
-
-
-  TweenMax.fromTo(featureHeaderContent, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    ease: Power1.easeInOut,
-    delay: 3.5
-  });
-
-  TweenMax.fromTo(featureHeaderContent2, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    ease: Power1.easeInOut,
-    delay: 4
-  });
-
-  TweenMax.fromTo(featureHeaderContent3, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    ease: Power1.easeInOut,
-    delay: 4.5
-  });
-
-  TweenMax.fromTo(downArrow, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    ease: Power1.easeInOut,
-    delay: 5
-  });
-
-  TweenMax.fromTo(downArrow, 1, {
-    y: 0,
-  }, {
-    y: -5,
-    yoyo: true,
-    repeat: -1,
-    ease: Power1.easeInOut,
-    delay: 6
-  }); */
 
   TweenMax.fromTo("#scr2Anim", 1.5, {
     opacity: 0
