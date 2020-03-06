@@ -85,15 +85,12 @@ const animateFeaturePage = () => {
 
   // nav for mobile changes
   $(".innerNav").hover(function () {
+    $(".hover").removeClass("slideIn");
+    $(".hover").removeClass("hover");
     $(this).addClass("hover");
   });
 
-  setInterval(function () {
-    $(".hover").addClass("slideIn");
-    $(".hover").removeClass("hover");
-  }, 2200);
-
-
+  
 
   TweenMax.fromTo("#scr2Anim", 1.5, {
     opacity: 0
