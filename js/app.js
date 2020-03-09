@@ -899,10 +899,10 @@ function startAnimMyth5() {
 function startAnimMyth6() {
   executedscr6 = true;
 
-  let myth5FocusArea = document.querySelector("#myth5FocusArea");
+  let myth6FocusArea = document.querySelector(".myth6FocusArea");
 
   // animating focus area
-  TweenMax.fromTo(myth5FocusArea, 1, {
+  TweenMax.fromTo(myth6FocusArea, 1, {
     scale: 0,
     opacity: 0,
     borderRadius: "100%",
