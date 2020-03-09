@@ -243,32 +243,44 @@ function startAnim() {
 function startAnm1() {
   if (document.body.scrollTop > 768 || document.documentElement.scrollTop > 768) {
     if (executed != true) {
+      $(".hover").removeClass("hover");
+      $("#mythOne").addClass("hover");
       startAnim();
     }
   }
   if (document.body.scrollTop > 1768 || document.documentElement.scrollTop > 1768) {
     if (executedscr2 != true) {
+      $(".hover").removeClass("hover");
+      $("#mythTwo").addClass("hover");
       startAnimmyth2();
     }
   }
   if (document.body.scrollTop > 2768 || document.documentElement.scrollTop > 2768) {
     if (executedscr3 != true) {
+      $(".hover").removeClass("hover");
+      $("#mythThree").addClass("hover");
       startAnimMyth3();
     }
   }
   if (document.body.scrollTop > 3768 || document.documentElement.scrollTop > 3768) {
     if (executedscr4 != true) {
+      $(".hover").removeClass("hover");
+      $("#mythFour").addClass("hover");
       startAnimMyth4();
     }
   }
   if (document.body.scrollTop > 4768 || document.documentElement.scrollTop > 4768) {
     if (executedscr5 != true) {
+      $(".hover").removeClass("hover");
+      $("#mythFive").addClass("hover");
       startAnimMyth5();
     }
   }
 
   if (document.body.scrollTop > 5768 || document.documentElement.scrollTop > 5768) {
     if (executedscr6 != true) {
+      $(".hover").removeClass("hover");
+      $("#mythSix").addClass("hover");
       startAnimMyth6();
     }
   }
