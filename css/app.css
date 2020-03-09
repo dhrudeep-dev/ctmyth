@@ -72,9 +72,9 @@
 
 /* feature page */
 .screenOne {
-	background: url(../images/featureImage.svg) top repeat fixed;
+	background: url(../images/featureImage.svg) top no-repeat fixed;
 	height: 768px;
-	background-size: 50%;
+	background-size: cover;
 }
 
 #featurePageReplay{
@@ -94,6 +94,7 @@
 	background-size: cover;
 	z-index: 204;
 	clear: both;
+
 
 }
 
@@ -118,7 +119,7 @@
 #screen5_bg {
 
 	background: url(../images/mythfourbgOne.svg) top center no-repeat fixed;
-	height: 100vh;
+	height: 700px;
 	overflow: hidden;
 	width: 100%;
 	background-size: cover;
@@ -659,6 +660,7 @@
 	font-weight: bold;
 	border: none;
 	position: absolute;
+	margin-top: 20px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	max-width: 80%;
@@ -725,6 +727,24 @@
 	left: 29%;
 	transform: translate(-50%, -50%);
 }
+.yesIcon {
+
+	display: block;
+	width: 10%;
+	position: absolute;
+	top: 52%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+}
+.yesIconTwo {
+
+	display: block;
+	width: 10%;
+	position: absolute;
+	top: 52%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+}
 
 .bblCon3 {
 	margin-top: 5%;
@@ -741,7 +761,8 @@
 	position: relative;
 	background: #EFB700;
 	color: black;
-	top: -60%;
+	top: -50%;
+	left: 38%;
 	border-radius: 10px;
 	padding: 20px;
 	max-width: 400px;
@@ -1117,6 +1138,7 @@
 			border: none;
 			position: absolute;
 			left: 50%;
+			margin-top: 5px;
 			transform: translate(-50%, -50%);
 			max-width: 80%;
 			max-height: auto;
@@ -1182,6 +1204,24 @@
 			left: 28%;
 			transform: translate(-50%, -50%);
 		}
+		.yesIcon {
+		
+			display: block;
+			width: 10%;
+			position: absolute;
+			top: 47%;
+			left: 74%;
+			transform: translate(-50%, -50%);
+		}
+		.yesIconTwo {
+		
+			display: block;
+			width: 10%;
+			position: absolute;
+			top: 47%;
+			left: 74%;
+			transform: translate(-50%, -50%);
+		}
 		
 		.bblCon3 {
 			margin-top: 5%;
@@ -1198,8 +1238,8 @@
 			position: relative;
 			background: #EFB700;
 			color: black;
-			left: -10%;
-			top: -100% !important;
+			left: -9%;
+    		top: -95% !important;
 			border-radius: 10px;
 			padding: 20px;
 			max-width: 400px;
@@ -1225,7 +1265,7 @@
 		}
 		#myth4Text{
 			margin-top:100px !important;
-			font-size: 15px;
+			font-size: 12px;
 		}
 		
 
@@ -1304,4 +1344,15 @@
 	opacity: 0;
 	-webkit-box-shadow: 0px 5px 10px 5px #00000075;
 	box-shadow: 0px 5px 10px 5px #00000075;
+}
+
+
+/* tablet view */
+@media (max-width:801px){
+
+}
+
+/* mobile view */
+@media only screen and (max-width: 600px) {
+	
 }
