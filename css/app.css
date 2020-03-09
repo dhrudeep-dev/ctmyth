@@ -1108,6 +1108,27 @@
 		padding: 20px;
 	}
 		/* --------------- myth 4 content and styles --------------------*/
+		.myth4FocusArea {
+			background: rgba(255, 255, 255, 0.7);
+			background-size: cover;
+			background-position: center;
+			color: white;
+			font-weight: bold;
+			border: none;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			max-width: 80%;
+			max-height: auto;
+			padding: 20px;
+			text-align: center;
+			border-radius: 10px;
+			width: 800px;
+			height: 450px;
+			/* margin-top: 150px; */
+		}
+		
+		
 		.myth4Img {
 			max-width: 200px;
 			max-height: 200px;
@@ -1118,33 +1139,47 @@
 			text-align: center;
 			border-radius: 10px;
 			position: relative;
-			top: 240px;
+			top: 180px;
 			margin-top: -60px !important;
 		}
 		
 		
 		.pills {
 		
+			position: absolute;
 			display: block;
-			width: 4%;
-			left: 0;
+			width: 3%;
+			left: 10;
+			top: 45%;
 		
 		}
 		
 		.syringe {
 		
 			display: block;
-			width: 10%;
-			left: 0;
+			position: absolute;
+			width: 6%;
+			top: 45%;
+			right: 20px;
 		}
 		
 		.stopIcon {
 		
 			display: block;
-			width: 17%;
+			width: 10%;
 			position: absolute;
-			top: 20%;
-			left: 50%;
+			top: 47%;
+			left: 74%;
+			transform: translate(-50%, -50%);
+		}
+		
+		.stopIconTwo {
+		
+			display: block;
+			width: 10%;
+			position: absolute;
+			top: 48%;
+			left: 28%;
 			transform: translate(-50%, -50%);
 		}
 		
@@ -1163,6 +1198,8 @@
 			position: relative;
 			background: #EFB700;
 			color: black;
+			left: -10%;
+			top: -100% !important;
 			border-radius: 10px;
 			padding: 20px;
 			max-width: 400px;
@@ -1186,7 +1223,10 @@
 			margin-left: -10px;
 			margin-bottom: -10px;
 		}
-		
+		#myth4Text{
+			margin-top:100px !important;
+			font-size: 15px;
+		}
 		
 
 	/* myth 5 mobile view */

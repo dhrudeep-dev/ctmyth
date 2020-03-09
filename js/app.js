@@ -637,6 +637,122 @@ function startAnimMyth4() {
 
 
   // animating focus area
+  let responsiveAnimation1 = window.matchMedia("(max-width: 570px)");
+  if (responsiveAnimation1.matches) {
+    // mobile animation
+    TweenMax.fromTo(myth4FocusArea, 1, {
+      scale: 0,
+      opacity: 0,
+      borderRadius: "100%"
+    }, {
+      scale: 1,
+      opacity: 1,
+      borderRadius: "5px",
+      ease: Expo.easeOut
+    });
+  
+    TweenMax.fromTo(visitor, 1, {
+      scale: 0,
+      opacity: 0
+  
+    }, {
+      scale: 1.5,
+      opacity: 1,
+    });
+     // head animation
+      TweenMax.fromTo(visHead, 1, {
+      yPercent: -5,
+      rotation: -5,
+      transformOrigin: "center center",
+      transform: "-webkit-rotate3d(-1, 1, 0, 360deg)"
+  
+    }, {
+      zPercent: 5,
+      rotation: 5,
+      yoyo: true,
+      ease: Power1.easeInOut,
+      repeat: -1,
+      delay: 4
+    });
+  
+    // animate visitor talking
+    function visTalking() {
+      TweenMax.fromTo(visLipUpper, 1, {
+        y: 0,
+      }, {
+        y: -0.5,
+        repeat: 5,
+        yoyo: true
+      });
+  
+      TweenMax.fromTo(visLipLower, 1, {
+        y: 0,
+      }, {
+        y: 0.5,
+        repeat: 5,
+        yoyo: true
+      });
+    }
+    // $("#explain4").hide();
+    let t1 = new TimelineMax()
+      .call(changeText, ["Is Clinical trials are for patients who have run out of options?"], this,1)
+  
+    function changeText(newtext) {
+      $("#bubbleScr5sec").show();
+      $("#bubbleScr5sec").text(newtext);
+      console.log(newtext);
+      
+      visTalking();
+    }
+  
+    
+    let t2 = new TimelineMax()
+  
+    TweenMax.fromTo(pills, 3, {
+      opacity:0
+      
+    }, {
+  
+      opacity: 1,
+      x:60
+    })
+  
+    TweenMax.fromTo(syringe, 3, {
+      opacity:0
+      
+    }, {
+  
+      opacity: 1,
+      x:-50
+    } )
+  
+  
+    
+  
+    TweenMax.fromTo(stopIcon, 2, {
+      opacity:0
+    }, {
+      delay: 3,
+      opacity: 1
+    } )
+  
+    TweenMax.fromTo(stopIcon, 1, {
+      opacity:0
+    },{
+      opacity:0
+    })
+    // $(stopIcon).hide();
+  
+    TweenMax.fromTo(stopIconTwo, 2, {
+      opacity:0
+    }, {
+      delay: 3,
+      opacity: 1
+    } )
+    
+  } else {
+    // desktop animations
+
   TweenMax.fromTo(myth4FocusArea, 1, {
     scale: 0,
     opacity: 0,
@@ -656,48 +772,6 @@ function startAnimMyth4() {
     scale: 1.9,
     opacity: 1,
   });
-
-
-  // $("#pills").show();
-  // TweenMax.fromTo("#pills", 1.5, {
-  //   x: 0,
-  //   y: -180,
-  //   opacity: 1
-  // },{
-  //   x: 320
-  // });
-  
-  // TweenMax.to("#pills", 1, {
-  //   x:720,
-  //    y:0
-  // });
-  // $("pills").fadeOut();
-  // TweenMax.fromTo("#pills",6,{
-  //   x:370,
-  //   y:-200
-  // },{
-  //   x:100,
-  //   y:100
-  // });
-  // $("#pills").hide();
-  // $("#syringe").show();
-  // TweenMax.fromTo("#syringe", 1.5, {
-  //   opacity:1,
-  //   delay: 1.5,
-  //   x: 700,
-  //   y: -260
-  // }, {
-
-  //   x: 370
-  // });
-
-  // TweenMax.from(".stopIcon", 1,{
-  //   opacity:0,
-  //   delay: 2,
-  //   scale:0
-  // });
-
-
    // head animation
     TweenMax.fromTo(visHead, 1, {
     yPercent: -5,
@@ -740,20 +814,13 @@ function startAnimMyth4() {
     $("#bubbleScr5sec").show();
     $("#bubbleScr5sec").text(newtext);
     console.log(newtext);
-    // $(visitor).hide();
-    // $("#explain4").show();
+    
     visTalking();
   }
 
   
   let t2 = new TimelineMax()
 
-
-  //animation for pill
-  // .to(pills,3,{
-  //   opacity:0,
-  //   x:200
-  // })
   TweenMax.fromTo(pills, 3, {
     opacity:0
     
@@ -762,12 +829,6 @@ function startAnimMyth4() {
     opacity: 1,
     x:200
   })
-
-
-  //animation for syringe
-  // .to(syringe,3,{
-  // x: -200
-  // })
 
   TweenMax.fromTo(syringe, 3, {
     opacity:0
@@ -802,47 +863,7 @@ function startAnimMyth4() {
     opacity: 1
   } )
   
-
-  // t2.to(stopIcon, 2,{
-  //   opacity:0
-  // })
-
-  // t2.to(stopIconTwo, 2,{
-  //   opacity:0
-  // })
-  
-  
-
-
-
-
-
-  // function myFunction() {
-  //   let x = document.getElementById("bubbleSrc2");
-  //   if (x.style.display === "none") {
-  //     x.style.display = changeText;
-  //   } else {
-  //     x.style.display = changeText1;
-  //   }
-  // }
-
-
-  
-
-//   TweenMax.to(visHead, 1, {
-//     rotation:180,
-//     repeat:-1
-
-//   })
-
-//   TweenMax.to(visHead, 0.5, {
-//     // rotation: 100,
-//     transformOrigin: "center",
-//     rep
-// });
-
-  // TweenMax.to(visHead, 1, {rotation: -70, transformOrigin:"left top",  transformStyle:"preserve-3d"});
-
+}
 }
 
 
