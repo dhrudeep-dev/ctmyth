@@ -644,6 +644,8 @@ function startAnimMyth4() {
   let syringe = document.querySelector("#syringe");
   let stopIcon = document.querySelector("#stopIcon");
   let stopIconTwo = document.querySelector("#stopIconTwo");
+  let yesIcon = document.querySelector("#yesIcon");
+  let yesIconTwo = document.querySelector("#yesIconTwo");
   let visHead = visitorOne.getElementById('head');
 
   
@@ -749,7 +751,38 @@ function startAnimMyth4() {
       opacity: 1
     } )
   
+    // TweenMax.fromTo(stopIcon, 1, {
+    //   opacity:0
+    // },{
+    //   opacity:0
+    // })
+    // // $(stopIcon).hide();
+  
+    // TweenMax.fromTo(stopIconTwo, 2, {
+    //   opacity:0
+    // }, {
+    //   delay: 3,
+    //   opacity: 1
+    // } )
+    TweenMax.fromTo(stopIcon, 2, {
+      opacity:1
+    }, {
+      delay: 5,
+      opacity: 0
+    } )
+    TweenMax.fromTo(yesIcon, 2, {
+      opacity:0
+    }, {
+      delay: 7,
+      opacity: 0.6
+    } )
+  
     TweenMax.fromTo(stopIcon, 1, {
+      opacity:0
+    },{
+      opacity:0
+    })
+    TweenMax.fromTo(stopIconTwo, 1, {
       opacity:0
     },{
       opacity:0
@@ -761,7 +794,25 @@ function startAnimMyth4() {
     }, {
       delay: 3,
       opacity: 1
-    } )
+    })
+    TweenMax.fromTo(stopIconTwo, 2, {
+      opacity:1
+    }, {
+      delay: 5,
+      opacity: 0
+    })
+    TweenMax.fromTo(yesIconTwo, 2, {
+      opacity:0
+    }, {
+      delay: 7,
+      opacity: 0.6
+    })
+    TweenMax.fromTo("#myth4Text", 2, {
+      opacity:0
+    }, {
+      delay: 9,
+      opacity: 1
+    })
     
   } else {
     // desktop animations
@@ -861,12 +912,29 @@ function startAnimMyth4() {
     delay: 3,
     opacity: 1
   } )
+  TweenMax.fromTo(stopIcon, 2, {
+    opacity:1
+  }, {
+    delay: 5,
+    opacity: 0
+  } )
+  TweenMax.fromTo(yesIcon, 2, {
+    opacity:0
+  }, {
+    delay: 7,
+    opacity: 0.6
+  } )
 
-  // TweenMax.fromTo(stopIcon, 1, {
-  //   opacity:0
-  // },{
-  //   opacity:0
-  // })
+  TweenMax.fromTo(stopIcon, 1, {
+    opacity:0
+  },{
+    opacity:0
+  })
+  TweenMax.fromTo(stopIconTwo, 1, {
+    opacity:0
+  },{
+    opacity:0
+  })
   // $(stopIcon).hide();
 
   TweenMax.fromTo(stopIconTwo, 2, {
@@ -875,10 +943,22 @@ function startAnimMyth4() {
     delay: 3,
     opacity: 1
   })
+  TweenMax.fromTo(stopIconTwo, 2, {
+    opacity:1
+  }, {
+    delay: 5,
+    opacity: 0
+  })
+  TweenMax.fromTo(yesIconTwo, 2, {
+    opacity:0
+  }, {
+    delay: 7,
+    opacity: 0.6
+  })
   TweenMax.fromTo("#myth4Text", 2, {
     opacity:0
   }, {
-    delay: 3,
+    delay: 9,
     opacity: 1
   })
 }
