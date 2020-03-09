@@ -862,11 +862,11 @@ function startAnimMyth4() {
     opacity: 1
   } )
 
-  TweenMax.fromTo(stopIcon, 1, {
-    opacity:0
-  },{
-    opacity:0
-  })
+  // TweenMax.fromTo(stopIcon, 1, {
+  //   opacity:0
+  // },{
+  //   opacity:0
+  // })
   // $(stopIcon).hide();
 
   TweenMax.fromTo(stopIconTwo, 2, {
