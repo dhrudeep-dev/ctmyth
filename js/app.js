@@ -241,6 +241,10 @@ function startAnim() {
 
 /* calling first myth animation here */
 function startAnm1() {
+  if ($(window).scrollTop() < 768 ) {
+    $(".hover").removeClass("hover");
+    $("#intro").addClass("hover");
+  }
   if ($(window).scrollTop() > 768 && $(window).scrollTop() <= 1768) {
     console.log($(window).scrollTop());
     $(".hover").removeClass("hover");
@@ -258,7 +262,7 @@ function startAnm1() {
       startAnimmyth2();
     }
   }
-  if ($(window).scrollTop() > 2768 && $(window).scrollTop() <= 3768) {
+  if ($(window).scrollTop() > 2768 && $(window).scrollTop() <= 3468) {
     $(".hover").removeClass("hover");
       $("#mythThree").addClass("hover");
     if (executedscr3 != true) {
@@ -266,7 +270,7 @@ function startAnm1() {
       startAnimMyth3();
     }
   }
-  if ($(window).scrollTop() > 3768 && $(window).scrollTop() <= 4768) {
+  if ($(window).scrollTop() > 3468 && $(window).scrollTop() <= 4468) {
     $(".hover").removeClass("hover");
       $("#mythFour").addClass("hover");
     if (executedscr4 != true) {
@@ -274,7 +278,7 @@ function startAnm1() {
       startAnimMyth4();
     }
   }
-  if ($(window).scrollTop() > 4768 && $(window).scrollTop() <= 5768) {
+  if ($(window).scrollTop() > 4468 && $(window).scrollTop() <= 5468) {
     $(".hover").removeClass("hover");
       $("#mythFive").addClass("hover");
     if (executedscr5 != true) {
@@ -283,7 +287,7 @@ function startAnm1() {
     }
   }
 
-  if ($(window).scrollTop() > 5768 ) {
+  if ($(window).scrollTop() > 5468 ) {
     $(".hover").removeClass("hover");
       $("#mythSix").addClass("hover");
     if (executedscr6 != true) {
