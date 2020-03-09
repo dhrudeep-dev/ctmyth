@@ -120,8 +120,8 @@
 	background: url(../images/mythfourbgOne.svg) top center no-repeat fixed;
 	height: 800px;
 	overflow: hidden;
-	width: 100vw;
-	background-size: 110%;
+	width: 100%;
+	background-size: cover;
 	z-index: 204;
 	clear: both;
 }
