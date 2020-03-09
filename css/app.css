@@ -118,10 +118,10 @@
 #screen5_bg {
 
 	background: url(../images/mythfourbgOne.svg) top center no-repeat fixed;
-	height: 1000px;
+	height: 800px;
 	overflow: hidden;
-	width: 100%;
-	background-size: cover;
+	width: 100vw;
+	background-size: 110%;
 	z-index: 204;
 	clear: both;
 }
