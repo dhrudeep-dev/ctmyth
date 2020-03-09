@@ -860,13 +860,13 @@ function startAnimMyth4() {
   }, {
     delay: 3,
     opacity: 1
-  } )
+  })
   TweenMax.fromTo("#myth4Text", 2, {
     opacity:0
   }, {
     delay: 3,
     opacity: 1
-  } )
+  })
 }
 }
 
