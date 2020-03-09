@@ -1064,4 +1064,6 @@ function startAnimMyth6() {
     ease: Power1.easeInOut,
     borderRadius: "10px"
   });
+
+  
 }
