@@ -119,7 +119,7 @@
 #screen5_bg {
 
 	background: url(../images/mythfourbgOne.svg) top center no-repeat fixed;
-	height: 800px;
+	height: 700px;
 	overflow: hidden;
 	width: 100%;
 	background-size: cover;
@@ -660,6 +660,7 @@
 	font-weight: bold;
 	border: none;
 	position: absolute;
+	margin-top: 20px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	max-width: 80%;
@@ -760,7 +761,8 @@
 	position: relative;
 	background: #EFB700;
 	color: black;
-	top: -60%;
+	top: -50%;
+	left: 38%;
 	border-radius: 10px;
 	padding: 20px;
 	max-width: 400px;
@@ -1136,6 +1138,7 @@
 			border: none;
 			position: absolute;
 			left: 50%;
+			margin-top: 5px;
 			transform: translate(-50%, -50%);
 			max-width: 80%;
 			max-height: auto;
@@ -1235,8 +1238,8 @@
 			position: relative;
 			background: #EFB700;
 			color: black;
-			left: -10%;
-			top: -100% !important;
+			left: -9%;
+    		top: -95% !important;
 			border-radius: 10px;
 			padding: 20px;
 			max-width: 400px;
