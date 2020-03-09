@@ -725,6 +725,24 @@
 	left: 29%;
 	transform: translate(-50%, -50%);
 }
+.yesIcon {
+
+	display: block;
+	width: 10%;
+	position: absolute;
+	top: 52%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+}
+.yesIconTwo {
+
+	display: block;
+	width: 10%;
+	position: absolute;
+	top: 52%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+}
 
 .bblCon3 {
 	margin-top: 5%;
@@ -1180,6 +1198,24 @@
 			position: absolute;
 			top: 48%;
 			left: 28%;
+			transform: translate(-50%, -50%);
+		}
+		.yesIcon {
+		
+			display: block;
+			width: 10%;
+			position: absolute;
+			top: 47%;
+			left: 74%;
+			transform: translate(-50%, -50%);
+		}
+		.yesIconTwo {
+		
+			display: block;
+			width: 10%;
+			position: absolute;
+			top: 47%;
+			left: 74%;
 			transform: translate(-50%, -50%);
 		}
 		

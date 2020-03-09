@@ -765,7 +765,8 @@ function startAnimMyth4() {
     
   } else {
     // desktop animations
-
+$("#yesIcon").hide();
+$("#yesIconTwo").hide();
   TweenMax.fromTo(myth4FocusArea, 1, {
     scale: 0,
     opacity: 0,
