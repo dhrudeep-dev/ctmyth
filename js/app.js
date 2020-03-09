@@ -603,7 +603,7 @@ function startAnimMyth3() {
 // /* --------------------------- myth 4 animation --------------------------- */
 
 function startAnimMyth4() {
-
+  executedscr4 = true;
 
   // let visitorScr2Char = document.getElementById('visitorScr3');
   let visitorScr2 = document.getElementById('visitorScr3').contentDocument;
@@ -622,7 +622,6 @@ function startAnimMyth4() {
 
   // let docHead = doctor.getElementById('head');
 
-  executedscr4 = true;
 
   let visitorOne = document.querySelector("#visitorScr5").contentDocument;
   let visitor = document.querySelector("#visitorScr5");
