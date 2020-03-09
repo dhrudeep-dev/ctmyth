@@ -2,6 +2,10 @@ $(document).foundation();
 $(document).ready(function () {
   $('#nav').localScroll(800);
 
+  //hide pill
+  // $("#pills").hide();
+  // hide syringe
+  // $("#syringe").hide();
   // featured page
   $('#screen1_bgOne').parallax("50%", 0.1);
 
@@ -25,160 +29,81 @@ $(document).ready(function () {
 })
 
 window.onload = function () {
+
   // reference the pages
-  let body = document.querySelector("body");
-  // feature page
-  let progressBar = document.querySelector('#progressBar');
-  let sideNav = document.querySelector('#mySidenav');
-  let introductionPage = document.querySelector('#screen1_bgOne');
-  let mainNav = document.querySelector('.navigation');
-  let featureHeader = document.querySelector('.featuredHeader');
-  let featureHeaderContent = document.querySelector('.featureHeaderContent');
-  let featureHeaderContent2 = document.querySelector('.featureHeaderContent2');
-  let featureHeaderContent3 = document.querySelector('.featureHeaderContent3');
-  let downArrow = document.querySelector('#featurePageArrow');
-  let bothCharacters = document.querySelector(".characters");
-  let doctor = document.getElementById('doctor').contentDocument;
-  let visitor = document.getElementById('visitor').contentDocument;
+let body = document.querySelector("body");
+// feature page
+let progressBar = document.querySelector('#progressBar');
+let sideNav = document.querySelector('#mySidenav');
+let introductionPage = document.querySelector('#screen1_bgOne');
+let mainNav = document.querySelector('.navigation');
+let featureHeader = document.querySelector('.featuredHeader');
+let featureHeaderContent = document.querySelector('.featureHeaderContent');
+let featureHeaderContent2 = document.querySelector('.featureHeaderContent2');
+let featureHeaderContent3 = document.querySelector('.featureHeaderContent3');
+let downArrow = document.querySelector('#featurePageArrow');
+let bothCharacters = document.querySelector(".characters");
+let doctor = document.getElementById('doctor').contentDocument;
+let visitor = document.getElementById('visitor').contentDocument;
+let featurePageReplay = document.querySelector("#featurePageReplay");
 
-  let docHead = doctor.getElementById('head');
-  let visHead = visitor.getElementById('head');
+let docHead = doctor.getElementById('head');
+let visHead = visitor.getElementById('head');
 
-  // myth1 references
-  let mythOneFocusArea = document.querySelector('#mythOneFocusArea');
+// myth1 references
+let mythOneFocusArea = document.querySelector('#mythOneFocusArea');
+
+let featurePageTimeline = new TimelineMax();
+// let myth1Timeline = new TimelineMax();
+// let myth2Timeline = new TimelineMax();
+// let myth3Timeline = new TimelineMax();
+// let myth4Timeline = new TimelineMax();
+// let myth5Timeline = new TimelineMax();
+
+const animateFeaturePage = () => {
+  // featurePageTimeline.fromTo(introductionPage, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  // featurePageTimeline.fromTo(mainNav, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  // featurePageTimeline.fromTo(progressBar, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  // featurePageTimeline.fromTo(sideNav, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  featurePageTimeline.fromTo(featureHeader, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  featurePageTimeline.fromTo(bothCharacters, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  featurePageTimeline.fromTo(docHead, 0.6, {xPercent: -5, rotation: -5, transformOrigin: "center center"},{xPercent: 5, rotation: 5, yoyo: true, ease: Power1.easeInOut, repeat: -1}, "+=0")
+  featurePageTimeline.fromTo(visHead, 0.6, {xPercent: -5, rotation: -5, transformOrigin: "center center"},{xPercent: 5, rotation: 5, yoyo: true, ease: Power1.easeInOut, repeat: -1}, "+=0")
+  featurePageTimeline.fromTo(featureHeaderContent, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
+  featurePageTimeline.fromTo(featureHeaderContent2, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut, delay:0.3}, "+=0")
+  featurePageTimeline.fromTo(featureHeaderContent3, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut, delay:0.3}, "+=0")
+  featurePageTimeline.fromTo(featurePageReplay, 0.8, {opacity: 0, rotation: 360},{opacity: 1, rotation: 0, yoyo: true, ease: Back.easeInOut, transformOrigin: "center center"}, "+=0")
+  featurePageTimeline.fromTo(downArrow, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut,delay: 1}, "+=0")
+  featurePageTimeline.fromTo(downArrow, 1, {y: 0,},{y: -5, yoyo: true, repeat: -1, ease: Power1.easeInOut}, "+=0")}
 
   // onload reveal animation
+  animateFeaturePage();
+
+  featurePageReplay.addEventListener("click", function () {
+    featurePageTimeline.restart();
+  })
 
   // nav for mobile changes
   $(".innerNav").hover(function () {
+    $(".hover").removeClass("slideIn");
+    $(".hover").removeClass("hover");
     $(this).addClass("hover");
   });
+
   
-  setInterval(function () {
-    $(".hover").addClass("slideIn");
-    $(".hover").removeClass("hover");
-  }, 2200);
-
-  TweenMax.fromTo(introductionPage, 1, {
-    opacity: 0
-  }, {
-    opacity: 1,
-    delay: 1
-  });
-
-  // main nav animation
-  TweenMax.fromTo(mainNav, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    delay: 1
-  });
-
-  // progress bar animation
-  TweenMax.fromTo(progressBar, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    delay: 1
-  });
-
-  // side nav animation
-  TweenMax.fromTo(sideNav, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    delay: 1
-  });
-
-  // main content animation
-  TweenMax.fromTo(featureHeader, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    delay: 2
-  });
-
-  TweenMax.fromTo(bothCharacters, 1, {
-    opacity: 0
-  }, {
-    opacity: 1,
-    delay: 3
-  });
-
-  // head animation
-  TweenMax.fromTo(docHead, 1, {
-    xPercent: -10,
-    rotation: -5
-
-  }, {
-    xPercent: 10,
-    rotation: 5,
-    yoyo: true,
-    repeat: -1,
-    delay: 3
-  });
-
-  // head animation
-  TweenMax.fromTo(visHead, 1, {
-    xPercent: 10,
-    rotation: 5
-
-  }, {
-    xPercent: -10,
-    rotation: -5,
-    yoyo: true,
-    repeat: -1,
-    delay: 3
-  });
-
-
-  TweenMax.fromTo(featureHeaderContent, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    delay: 3.5
-  });
-
-  TweenMax.fromTo(featureHeaderContent2, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    delay: 4
-  });
-
-  TweenMax.fromTo(featureHeaderContent3, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    delay: 4.5
-  });
-
-  TweenMax.fromTo(downArrow, 1, {
-    opacity: 0,
-  }, {
-    opacity: 1,
-    delay: 6
-  });
-
-  TweenMax.fromTo(downArrow, 1, {
-    y: 0,
-  }, {
-    y: -5,
-    yoyo: true,
-    repeat: -1,
-    delay: 6
-  });
 
   TweenMax.fromTo("#scr2Anim", 1.5, {
     opacity: 0
   }, {
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 1
   });
   TweenMax.fromTo("#scr3Anim", 1.5, {
     opacity: 0
   }, {
     opacity: 1,
+    ease: Power1.easeInOut,
     delay: 1
   });
 }
@@ -196,13 +121,20 @@ window.onscroll = function () {
 };
 
 // variable to stop calling myth1 function onscroll
-var executed = false;
-var executedscr2 = false;
+let executed = false;
+let executedscr2 = false;
+let executedscr3 = false;
+let executedscr4 = false;
+let executedscr5 = false;
+let executedscr6 = false;
+
 
 // first myth's animation start here
 function startAnim() {
   executed = true;
-  TweenMax.to("#scr2Anim", 3, {    opacity: 1  });
+  TweenMax.to("#scr2Anim", 3, {
+    opacity: 1
+  });
 
   // variables for characters
   let visitorScr2Char = document.getElementById('visitorScr2');
@@ -266,7 +198,7 @@ function startAnim() {
     TweenMax.fromTo(visLipUpper, 1, {
       y: 0,
     }, {
-      y:-1.5,
+      y: -1.5,
       repeat: 5,
       yoyo: true
     });
@@ -311,12 +243,45 @@ function startAnim() {
 function startAnm1() {
   if (document.body.scrollTop > 768 || document.documentElement.scrollTop > 768) {
     if (executed != true) {
+      $(".hover").removeClass("hover");
+      $("#mythOne").addClass("hover");
       startAnim();
     }
   }
   if (document.body.scrollTop > 1768 || document.documentElement.scrollTop > 1768) {
     if (executedscr2 != true) {
+      $(".hover").removeClass("hover");
+      $("#mythTwo").addClass("hover");
       startAnimmyth2();
+    }
+  }
+  if (document.body.scrollTop > 2768 || document.documentElement.scrollTop > 2768) {
+    if (executedscr3 != true) {
+      $(".hover").removeClass("hover");
+      $("#mythThree").addClass("hover");
+      startAnimMyth3();
+    }
+  }
+  if (document.body.scrollTop > 3768 || document.documentElement.scrollTop > 3768) {
+    if (executedscr4 != true) {
+      $(".hover").removeClass("hover");
+      $("#mythFour").addClass("hover");
+      startAnimMyth4();
+    }
+  }
+  if (document.body.scrollTop > 4768 || document.documentElement.scrollTop > 4768) {
+    if (executedscr5 != true) {
+      $(".hover").removeClass("hover");
+      $("#mythFive").addClass("hover");
+      startAnimMyth5();
+    }
+  }
+
+  if (document.body.scrollTop > 5768 || document.documentElement.scrollTop > 5768) {
+    if (executedscr6 != true) {
+      $(".hover").removeClass("hover");
+      $("#mythSix").addClass("hover");
+      startAnimMyth6();
     }
   }
 }
@@ -328,7 +293,9 @@ function startAnimmyth2() {
   executedscr2 = true;
 
   console.log('getting call');
-  TweenMax.to("#scr3Anim", 3, {    opacity: 1  });
+  TweenMax.to("#scr3Anim", 3, {
+    opacity: 1
+  });
 
   // variables for characters
   let visitorScr2Char = document.getElementById('visitorScr3');
@@ -371,12 +338,16 @@ function startAnimmyth2() {
     .to(docEyes, 8, {
       x: -10
     }, 3)
-    .call(changeText, ["Every trial uses a placebo as a comparison?"], this, 6)
+    .call(changeText, ["Every trial uses a placebo as a comparison!!!!!!"], this, 6)
+    .call(changeText1, ["Cts only use placebo on patient if the patient is suffering from serious illness like cancer."], this, "+=6")
     .call(changeImgpath, ["images/myth2.svg"], this, "+=6")
-    .call(changeText1, ["Placebo only uses for – serious illness like cancer."], this, "+=6")
-    .call(changeText, ["Clinical Trials inform patients about placebo before treating them (if they are using placebo)"], this, "+=6")
-    .call(changeText1, ["Clinical Trials only use placebo if existing therapies are not effective enough."], this, "+=6")
-    .call(changeText1, ["Clinical Trials give all the necessary information about placebo to patients before the treatment."], this, "+=6")
+    .call(changeText1, ["Cts only use placebo if existing therapies are not effective enough."], this, "+=6")
+    .call(changeImgpath, ["images/placeboImg.png"], this, "+=6")
+    .call(changeText, ["How does patient can know if they are getting treatement with the placebo effect?"], this, "+=6")
+    .call(changeText1, ["Cts inform patients about placebo before treating them."], this, "+=6")
+    .call(changeText1, ["Cts give all the necessary information about placebo to patients before the treatment."], this, "+=6")
+    .call(changeText, ["Wow that’s good, at east patient has informed before the treatment."], this, "+=6")
+
 
   function docTalking() {
     TweenMax.fromTo(docMouth, 1, {
@@ -408,6 +379,7 @@ function startAnimmyth2() {
     $("#bubbleScr3sec").hide();
     $("#myth2Allimg").show();
     $("#myth2Allimg").attr("src", newtext);
+    
   }
 
   function myFunction() {
@@ -418,4 +390,541 @@ function startAnimmyth2() {
       x.style.display = changeText1;
     }
   }
+}
+
+/* --------------------------- myth 3 animation --------------------------- */
+
+function startAnimMyth3() {
+
+  executedscr3 = true;
+
+  let myth3FocusArea = document.querySelector("#myth3FocusArea");
+  // let officeMyth3 = document.querySelector("#officeMyth3");
+  // let officeMyth3SVG = document.querySelector("#officeMyth3").contentDocument;
+
+  let visitorScr4Char = document.getElementById('visitorScr4');
+  let visitorMyth3Animation = document.getElementById("visitorScr4").contentDocument;
+
+  // head of visitor
+  let visitorMyth3Head = visitorMyth3Animation.getElementById("head");
+  // lips of visitor
+  let visLipUpper = visitorMyth3Animation.getElementById('upperLip');
+  let visLipLower = visitorMyth3Animation.getElementById('lowerLip');
+
+  let clerkScr4Char = document.getElementById('clerkScr4');
+  let clerkMyth3Animation = document.getElementById("clerkScr4").contentDocument;
+
+  // head of clerk
+  let clerkMyth3Head = clerkMyth3Animation.getElementById("head");
+
+  // mouth of clerk
+  let clerkMouth = clerkMyth3Animation.getElementById('mouth');
+
+
+
+  // animating focus area
+  TweenMax.fromTo(myth3FocusArea, 1, {
+    // scale: 0,
+    opacity: 0
+    // borderRadius: "100%"
+    // transformOrigin: "center center"
+  }, {
+    // scale: 1,
+    opacity: 1,
+    ease: Power1.easeInOut
+    // borderRadius: "10px"
+  });
+
+  // animate visitor
+  TweenMax.fromTo(visitorScr4Char, 1, {
+    opacity: 1,
+  }, {
+    opacity: 1,
+    ease: Power1.easeInOut,
+    delay: 2
+  });
+
+
+  let responsiveAnimation = window.matchMedia("(max-width: 570px)");
+  if (responsiveAnimation.matches) {
+    // mobile animation
+    TweenMax.fromTo(myth3FocusArea, 1, {
+      backgroundPosition: "left center"
+
+    }, {
+      backgroundPosition: "60% 50%",
+      delay: 6
+    });
+
+    // animate visitor walking into office
+    TweenMax.fromTo(visitorScr4Char, 2, {
+      x: 60,
+      y: -40,
+      scale: 0.5
+    }, {
+      y: 40,
+      scale: 1.5,
+      ease: Power1.easeInOut,
+      delay: 3
+    });
+
+    // animate visitor walking towards clerk
+    TweenMax.to(visitorScr4Char, 3, {
+      x: 60,
+      y: 40,
+      delay: 6
+    });
+
+    TweenMax.fromTo(clerkScr4Char, 2, {
+      visibility: 'hidden'
+    },{
+      visibility: 'visible',
+      x: -10,
+      delay: 7
+    });
+
+  } else {
+    // desktop animations
+
+    // animate visitor walking into office
+    TweenMax.fromTo(visitorScr4Char, 2, {
+      x: 0,
+      y: 0,
+      scale: 0.5
+    }, {
+      x: -10,
+      y: 40,
+      scale: 1.5,
+      ease: Power1.easeInOut,
+      delay: 3
+    });
+
+    // animate visitor walking towards clerk
+    TweenMax.to(visitorScr4Char, 3, {
+      x: 320,
+      y: 40,
+      delay: 6
+    });
+
+
+    TweenMax.fromTo(clerkScr4Char, 1, {
+      opacity: 1,
+    }, {
+      opacity: 1,
+      ease: Power1.easeInOut,
+      delay: 2
+    });
+
+  }
+
+  // animate visitor head movement
+  TweenMax.fromTo(visitorMyth3Head, 1, {
+    xPercent: -5,
+    rotation: -5,
+    transformOrigin: "center center"
+
+  }, {
+    xPercent: 5,
+    rotation: 5,
+    yoyo: true,
+    ease: Power1.easeInOut,
+    repeat: -1,
+    delay: 9
+  });
+
+  // animate clerk head movement
+  TweenMax.fromTo(clerkMyth3Head, 1, {
+    xPercent: -5,
+    rotation: -5,
+    transformOrigin: "center center"
+
+  }, {
+    xPercent: 5,
+    rotation: 5,
+    yoyo: true,
+    ease: Power1.easeInOut,
+    repeat: -1,
+    delay: 10
+  });
+
+  // animate clerk talking
+  function clerkTalking() {
+    TweenMax.fromTo(clerkMouth, 1, {
+      scaleY: 1,
+    }, {
+      scaleY: 0.5,
+      repeat: 5,
+      yoyo: true
+    });
+  }
+
+  // animate visitor talking
+  function visTalking() {
+    TweenMax.fromTo(visLipUpper, 1, {
+      y: 0,
+    }, {
+      y: -0.5,
+      repeat: 5,
+      yoyo: true
+    });
+
+    TweenMax.fromTo(visLipLower, 1, {
+      y: 0,
+    }, {
+      y: 0.5,
+      repeat: 5,
+      yoyo: true
+    });
+  }
+
+
+  let t1 = new TimelineMax()
+    .call(changeText, ["Every trial uses a placebo as a comparison!!!!!!"], this, 10)
+    .call(changeText1, ["Cts only use placebo on patient if the patient is suffering from serious illness like cancer."], this, "+=6")
+    .call(changeText1, ["Cts only use placebo if existing therapies are not effective enough."], this, "+=6")
+    .call(changeText, ["How does patient can know if they are getting treatement with the placebo effect?"], this, "+=6")
+    .call(changeText1, ["Cts inform patients about placebo before treating them."], this, "+=6")
+    .call(changeText1, ["Cts give all the necessary information about placebo to patients before the treatment."], this, "+=6")
+    .call(changeText, ["Wow that’s good, at east patient has informed before the treatment."], this, "+=6")
+
+
+  function changeText1(newtext) {
+    $("#bubbleScr4sec").show();
+    $("#bubbleScr4sec").text(newtext)
+    $("#bubbleScr4first").hide();
+
+    clerkTalking();
+  }
+
+  function changeText(newtext) {
+    $("#bubbleScr4first").show();
+    $("#bubbleScr4first").text(newtext)
+    $("#bubbleScr4sec").hide();
+
+    visTalking();
+  }
+
+  function myFunction() {
+    let x = document.getElementById("bubbleSrc2");
+    if (x.style.display === "none") {
+      x.style.display = changeText;
+    } else {
+      x.style.display = changeText1;
+    }
+  }
+}
+
+// /* --------------------------- myth 4 animation --------------------------- */
+
+function startAnimMyth4() {
+  executedscr4 = true;
+
+  // let visitorScr2Char = document.getElementById('visitorScr3');
+  let visitorScr2 = document.getElementById('visitorScr3').contentDocument;
+
+  let visLeftFeet = visitorScr2.getElementById('leftFeet');
+  let visRightFeet = visitorScr2.getElementById('rightFeet');
+  let visRightPant = visitorScr2.getElementById('rightLeg');
+  let visLeftPant = visitorScr2.getElementById('leftLeg');
+  let visEyes = visitorScr2.getElementById('visEyes');
+  let visitorMyth4Animation = document.getElementById("visitorScr5").contentDocument;
+
+  let visLipUpper = visitorMyth4Animation.getElementById('upperLip');
+  let visLipLower = visitorMyth4Animation.getElementById('lowerLip');
+
+  // let doctor = document.getElementById('doctor').contentDocument;
+
+  // let docHead = doctor.getElementById('head');
+
+
+  let visitorOne = document.querySelector("#visitorScr5").contentDocument;
+  let visitor = document.querySelector("#visitorScr5");
+  let myth4FocusArea = document.querySelector(".myth4FocusArea");
+  let pills = document.querySelector("#pills");
+  let syringe = document.querySelector("#syringe");
+  let stopIcon = document.querySelector("#stopIcon");
+  let stopIconTwo = document.querySelector("#stopIconTwo");
+  let visHead = visitorOne.getElementById('head');
+
+  
+
+
+  // animating focus area
+  let responsiveAnimation1 = window.matchMedia("(max-width: 570px)");
+  if (responsiveAnimation1.matches) {
+    // mobile animation
+    TweenMax.fromTo(myth4FocusArea, 1, {
+      scale: 0,
+      opacity: 0,
+      borderRadius: "100%"
+    }, {
+      scale: 1,
+      opacity: 1,
+      borderRadius: "5px",
+      ease: Expo.easeOut
+    });
+  
+    TweenMax.fromTo(visitor, 1, {
+      scale: 0,
+      opacity: 0
+  
+    }, {
+      scale: 1.5,
+      opacity: 1,
+    });
+     // head animation
+      TweenMax.fromTo(visHead, 1, {
+      yPercent: -5,
+      rotation: -5,
+      transformOrigin: "center center",
+      transform: "-webkit-rotate3d(-1, 1, 0, 360deg)"
+  
+    }, {
+      zPercent: 5,
+      rotation: 5,
+      yoyo: true,
+      ease: Power1.easeInOut,
+      repeat: -1,
+      delay: 4
+    });
+  
+    // animate visitor talking
+    function visTalking() {
+      TweenMax.fromTo(visLipUpper, 1, {
+        y: 0,
+      }, {
+        y: -0.5,
+        repeat: 5,
+        yoyo: true
+      });
+  
+      TweenMax.fromTo(visLipLower, 1, {
+        y: 0,
+      }, {
+        y: 0.5,
+        repeat: 5,
+        yoyo: true
+      });
+    }
+    // $("#explain4").hide();
+    let t1 = new TimelineMax()
+      .call(changeText, ["Is Clinical trials are for patients who have run out of options?"], this,1)
+  
+    function changeText(newtext) {
+      $("#bubbleScr5sec").show();
+      $("#bubbleScr5sec").text(newtext);
+      console.log(newtext);
+      
+      visTalking();
+    }
+  
+    
+    let t2 = new TimelineMax()
+  
+    TweenMax.fromTo(pills, 3, {
+      opacity:0
+      
+    }, {
+  
+      opacity: 1,
+      x:60
+    })
+  
+    TweenMax.fromTo(syringe, 3, {
+      opacity:0
+      
+    }, {
+  
+      opacity: 1,
+      x:-50
+    } )
+  
+  
+    
+  
+    TweenMax.fromTo(stopIcon, 2, {
+      opacity:0
+    }, {
+      delay: 3,
+      opacity: 1
+    } )
+  
+    TweenMax.fromTo(stopIcon, 1, {
+      opacity:0
+    },{
+      opacity:0
+    })
+    // $(stopIcon).hide();
+  
+    TweenMax.fromTo(stopIconTwo, 2, {
+      opacity:0
+    }, {
+      delay: 3,
+      opacity: 1
+    } )
+    
+  } else {
+    // desktop animations
+
+  TweenMax.fromTo(myth4FocusArea, 1, {
+    scale: 0,
+    opacity: 0,
+    borderRadius: "100%"
+  }, {
+    scale: 1,
+    opacity: 1,
+    borderRadius: "5px",
+    ease: Expo.easeOut
+  });
+
+  TweenMax.fromTo(visitor, 1, {
+    scale: 0,
+    opacity: 0
+
+  }, {
+    scale: 1.9,
+    opacity: 1,
+  });
+   // head animation
+    TweenMax.fromTo(visHead, 1, {
+    yPercent: -5,
+    rotation: -5,
+    transformOrigin: "center center",
+    transform: "-webkit-rotate3d(-1, 1, 0, 360deg)"
+
+  }, {
+    zPercent: 5,
+    rotation: 5,
+    yoyo: true,
+    ease: Power1.easeInOut,
+    repeat: -1,
+    delay: 4
+  });
+
+  // animate visitor talking
+  function visTalking() {
+    TweenMax.fromTo(visLipUpper, 1, {
+      y: 0,
+    }, {
+      y: -0.5,
+      repeat: 5,
+      yoyo: true
+    });
+
+    TweenMax.fromTo(visLipLower, 1, {
+      y: 0,
+    }, {
+      y: 0.5,
+      repeat: 5,
+      yoyo: true
+    });
+  }
+  // $("#explain4").hide();
+  let t1 = new TimelineMax()
+    .call(changeText, ["Is Clinical trials are for patients who have run out of options?"], this,1)
+
+  function changeText(newtext) {
+    $("#bubbleScr5sec").show();
+    $("#bubbleScr5sec").text(newtext);
+    console.log(newtext);
+    
+    visTalking();
+  }
+
+  
+  let t2 = new TimelineMax()
+
+  TweenMax.fromTo(pills, 3, {
+    opacity:0
+    
+  }, {
+
+    opacity: 1,
+    x:200
+  })
+
+  TweenMax.fromTo(syringe, 3, {
+    opacity:0
+    
+  }, {
+
+    opacity: 1,
+    x:-200
+  } )
+
+
+  
+
+  TweenMax.fromTo(stopIcon, 2, {
+    opacity:0
+  }, {
+    delay: 3,
+    opacity: 1
+  } )
+
+  TweenMax.fromTo(stopIcon, 1, {
+    opacity:0
+  },{
+    opacity:0
+  })
+  // $(stopIcon).hide();
+
+  TweenMax.fromTo(stopIconTwo, 2, {
+    opacity:0
+  }, {
+    delay: 3,
+    opacity: 1
+  })
+  TweenMax.fromTo("#myth4Text", 2, {
+    opacity:0
+  }, {
+    delay: 3,
+    opacity: 1
+  })
+}
+}
+
+
+
+/* --------------------------- myth 5 animation --------------------------- */
+
+function startAnimMyth5() {
+  executedscr5 = true;
+
+  let myth5FocusArea = document.querySelector("#myth5FocusArea");
+
+  // animating focus area
+  TweenMax.fromTo(myth5FocusArea, 1, {
+    scale: 0,
+    opacity: 0,
+    borderRadius: "100%",
+    transformOrigin: "center center"
+  }, {
+    scale: 1,
+    opacity: 1,
+    ease: Power1.easeInOut,
+    borderRadius: "10px"
+  });
+}
+
+/* --------------------------- myth 6 animation --------------------------- */
+
+
+function startAnimMyth6() {
+  executedscr6 = true;
+
+  let myth6FocusArea = document.querySelector(".myth6FocusArea");
+
+  // animating focus area
+  TweenMax.fromTo(myth6FocusArea, 1, {
+    scale: 0,
+    opacity: 0,
+    borderRadius: "100%",
+    transformOrigin: "center center"
+  }, {
+    scale: 1,
+    opacity: 1,
+    ease: Power1.easeInOut,
+    borderRadius: "10px"
+  });
 }
