@@ -749,10 +749,6 @@ function startAnimMyth4() {
       opacity: 1,
       x:-50
     } )
-  
-  
-    
-  
     TweenMax.fromTo(stopIcon, 2, {
       opacity:0
     }, {
@@ -760,7 +756,38 @@ function startAnimMyth4() {
       opacity: 1
     } )
   
+    // TweenMax.fromTo(stopIcon, 1, {
+    //   opacity:0
+    // },{
+    //   opacity:0
+    // })
+    // // $(stopIcon).hide();
+  
+    // TweenMax.fromTo(stopIconTwo, 2, {
+    //   opacity:0
+    // }, {
+    //   delay: 3,
+    //   opacity: 1
+    // } )
+    TweenMax.fromTo(stopIcon, 2, {
+      opacity:1
+    }, {
+      delay: 5,
+      opacity: 0
+    } )
+    TweenMax.fromTo(yesIcon, 2, {
+      opacity:0
+    }, {
+      delay: 7,
+      opacity: 0.6
+    } )
+  
     TweenMax.fromTo(stopIcon, 1, {
+      opacity:0
+    },{
+      opacity:0
+    })
+    TweenMax.fromTo(stopIconTwo, 1, {
       opacity:0
     },{
       opacity:0
@@ -772,12 +799,53 @@ function startAnimMyth4() {
     }, {
       delay: 3,
       opacity: 1
-    } )
+    })
+    TweenMax.fromTo(stopIconTwo, 2, {
+      opacity:1
+    }, {
+      delay: 5,
+      opacity: 0
+    })
+    TweenMax.fromTo(yesIconTwo, 2, {
+      opacity:0
+    }, {
+      delay: 7,
+      opacity: 0.6
+    })
+    TweenMax.fromTo("#myth4Text", 2, {
+      opacity:0
+    }, {
+      delay: 9,
+      opacity: 1
+    })
+
+  
+    
+  
+    // TweenMax.fromTo(stopIcon, 2, {
+    //   opacity:0
+    // }, {
+    //   delay: 3,
+    //   opacity: 1
+    // } )
+  
+    // TweenMax.fromTo(stopIcon, 1, {
+    //   opacity:0
+    // },{
+    //   opacity:0
+    // })
+    // // $(stopIcon).hide();
+  
+    // TweenMax.fromTo(stopIconTwo, 2, {
+    //   opacity:0
+    // }, {
+    //   delay: 3,
+    //   opacity: 1
+    // } )
     
   } else {
     // desktop animations
-$("#yesIcon").hide();
-$("#yesIconTwo").hide();
+
   TweenMax.fromTo(myth4FocusArea, 1, {
     scale: 0,
     opacity: 0,
@@ -864,17 +932,31 @@ $("#yesIconTwo").hide();
     x:-200
   } )
 
-
-  
-
   TweenMax.fromTo(stopIcon, 2, {
     opacity:0
   }, {
     delay: 3,
     opacity: 1
   } )
+  TweenMax.fromTo(stopIcon, 2, {
+    opacity:1
+  }, {
+    delay: 5,
+    opacity: 0
+  } )
+  TweenMax.fromTo(yesIcon, 2, {
+    opacity:0
+  }, {
+    delay: 7,
+    opacity: 0.6
+  } )
 
   TweenMax.fromTo(stopIcon, 1, {
+    opacity:0
+  },{
+    opacity:0
+  })
+  TweenMax.fromTo(stopIconTwo, 1, {
     opacity:0
   },{
     opacity:0
@@ -887,12 +969,55 @@ $("#yesIconTwo").hide();
     delay: 3,
     opacity: 1
   })
+  TweenMax.fromTo(stopIconTwo, 2, {
+    opacity:1
+  }, {
+    delay: 5,
+    opacity: 0
+  })
+  TweenMax.fromTo(yesIconTwo, 2, {
+    opacity:0
+  }, {
+    delay: 7,
+    opacity: 0.6
+  })
   TweenMax.fromTo("#myth4Text", 2, {
     opacity:0
   }, {
-    delay: 3,
+    delay: 9,
     opacity: 1
   })
+
+    
+
+  
+
+  // TweenMax.fromTo(stopIcon, 2, {
+  //   opacity:0
+  // }, {
+  //   delay: 3,
+  //   opacity: 1
+  // } )
+
+  // TweenMax.fromTo(stopIcon, 1, {
+  //   opacity:0
+  // },{
+  //   opacity:0
+  // })
+  // // $(stopIcon).hide();
+
+  // TweenMax.fromTo(stopIconTwo, 2, {
+  //   opacity:0
+  // }, {
+  //   delay: 3,
+  //   opacity: 1
+  // })
+  // TweenMax.fromTo("#myth4Text", 2, {
+  //   opacity:0
+  // }, {
+  //   delay: 3,
+  //   opacity: 1
+  // })
 }
 }
 

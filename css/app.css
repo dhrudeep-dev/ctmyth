@@ -72,9 +72,9 @@
 
 /* feature page */
 .screenOne {
-	background: url(../images/featureImage.svg) top repeat fixed;
+	background: url(../images/featureImage.svg) top no-repeat fixed;
 	height: 768px;
-	background-size: 50%;
+	background-size: cover;
 }
 
 #featurePageReplay{
@@ -119,7 +119,7 @@
 #screen5_bg {
 
 	background: url(../images/mythfourbgOne.svg) top center no-repeat fixed;
-	height: 1000px;
+	height: 800px;
 	overflow: hidden;
 	width: 100%;
 	background-size: cover;
@@ -1262,7 +1262,7 @@
 		}
 		#myth4Text{
 			margin-top:100px !important;
-			font-size: 15px;
+			font-size: 12px;
 		}
 		
 
