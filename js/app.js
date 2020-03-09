@@ -53,12 +53,12 @@ let visHead = visitor.getElementById('head');
 // myth1 references
 let mythOneFocusArea = document.querySelector('#mythOneFocusArea');
 
-let featurePageTimeline = gsap.timeline();
-let myth1Timeline = gsap.timeline();
-let myth2Timeline = gsap.timeline();
-let myth3Timeline = gsap.timeline();
-let myth4Timeline = gsap.timeline();
-let myth5Timeline = gsap.timeline();
+let featurePageTimeline = new TimelineMax();
+// let myth1Timeline = new TimelineMax();
+// let myth2Timeline = new TimelineMax();
+// let myth3Timeline = new TimelineMax();
+// let myth4Timeline = new TimelineMax();
+// let myth5Timeline = new TimelineMax();
 
 const animateFeaturePage = () => {
   // featurePageTimeline.fromTo(introductionPage, 0.3, {opacity: 0},{opacity: 1, ease: Power1.easeInOut}, "+=0")
