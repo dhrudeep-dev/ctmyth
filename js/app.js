@@ -348,6 +348,7 @@ function startAnimmyth2() {
     .call(changeText1, ["Cts give all the necessary information about placebo to patients before the treatment."], this, "+=6")
     .call(changeText, ["Wow that’s good, at east patient has informed before the treatment."], this, "+=6")
 
+
   function docTalking() {
     TweenMax.fromTo(docMouth, 1, {
       scaleY: 1,
@@ -378,6 +379,7 @@ function startAnimmyth2() {
     $("#bubbleScr3sec").hide();
     $("#myth2Allimg").show();
     $("#myth2Allimg").attr("src", newtext);
+    
   }
 
   function myFunction() {
