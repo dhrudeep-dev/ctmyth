@@ -464,8 +464,9 @@ function startAnimMyth3() {
     });
 
     // animate visitor walking into office
+    //incase something goes wrong i changed the x: from 60 to 20
     TweenMax.fromTo(visitorScr4Char, 2, {
-      x: 60,
+      x: 20,
       y: -40,
       scale: 0.5
     }, {
