@@ -72,9 +72,9 @@
 
 /* feature page */
 .screenOne {
-	background: url(../images/featureImage.svg) top repeat fixed;
+	background: url(../images/featureImage.svg) top no-repeat fixed;
 	height: 768px;
-	background-size: 50%;
+	background-size: cover;
 }
 
 #featurePageReplay{
