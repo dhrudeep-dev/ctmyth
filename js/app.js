@@ -157,7 +157,7 @@ window.onload = function () {
   $(".innerNav").hover(function () {
     $(".hover").removeClass("slideIn");
     $(".hover").removeClass("hover");
-    $(this).addClass("slideIn");
+    $(this).addClass("hover");
   });
 
 
