@@ -311,7 +311,7 @@ function startAnim() {
 
 /* calling first myth animation here */
 function startAnm1() {
-  if ($(window).scrollTop() < 768 ) {
+  if ($(window).scrollTop() < 768) {
     $(".hover").removeClass("hover");
     $("#intro").addClass("hover");
   }
@@ -319,7 +319,7 @@ function startAnm1() {
     console.log($(window).scrollTop());
     $(".hover").removeClass("hover");
     $("#mythOne").addClass("hover");
-    if (executed != true) {   
+    if (executed != true) {
       startAnim();
     }
   }
@@ -328,40 +328,40 @@ function startAnm1() {
     $(".hover").removeClass("hover");
     $("#mythTwo").addClass("hover");
     if (executedscr2 != true) {
-      
+
       startAnimmyth2();
     }
   }
   if ($(window).scrollTop() > 2768 && $(window).scrollTop() <= 3468) {
     $(".hover").removeClass("hover");
-      $("#mythThree").addClass("hover");
+    $("#mythThree").addClass("hover");
     if (executedscr3 != true) {
-      
+
       startAnimMyth3();
     }
   }
   if ($(window).scrollTop() > 3468 && $(window).scrollTop() <= 4468) {
     $(".hover").removeClass("hover");
-      $("#mythFour").addClass("hover");
+    $("#mythFour").addClass("hover");
     if (executedscr4 != true) {
-      
+
       startAnimMyth4();
     }
   }
   if ($(window).scrollTop() > 4468 && $(window).scrollTop() <= 5468) {
     $(".hover").removeClass("hover");
-      $("#mythFive").addClass("hover");
+    $("#mythFive").addClass("hover");
     if (executedscr5 != true) {
-      
+
       startAnimMyth5();
     }
   }
 
-  if ($(window).scrollTop() > 5468 ) {
+  if ($(window).scrollTop() > 5468) {
     $(".hover").removeClass("hover");
-      $("#mythSix").addClass("hover");
+    $("#mythSix").addClass("hover");
     if (executedscr6 != true) {
-      
+
       startAnimMyth6();
     }
   }
@@ -819,7 +819,7 @@ function startAnimMyth4() {
       opacity: 1,
       x: -50
     })
-    
+
     TweenMax.fromTo(stopIcon, 2, {
       opacity: 0
     }, {
@@ -833,9 +833,9 @@ function startAnimMyth4() {
       opacity: 0
     })
     TweenMax.fromTo(stopIconTwo, 1, {
-      opacity:0
-    },{
-      opacity:0
+      opacity: 0
+    }, {
+      opacity: 0
     })
     // $(stopIcon).hide();
 
@@ -998,9 +998,12 @@ function startAnimMyth6() {
   let myth6FocusArea = document.querySelector(".myth6FocusArea");
   let syringeMyth6 = document.querySelector("#syringeMyth6");
   let syringe = document.getElementById("syringeMyth6").contentDocument;
-  let liquid = syringe.getElementsByClassName("liquid");
-
-
+  let patient = document.getElementById("patientMyth6").contentDocument;
+  let patientSkin = patient.getElementById("skin");
+  let patientLips = patient.getElementById("lips");
+  let liquid = syringe.getElementById("liquid");
+  let inject = syringe.getElementById("pusher");
+  let needle = syringe.getElementById("needle");
 
   // animating focus area
   TweenMax.fromTo(myth6FocusArea, 1, {
@@ -1015,19 +1018,128 @@ function startAnimMyth6() {
     borderRadius: "10px"
   });
 
-  let t1 = new TimelineMax()
-    .to(syringeMyth6, 0.5, {
-      x: -180,
-      scale: 1
-    })
-    
-    .to(syringeMyth6, 0.5, {
-      y: 100
-    }, 1)
+  let responsiveAnimation = window.matchMedia("(max-width: 570px)");
 
-    .to(liquid, 0.5, {
-      css: {
+  if (responsiveAnimation.matches) {
+
+    // syringe is emptying
+    TweenMax.fromTo(liquid, 1.5, {
+      fillOpacity: 1,
+      transformOrigin: "center top"
+    }, {
+      fillOpacity: 0.5,
+      ease: Power0.easeNone,
+      delay: 2.3,
+      transformOrigin: "center bottom"
+    });
+
+    // move syringe while injecting
+    TweenMax.fromTo(syringeMyth6, 1.5, {
+      x: 170
+    }, {
+      x: 167,
+      delay: 2.0
+    });
+
+    let t1 = new TimelineMax()
+
+      .to(syringeMyth6, 0.5, {
+        x: 170,
+        scale: 1
+      })
+
+      .to(syringeMyth6, 0.5, {
+        y: 150,
+        zIndex: 1
+      }, 1)
+
+      .to(inject, 1.5, {
+        scaleX: 0.7,
+        scaleY: 0.7,
+        transformOrigin: "center center",
+        ease: Power1.easeInOut
+      })
+
+      .to(needle, 1.5, {
+        scaleX: 0.7,
+        scaleY: 0.7,
+        transformOrigin: "center center",
+        ease: Power1.easeInOut
+      })
+
+      // hide syringe
+      .to(syringeMyth6, 0, {
         opacity: 0
-      }
-    })
+      })
+
+      // patient going pale
+      .to(patientSkin, 3, {
+        fillOpacity: 0.5
+      })
+
+      .to(patientLips, 3, {
+        fillOpacity: 0.7
+      })
+
+    // desktop animations
+  } else {
+
+    // syringe is emptying
+    TweenMax.fromTo(liquid, 1.5, {
+      fillOpacity: 1,
+      transformOrigin: "center top"
+    }, {
+      fillOpacity: 0.5,
+      ease: Power0.easeNone,
+      delay: 2.3,
+      transformOrigin: "center bottom"
+    });
+
+    // move syringe while injecting
+    TweenMax.fromTo(syringeMyth6, 1.5, {
+      x: -100
+    }, {
+      x: -103,
+      delay: 2.0
+    });
+
+    // syringe injecting sequence
+    let t2 = new TimelineMax()
+      .to(syringeMyth6, 0.5, {
+        x: -100,
+        scale: 1
+      })
+
+      .to(syringeMyth6, 0.5, {
+        y: 100
+      }, 1)
+
+      .to(inject, 1.5, {
+        scaleX: 0.7,
+        scaleY: 0.7,
+        transformOrigin: "center center",
+        ease: Power1.easeInOut
+      })
+
+      .to(needle, 1.5, {
+        scaleX: 0.7,
+        scaleY: 0.7,
+        transformOrigin: "center center",
+        ease: Power1.easeInOut
+      })
+
+      // hide syringe
+      .to(syringeMyth6, 0, {
+        opacity: 0
+      })
+
+      // patient going pale
+      .to(patientSkin, 3, {
+        fillOpacity: 0.5
+      })
+
+      .to(patientLips, 3, {
+        fillOpacity: 0.7
+      })
+  }
 }
