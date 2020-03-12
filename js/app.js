@@ -160,6 +160,12 @@ window.onload = function () {
     $(this).addClass("hover");
   });
 
+  setInterval(() => {
+    console.log('calling fun');
+    $(".hover").removeClass("hover");
+    $(".hover").addClass("slideIn");
+
+  },3000)
 
 
   TweenMax.fromTo("#scr2Anim", 1.5, {
