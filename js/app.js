@@ -1006,8 +1006,9 @@ function startAnimMyth6() {
   let syringeMyth6 = document.querySelector("#syringeMyth6");
   let syringe = document.getElementById("syringeMyth6").contentDocument;
   let patient = document.getElementById("patientMyth6").contentDocument;
-  let patientSkin = patient.getElementById("skin");
+  let patientSkin = patient.getElementsByClassName("st1");
   let patientLips = patient.getElementById("lips");
+  let patientEyes = patient.getElementById("eyes");
   let liquid = syringe.getElementById("liquid");
   let inject = syringe.getElementById("pusher");
   let needle = syringe.getElementById("needle");
@@ -1026,88 +1027,78 @@ function startAnimMyth6() {
   });
 
   let responsiveAnimation = window.matchMedia("(max-width: 570px)");
-
+  //  mobile animation 
   if (responsiveAnimation.matches) {
 
     // syringe is emptying
-    TweenMax.fromTo(liquid, 1.5, {
+    TweenMax.fromTo(liquid, 1, {
       fillOpacity: 1,
       transformOrigin: "center top"
     }, {
-      fillOpacity: 0.5,
+      fillOpacity: 0,
       ease: Power0.easeNone,
-      delay: 2.3,
+      delay: 2.5,
       transformOrigin: "center bottom"
     });
 
-    // move syringe while injecting
-    TweenMax.fromTo(syringeMyth6, 1.5, {
-      x: 170
-    }, {
-      x: 167,
-      delay: 2.0
-    });
-
+  // syringe injecting sequence
     let t1 = new TimelineMax()
 
       .to(syringeMyth6, 0.5, {
-        x: 170,
+        x: 145,
         scale: 1
       })
 
       .to(syringeMyth6, 0.5, {
-        y: 150,
+        y: 160,
         zIndex: 1
       }, 1)
 
-      .to(inject, 1.5, {
+      .to(inject, 0.8, {
+        scaleX: 0.6,
+        scaleY: 0.6,
+        transformOrigin: "center center",
+        ease: Power1.easeInOut,
+        delay: 1
+      })
+
+      .to(needle, 2, {
         scaleX: 0.7,
         scaleY: 0.7,
         transformOrigin: "center center",
         ease: Power1.easeInOut
       })
 
-      .to(needle, 1.5, {
-        scaleX: 0.7,
-        scaleY: 0.7,
-        transformOrigin: "center center",
-        ease: Power1.easeInOut
+      // patient getting sick
+      .to(patientSkin, 6, {
+        fill: "#c0ff96"
+      })
+
+      .to(patientEyes, 6, {
+        scale: 0.9,
+        transformOrigin: "center center"
+      })
+
+      .to(patientLips, 6, {
+        fillOpacity: 0.7
       })
 
       // hide syringe
       .to(syringeMyth6, 0, {
-        opacity: 0
-      })
-
-      // patient going pale
-      .to(patientSkin, 3, {
-        fillOpacity: 0.5
-      })
-
-      .to(patientLips, 3, {
-        fillOpacity: 0.7
+        opacity: 0,
+        delay: 3
       })
 
     // desktop animations
   } else {
 
     // syringe is emptying
-    TweenMax.fromTo(liquid, 1.5, {
+    TweenMax.fromTo(liquid, 1, {
       fillOpacity: 1,
-      transformOrigin: "center top"
     }, {
-      fillOpacity: 0.5,
+      fillOpacity: 0,
       ease: Power0.easeNone,
-      delay: 2.3,
-      transformOrigin: "center bottom"
-    });
-
-    // move syringe while injecting
-    TweenMax.fromTo(syringeMyth6, 1.5, {
-      x: -100
-    }, {
-      x: -103,
-      delay: 2.0
+      delay: 1.5
     });
 
     // syringe injecting sequence
@@ -1121,32 +1112,41 @@ function startAnimMyth6() {
         y: 100
       }, 1)
 
-      .to(inject, 1.5, {
+
+      .to(inject, 0.8, {
+        scaleX: 0.6,
+        scaleY: 0.6,
+        transformOrigin: "center center",
+        ease: Power1.easeInOut
+      })
+
+      .to(needle, 2, {
         scaleX: 0.7,
         scaleY: 0.7,
         transformOrigin: "center center",
         ease: Power1.easeInOut
       })
 
-      .to(needle, 1.5, {
-        scaleX: 0.7,
-        scaleY: 0.7,
-        transformOrigin: "center center",
-        ease: Power1.easeInOut
+      // patient getting sick
+      .to(patientSkin, 6, {
+        fill: "#c0ff96"
+      })
+
+      .to(patientEyes, 6, {
+        scale: 0.9,
+        transformOrigin: "center center"
+      })
+
+      .to(patientLips, 6, {
+        fillOpacity: 0.7
       })
 
       // hide syringe
       .to(syringeMyth6, 0, {
-        opacity: 0
+        opacity: 0,
+        delay: 3
       })
 
-      // patient going pale
-      .to(patientSkin, 3, {
-        fillOpacity: 0.5
-      })
-
-      .to(patientLips, 3, {
-        fillOpacity: 0.7
-      })
+      
   }
 }
