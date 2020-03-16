@@ -1045,12 +1045,12 @@ function startAnimMyth6() {
     let t1 = new TimelineMax()
 
       .to(syringeMyth6, 0.5, {
-        x: 85,
+        x: 145,
         scale: 1
       })
 
       .to(syringeMyth6, 0.5, {
-        y: 170,
+        y: 160,
         zIndex: 1
       }, 1)
 
