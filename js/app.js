@@ -1003,6 +1003,10 @@ function startAnimMyth6() {
   executedscr6 = true;
 
   let myth6FocusArea = document.querySelector(".myth6FocusArea");
+  let pointOne = document.querySelector("#firstPoint");
+  let pointTwo = document.querySelector("#secondPoint");
+  let pointThree = document.querySelector("#thirdPoint");
+  let pointFour = document.querySelector("#fourthPoint");
   let syringeMyth6 = document.querySelector("#syringeMyth6");
   let syringe = document.getElementById("syringeMyth6").contentDocument;
   let patient = document.getElementById("patientMyth6").contentDocument;
@@ -1026,6 +1030,36 @@ function startAnimMyth6() {
     borderRadius: "10px"
   });
 
+  let t1 = new TimelineMax()
+
+  .to(pointOne, 1, {
+    display: "none",
+    delay: 10
+  })
+
+  .to(pointTwo, 1, {
+    display: "block"
+  })
+
+  .to(pointTwo, 1, {
+    display: "none",
+    delay: 10
+  })
+
+  .to(pointThree, 1, {
+    display: "block"
+  })
+
+  .to(pointThree, 1, {
+    display: "none",
+    delay: 10
+  })
+
+  .to(pointFour, 1, {
+    display: "block"
+  })
+
+  
   let responsiveAnimation = window.matchMedia("(max-width: 570px)");
   //  mobile animation 
   if (responsiveAnimation.matches) {

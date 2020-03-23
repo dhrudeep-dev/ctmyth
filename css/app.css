@@ -936,6 +936,22 @@
 	width: 50%;
 }
 
+.heading h5 {
+	color: #000;
+}
+
+#secondPoint {
+	display: none;
+}
+
+#thirdPoint {
+	display: none;
+}
+
+#fourthPoint {
+	display: none;
+}
+
 /* media query for web view */
 @media only screen and (min-width: 768px) {
 
