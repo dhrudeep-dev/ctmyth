@@ -1044,10 +1044,8 @@ function startAnimMyth6() {
     onComplete: function () {
       TweenMax.fromTo(headingMyth6, 3, {
         opacity: 0,
-        scale: 0.5
       }, {
         opacity: 1,
-        scale: 1,
         ease: Power1.easeInOut
       })
     }
@@ -1191,10 +1189,8 @@ function startAnimMyth6() {
         onComplete: function () {
           TweenMax.fromTo(headingMyth6Point2, 3, {
             opacity: 0,
-            scale: 0.5
           }, {
             opacity: 1,
-            scale: 1,
             ease: Power1.easeInOut
           })
 
@@ -1228,10 +1224,8 @@ function startAnimMyth6() {
         onComplete: function () {
           TweenMax.fromTo(headingMyth6Point3, 3, {
             opacity: 0,
-            scale: 0.5
           }, {
             opacity: 1,
-            scale: 1,
             ease: Power1.easeInOut
           })
         }
@@ -1251,10 +1245,8 @@ function startAnimMyth6() {
         onComplete: function () {
           TweenMax.fromTo(headingMyth6Point4, 3, {
             opacity: 0,
-            scale: 0.5
           }, {
             opacity: 1,
-            scale: 1,
             ease: Power1.easeInOut
           })
         }
