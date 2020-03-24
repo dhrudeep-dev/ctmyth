@@ -1021,12 +1021,14 @@ function startAnimMyth6() {
   let slide2Img = document.querySelector("#handMedicineMyth6");
   let handMedicineMyth6 = document.getElementById("handMedicineMyth6").contentDocument;
   let handMedicine = handMedicineMyth6.getElementById("handMedicine");
-// slide 3
+  // slide 3
   let pointThree = document.querySelector("#thirdPoint");
   let headingMyth6Point3 = document.querySelector("#headingMyth6Point3");
-// slide 4
+  // slide 4
   let pointFour = document.querySelector("#fourthPoint");
   let headingMyth6Point4 = document.querySelector("#headingMyth6Point4");
+
+  let myth6Replay = document.querySelector("#myth6Replay");
 
   // animating myth 6 focus area
   TweenMax.fromTo(myth6FocusArea, 1, {
@@ -1112,7 +1114,7 @@ function startAnimMyth6() {
   } else {
 
     // animation sequence
-    let t2 = new TimelineMax()
+    let myth6Timeline = new TimelineMax()
 
       // fade in patient
       .to(patientMyth6, 2, {
@@ -1156,7 +1158,7 @@ function startAnimMyth6() {
         ease: Power1.easeInOut
       })
 
-      
+
       // patient getting sick
       .to(patientSkin, 3, {
         fill: "#c0ff96"
@@ -1257,5 +1259,10 @@ function startAnimMyth6() {
           })
         }
       })
+
+    // restart timeline
+    myth6Replay.addEventListener("click", function () {
+      myth6Timeline.restart();
+    })
   }
 }

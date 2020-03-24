@@ -941,6 +941,7 @@
 #headingMyth6Point2 {
 	opacity: 0;
 }
+
 #handMedicineMyth6 {
 	width: 60%;
 	margin-top: 100px;
@@ -970,6 +971,11 @@
 	display: none;
 }
 
+#myth6Replay {
+	padding: 15px;
+	cursor: pointer;
+	width: 60px;
+}
 /* media query for web view */
 @media only screen and (min-width: 768px) {
 
