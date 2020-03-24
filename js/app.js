@@ -1042,7 +1042,7 @@ function startAnimMyth6() {
     ease: Power1.easeInOut,
     borderRadius: "10px",
     onComplete: function () {
-      TweenMax.fromTo(headingMyth6, 3, {
+      TweenMax.fromTo(headingMyth6, 1, {
         opacity: 0,
       }, {
         opacity: 1,
@@ -1095,16 +1095,16 @@ function startAnimMyth6() {
       })
 
       // patient getting sick
-      .to(patientSkin, 4, {
+      .to(patientSkin, 3, {
         fill: "#c0ff96"
       })
 
-      .to(patientEyes, 4, {
+      .to(patientEyes, 3, {
         scale: 0.9,
         transformOrigin: "center center"
       })
 
-      .to(patientLips, 4, {
+      .to(patientLips, 3, {
         fillOpacity: 0.7
       })
 
@@ -1131,54 +1131,49 @@ function startAnimMyth6() {
         y: 100,
       }, 1)
 
+      // pushing inject in
       .to(inject, 0.8, {
         scaleX: 0.6,
         scaleY: 0.6,
         transformOrigin: "center center",
         ease: Power1.easeInOut,
-        delay: 3,
-        onComplete: function () {
-          // syringe is emptying
-          TweenMax.fromTo(liquid, 1, {
-            fillOpacity: 1,
-          }, {
-            fillOpacity: 0,
-            ease: Power0.easeNone
-          })
-        }
+        delay: 1.5
       })
+
+      // syringe is emptying
+      .fromTo(liquid, 1, {
+        fillOpacity: 1,
+      }, {
+        fillOpacity: 0,
+        ease: Power0.easeNone
+      },'-=0.3')
 
       // needle going in
       .to(needle, 2, {
-        scaleX: 0.7,
-        scaleY: 0.7,
+        scaleX: 0.5,
+        scaleY: 0.5,
         transformOrigin: "center center",
         ease: Power1.easeInOut
-      })
+      }, '-=2')
 
 
       // patient getting sick
-      .to(patientSkin, 3, {
+      .to(patientSkin, 2, {
         fill: "#c0ff96"
       })
 
-      .to(patientSick, 3, {
+      .to(patientSick, 2, {
         opacity: 1
-      })
+      }, '-=3')
 
       // patient getting sick
-      .to(patientEyes, 3, {
+      .to(patientEyes, 2, {
         scale: 0.9,
         transformOrigin: "center center"
       })
 
-      // patient getting sick
-      .to(patientLips, 3, {
-        fillOpacity: 0.7
-      })
-
       // hide slide 1
-      .to(pointOne, 1, {
+      .to(pointOne, 0.5, {
         opacity: 0,
         display: "none"
       })
@@ -1187,7 +1182,7 @@ function startAnimMyth6() {
       .to(pointTwo, 1, {
         opacity: 1,
         onComplete: function () {
-          TweenMax.fromTo(headingMyth6Point2, 3, {
+          TweenMax.fromTo(headingMyth6Point2, 1, {
             opacity: 0,
           }, {
             opacity: 1,
@@ -1211,7 +1206,7 @@ function startAnimMyth6() {
       })
 
       // hide slide 2
-      .to(pointTwo, 1, {
+      .to(pointTwo, 0.5, {
         opacity: 0,
         display: "none",
         delay: 10
@@ -1222,7 +1217,7 @@ function startAnimMyth6() {
         opacity: 1,
         display: "block",
         onComplete: function () {
-          TweenMax.fromTo(headingMyth6Point3, 3, {
+          TweenMax.fromTo(headingMyth6Point3, 1, {
             opacity: 0,
           }, {
             opacity: 1,
@@ -1232,7 +1227,7 @@ function startAnimMyth6() {
       })
 
       // hide slide 3
-      .to(pointThree, 1, {
+      .to(pointThree, 0.5, {
         opacity: 0,
         display: "none",
         delay: 5
@@ -1243,7 +1238,7 @@ function startAnimMyth6() {
         display: "block",
         opacity: 1,
         onComplete: function () {
-          TweenMax.fromTo(headingMyth6Point4, 3, {
+          TweenMax.fromTo(headingMyth6Point4, 1, {
             opacity: 0,
           }, {
             opacity: 1,

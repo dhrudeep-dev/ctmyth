@@ -971,10 +971,16 @@
 	display: none;
 }
 
+.myth6Row {
+	text-align: center;
+}
+
 #myth6Replay {
 	padding: 15px;
 	cursor: pointer;
 	width: 60px;
+	position: relative;
+    top: 400px;
 }
 /* media query for web view */
 @media only screen and (min-width: 768px) {
