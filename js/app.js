@@ -1162,7 +1162,7 @@ function startAnimMyth6() {
         fill: "#c0ff96"
       })
 
-      .to(patientSick, 5, {
+      .to(patientSick, 3, {
         opacity: 1
       })
 
@@ -1239,7 +1239,7 @@ function startAnimMyth6() {
       .to(pointThree, 1, {
         opacity: 0,
         display: "none",
-        delay: 10
+        delay: 5
       })
 
       // show slide 4
