@@ -926,6 +926,7 @@
 
 #syringeMyth6 {
 	display: block;
+	opacity: 0;
 	width: 10%;
 	left: 500px;
 	top: 50px;
@@ -934,6 +935,7 @@
 
 #patientMyth6 {
 	width: 50%;
+	opacity: 0;
 }
 
 #headingMyth6Point2 {
@@ -948,15 +950,21 @@
 	color: #000;
 }
 
+.heading{
+	opacity: 0;
+}
 #secondPoint {
-	display: none;
+	opacity: 0;
+	position: absolute;
 }
 
 #thirdPoint {
+	opacity: 0;
 	display: none;
 }
 
 #fourthPoint {
+	opacity: 0;
 	display: none;
 }
 

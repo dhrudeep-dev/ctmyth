@@ -165,7 +165,7 @@ window.onload = function () {
     $(".hover").removeClass("hover");
     $(".hover").addClass("slideIn");
 
-  },3000)
+  }, 3000)
 
 
   TweenMax.fromTo("#scr2Anim", 1.5, {
@@ -997,22 +997,15 @@ function startAnimMyth5() {
 }
 
 /* --------------------------- myth 6 animation --------------------------- */
-
-
 function startAnimMyth6() {
   executedscr6 = true;
 
   let myth6FocusArea = document.querySelector(".myth6FocusArea");
+  // slide 1
   let pointOne = document.querySelector("#firstPoint");
-
-  let pointTwo = document.querySelector("#secondPoint");
-  let headingMyth6Point2 = document.querySelector("#headingMyth6Point2");
-  let handMedicineMyth6 = document.getElementById("handMedicineMyth6").contentDocument;
-  let handMedicine = handMedicineMyth6.getElementById("handMedicine");
-
-  let pointThree = document.querySelector("#thirdPoint");
-  let pointFour = document.querySelector("#fourthPoint");
+  let headingMyth6 = document.querySelector(".headingMyth6");
   let syringeMyth6 = document.querySelector("#syringeMyth6");
+  let patientMyth6 = document.querySelector("#patientMyth6");
   let syringe = document.getElementById("syringeMyth6").contentDocument;
   let patient = document.getElementById("patientMyth6").contentDocument;
   let patientSkin = patient.getElementsByClassName("st1");
@@ -1021,8 +1014,19 @@ function startAnimMyth6() {
   let liquid = syringe.getElementById("liquid");
   let inject = syringe.getElementById("pusher");
   let needle = syringe.getElementById("needle");
+  // slide 2
+  let pointTwo = document.querySelector("#secondPoint");
+  let headingMyth6Point2 = document.querySelector("#headingMyth6Point2");
+  let handMedicineMyth6 = document.getElementById("handMedicineMyth6").contentDocument;
+  let handMedicine = handMedicineMyth6.getElementById("handMedicine");
+// slide 3
+  let pointThree = document.querySelector("#thirdPoint");
+  let headingMyth6Point3 = document.querySelector("#headingMyth6Point3");
+// slide 4
+  let pointFour = document.querySelector("#fourthPoint");
+  let headingMyth6Point4 = document.querySelector("#headingMyth6Point4");
 
-  // animating focus area
+  // animating myth 6 focus area
   TweenMax.fromTo(myth6FocusArea, 1, {
     scale: 0,
     opacity: 0,
@@ -1032,7 +1036,17 @@ function startAnimMyth6() {
     scale: 1,
     opacity: 1,
     ease: Power1.easeInOut,
-    borderRadius: "10px"
+    borderRadius: "10px",
+    onComplete: function () {
+      TweenMax.fromTo(headingMyth6, 3, {
+        opacity: 0,
+        scale: 0.5
+      }, {
+        opacity: 1,
+        scale: 1,
+        ease: Power1.easeInOut
+      })
+    }
   });
 
   let responsiveAnimation = window.matchMedia("(max-width: 570px)");
@@ -1050,7 +1064,7 @@ function startAnimMyth6() {
       transformOrigin: "center bottom"
     });
 
-  // syringe injecting sequence
+    // syringe injecting sequence
     let t1 = new TimelineMax()
 
       .to(syringeMyth6, 0.5, {
@@ -1079,56 +1093,60 @@ function startAnimMyth6() {
       })
 
       // patient getting sick
-      .to(patientSkin, 6, {
+      .to(patientSkin, 4, {
         fill: "#c0ff96"
       })
 
-      .to(patientEyes, 6, {
+      .to(patientEyes, 4, {
         scale: 0.9,
         transformOrigin: "center center"
       })
 
-      .to(patientLips, 6, {
+      .to(patientLips, 4, {
         fillOpacity: 0.7
-      })
-
-      // hide syringe
-      .to(syringeMyth6, 0, {
-        opacity: 0,
-        delay: 3
       })
 
     // desktop animations
   } else {
 
-    // syringe is emptying
-    TweenMax.fromTo(liquid, 1, {
-      fillOpacity: 1,
-    }, {
-      fillOpacity: 0,
-      ease: Power0.easeNone,
-      delay: 1.5
-    });
-
-    // syringe injecting sequence
+    // animation sequence
     let t2 = new TimelineMax()
-      .to(syringeMyth6, 0.5, {
+
+      // fade in patient
+      .to(patientMyth6, 2, {
+        opacity: 1
+      })
+
+      // fade in syringe
+      .to(syringeMyth6, 1, {
+        opacity: 1,
         x: -100,
         scale: 1
       })
 
-      .to(syringeMyth6, 0.5, {
-        y: 100
+      // move to patient arm
+      .to(syringeMyth6, 1, {
+        y: 100,
       }, 1)
-
 
       .to(inject, 0.8, {
         scaleX: 0.6,
         scaleY: 0.6,
         transformOrigin: "center center",
-        ease: Power1.easeInOut
+        ease: Power1.easeInOut,
+        delay: 3,
+        onComplete: function () {
+          // syringe is emptying
+          TweenMax.fromTo(liquid, 1, {
+            fillOpacity: 1,
+          }, {
+            fillOpacity: 0,
+            ease: Power0.easeNone
+          })
+        }
       })
 
+      // needle going in
       .to(needle, 2, {
         scaleX: 0.7,
         scaleY: 0.7,
@@ -1137,71 +1155,98 @@ function startAnimMyth6() {
       })
 
       // patient getting sick
-      .to(patientSkin, 6, {
+      .to(patientSkin, 3, {
         fill: "#c0ff96"
       })
 
-      .to(patientEyes, 6, {
+      // patient getting sick
+      .to(patientEyes, 3, {
         scale: 0.9,
         transformOrigin: "center center"
       })
 
-      .to(patientLips, 6, {
+      // patient getting sick
+      .to(patientLips, 3, {
         fillOpacity: 0.7
       })
 
-      // hide syringe
-      .to(syringeMyth6, 0, {
+      // hide slide 1
+      .to(pointOne, 1, {
         opacity: 0,
-        delay: 3
+        display: "none"
+      })
+
+      // show slide 2
+      .to(pointTwo, 1, {
+        opacity: 1,
+        onComplete: function () {
+          TweenMax.fromTo(headingMyth6Point2, 3, {
+            opacity: 0,
+            scale: 0.5
+          }, {
+            opacity: 1,
+            scale: 1,
+            ease: Power1.easeInOut
+          })
+
+          // animate in asset for slide 2
+          TweenMax.fromTo(handMedicine, 2, {
+            x: -300,
+            opacity: 0,
+            display: "none"
+          }, {
+            x: -150,
+            opacity: 1,
+            display: "block",
+            delay: 2
+          })
+        }
+      })
+
+      // hide slide 2
+      .to(pointTwo, 1, {
+        opacity: 0,
+        display: "none",
+        delay: 15
+      })
+
+      // show slide 3
+      .to(pointThree, 1, {
+        opacity: 1,
+        display: "block",
+        onComplete: function () {
+          TweenMax.fromTo(headingMyth6Point3, 3, {
+            opacity: 0,
+            scale: 0.5
+          }, {
+            opacity: 1,
+            scale: 1,
+            ease: Power1.easeInOut
+          })
+        }
+      })
+
+      // hide slide 3
+      .to(pointThree, 1, {
+        opacity: 0,
+        display: "none",
+        delay: 10
+      })
+
+      // show slide 4
+      .to(pointFour, 1, {
+        display: "block",
+        opacity: 1,
+        onComplete: function () {
+          TweenMax.fromTo(headingMyth6Point4, 3, {
+            opacity: 0,
+            scale: 0.5
+          }, {
+            opacity: 1,
+            scale: 1,
+            ease: Power1.easeInOut
+          })
+        }
       })
   }
-
-  let t1 = new TimelineMax()
-
-  .to(pointOne, 1, {
-    display: "none",
-    delay: 10
-  })
-
-  .to(pointTwo, 1, {
-    display: "block",
-    onComplete: function() {
-      TweenMax.fromTo(headingMyth6Point2, 3, {
-        opacity: 0,
-        scale: 0.5
-      }, {
-        opacity: 1, 
-        scale: 1,
-        ease: Power1.easeInOut
-      })
-
-      TweenMax.fromTo(handMedicine, 2, {
-        x: -900,
-        opacity: 0
-      },{
-        x: -50,
-        opacity: 1,
-        delay: 3
-      })
-    }
-  })
-
-  .to(pointTwo, 1, {
-    display: "none",
-    delay: 10
-  })
-
-  .to(pointThree, 1, {
-    display: "block"
-  })
-
-  .to(pointThree, 1, {
-    display: "none",
-    delay: 10
-  })
-
-  .to(pointFour, 1, {
-    display: "block"
-  })
 }
