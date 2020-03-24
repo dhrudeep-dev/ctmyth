@@ -1017,6 +1017,7 @@ function startAnimMyth6() {
   // slide 2
   let pointTwo = document.querySelector("#secondPoint");
   let headingMyth6Point2 = document.querySelector("#headingMyth6Point2");
+  let slide2Img = document.querySelector("#handMedicineMyth6");
   let handMedicineMyth6 = document.getElementById("handMedicineMyth6").contentDocument;
   let handMedicine = handMedicineMyth6.getElementById("handMedicine");
 // slide 3
@@ -1190,13 +1191,15 @@ function startAnimMyth6() {
           })
 
           // animate in asset for slide 2
+          TweenMax.to(slide2Img, 1, {
+            opacity: 1
+          })
+
           TweenMax.fromTo(handMedicine, 2, {
             x: -300,
-            opacity: 0,
             display: "none"
           }, {
             x: -150,
-            opacity: 1,
             display: "block",
             delay: 2
           })

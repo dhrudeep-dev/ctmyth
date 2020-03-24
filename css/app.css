@@ -944,6 +944,7 @@
 #handMedicineMyth6 {
 	width: 60%;
 	margin-top: 100px;
+	opacity: 0;
 }
 
 .heading h5 {
