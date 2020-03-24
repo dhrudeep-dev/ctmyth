@@ -936,6 +936,14 @@
 	width: 50%;
 }
 
+#headingMyth6Point2 {
+	opacity: 0;
+}
+#handMedicineMyth6 {
+	width: 60%;
+	margin-top: 100px;
+}
+
 .heading h5 {
 	color: #000;
 }
