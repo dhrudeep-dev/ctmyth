@@ -1011,6 +1011,7 @@ function startAnimMyth6() {
   let patientSkin = patient.getElementsByClassName("st1");
   let patientLips = patient.getElementById("lips");
   let patientEyes = patient.getElementById("eyes");
+  let patientSick = patient.getElementById("sick");
   let liquid = syringe.getElementById("liquid");
   let inject = syringe.getElementById("pusher");
   let needle = syringe.getElementById("needle");
@@ -1155,9 +1156,14 @@ function startAnimMyth6() {
         ease: Power1.easeInOut
       })
 
+      
       // patient getting sick
       .to(patientSkin, 3, {
         fill: "#c0ff96"
+      })
+
+      .to(patientSick, 5, {
+        opacity: 1
       })
 
       // patient getting sick
@@ -1210,7 +1216,7 @@ function startAnimMyth6() {
       .to(pointTwo, 1, {
         opacity: 0,
         display: "none",
-        delay: 15
+        delay: 10
       })
 
       // show slide 3
