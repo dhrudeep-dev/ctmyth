@@ -1182,25 +1182,24 @@ function startAnimMyth6() {
       .to(pointTwo, 1, {
         opacity: 1,
         onComplete: function () {
-          TweenMax.fromTo(headingMyth6Point2, 1, {
-            opacity: 0,
-          }, {
+          TweenMax.to(headingMyth6Point2, 1, {
             opacity: 1,
             ease: Power1.easeInOut
           })
-
+          
           // animate in asset for slide 2
           TweenMax.to(slide2Img, 1, {
             opacity: 1
           })
 
+          TweenMax.to(handMedicine, 2, {
+            opacity: 1
+          })
+
           TweenMax.fromTo(handMedicine, 2, {
-            x: -300,
-            display: "none"
-          }, {
-            x: -150,
-            display: "block",
-            delay: 2
+            x: -300
+          },{
+            x: -150
           })
         }
       })
@@ -1217,9 +1216,7 @@ function startAnimMyth6() {
         opacity: 1,
         display: "block",
         onComplete: function () {
-          TweenMax.fromTo(headingMyth6Point3, 1, {
-            opacity: 0,
-          }, {
+          TweenMax.to(headingMyth6Point3, 1, {
             opacity: 1,
             ease: Power1.easeInOut
           })
@@ -1238,9 +1235,7 @@ function startAnimMyth6() {
         display: "block",
         opacity: 1,
         onComplete: function () {
-          TweenMax.fromTo(headingMyth6Point4, 1, {
-            opacity: 0,
-          }, {
+          TweenMax.to(headingMyth6Point4, 1, {
             opacity: 1,
             ease: Power1.easeInOut
           })
