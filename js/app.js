@@ -1055,58 +1055,145 @@ function startAnimMyth6() {
   //  mobile animation 
   if (responsiveAnimation.matches) {
 
-    // syringe is emptying
-    TweenMax.fromTo(liquid, 1, {
-      fillOpacity: 1,
-      transformOrigin: "center top"
-    }, {
-      fillOpacity: 0,
-      ease: Power0.easeNone,
-      delay: 2.5,
-      transformOrigin: "center bottom"
-    });
+    // animation sequence
+    let myth6Timeline = new TimelineMax()
 
-    // syringe injecting sequence
-    let t1 = new TimelineMax()
-
-      .to(syringeMyth6, 0.5, {
-        x: 145,
-        scale: 1
+      // fade in patient
+      .to(patientMyth6, 2, {
+        opacity: 1,
+        scale: 1.5
       })
 
-      .to(syringeMyth6, 0.5, {
-        y: 160,
-        zIndex: 1
+      // fade in syringe
+      .fromTo(syringeMyth6, 1, {
+        opacity: 1,
+        x: 300,
+        scale: 1
+      },{
+        x: 100
+      })
+
+      // move to patient arm
+      .to(syringeMyth6, 1, {
+        y: 250,
       }, 1)
 
+      // pushing inject in
       .to(inject, 0.8, {
         scaleX: 0.6,
         scaleY: 0.6,
         transformOrigin: "center center",
         ease: Power1.easeInOut,
-        delay: 1
+        delay: 1.5
       })
 
+      // syringe is emptying
+      .fromTo(liquid, 1, {
+        fillOpacity: 1,
+      }, {
+        fillOpacity: 0,
+        ease: Power0.easeNone
+      },'-=0.3')
+
+      // needle going in
       .to(needle, 2, {
-        scaleX: 0.7,
-        scaleY: 0.7,
+        scaleX: 0.5,
+        scaleY: 0.5,
         transformOrigin: "center center",
         ease: Power1.easeInOut
-      })
+      }, '-=2')
+
 
       // patient getting sick
-      .to(patientSkin, 3, {
+      .to(patientSkin, 2, {
         fill: "#c0ff96"
       })
 
-      .to(patientEyes, 3, {
+      .to(patientSick, 2, {
+        opacity: 1
+      }, '-=3')
+
+      // patient getting sick
+      .to(patientEyes, 2, {
         scale: 0.9,
         transformOrigin: "center center"
       })
 
-      .to(patientLips, 3, {
-        fillOpacity: 0.7
+      // hide slide 1
+      .to(pointOne, 0.5, {
+        opacity: 0,
+        display: "none"
       })
+
+      // show slide 2
+      .to(pointTwo, 1, {
+        opacity: 1,
+        onComplete: function () {
+          TweenMax.to(headingMyth6Point2, 1, {
+            opacity: 1,
+            ease: Power1.easeInOut
+          })
+          
+          // animate in asset for slide 2
+          TweenMax.to(slide2Img, 1, {
+            opacity: 1
+          })
+
+          TweenMax.to(handMedicine, 2, {
+            opacity: 1
+          })
+
+          TweenMax.fromTo(handMedicine, 2, {
+            x: -300
+          },{
+            x: -150
+          })
+        }
+      })
+
+      // hide slide 2
+      .to(pointTwo, 0.5, {
+        opacity: 0,
+        display: "none",
+        delay: 10
+      })
+
+      // show slide 3
+      .to(pointThree, 1, {
+        opacity: 1,
+        display: "block",
+        onComplete: function () {
+          TweenMax.to(headingMyth6Point3, 1, {
+            opacity: 1,
+            ease: Power1.easeInOut
+          })
+        }
+      })
+
+      // hide slide 3
+      .to(pointThree, 0.5, {
+        opacity: 0,
+        display: "none",
+        delay: 5
+      })
+
+      // show slide 4
+      .to(pointFour, 1, {
+        display: "block",
+        opacity: 1,
+        onComplete: function () {
+          TweenMax.to(headingMyth6Point4, 1, {
+            opacity: 1,
+            ease: Power1.easeInOut
+          })
+        }
+      })
+
+    // restart timeline
+    myth6Replay.addEventListener("click", function () {
+      myth6Timeline.restart();
+    })
+  
 
     // desktop animations
   } else {
@@ -1128,7 +1215,7 @@ function startAnimMyth6() {
 
       // move to patient arm
       .to(syringeMyth6, 1, {
-        y: 100,
+        y: 50,
       }, 1)
 
       // pushing inject in

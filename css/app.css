@@ -936,6 +936,7 @@
 #patientMyth6 {
 	width: 50%;
 	opacity: 0;
+	margin-top: -40px;
 }
 
 #headingMyth6Point2 {
@@ -948,14 +949,15 @@
 	opacity: 0;
 }
 
-.heading h5 {
-	color: #000;
-}
 
 .headingMyth6 {
 	opacity: 0;
+	color: #000;
 }
 
+.headingMyth6 h4 span {
+	color: #000;
+}
 #secondPoint {
 	opacity: 0;
 	position: absolute;
@@ -1360,12 +1362,17 @@
 		left: 50px;
 		top: -100px;
 		position: relative;
+		z-index: 1;
 	}
 
 	#patientMyth6 {
 		width: 100%;
 		position: relative;
 		top: 90px;
+	}
+
+	#myth6Replay {
+		top: 450px;
 	}
 }
 
