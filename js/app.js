@@ -1209,8 +1209,8 @@ function startAnimMyth6() {
       // fade in syringe
       .to(syringeMyth6, 1, {
         opacity: 1,
-        x: -100,
-        scale: 1
+        x: -115,
+        scale: 0.6
       })
 
       // move to patient arm
