@@ -79,6 +79,41 @@
 		outline: none;
 	}
 
+	/* Starting of title code */
+	.ContHeading{
+		width: 67%;
+		/* background-color: ; */
+		margin: 0 auto;
+		position: relative;
+		top: 43vh;
+		z-index: 1000;
+		box-shadow:         inset 0 0 10px #0000002d;
+	}
+	#screen4_bg .ContHeading{
+		width: 67%;
+		/* background-color: ; */
+		margin: 0 auto;
+		position: relative;
+		top: 33vh;
+		z-index: 1000;
+		box-shadow:         inset 0 0 10px #0000002d;
+	}
+	#screen5_bg .ContHeading{
+		width: 67%;
+		/* background-color: ; */
+		margin: 0 auto;
+		position: relative;
+		top: 17vh;
+		z-index: 1000;
+		box-shadow:         inset 0 0 10px #0000002d;
+	}
+
+	.ContHeading h4{
+		text-align: center;
+	}
+/* Ending of Title code */
+
+	
 /* feature page */
 .screenOne {
 	background: url(../images/featureImage.svg) top no-repeat fixed;
