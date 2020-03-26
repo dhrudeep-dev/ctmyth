@@ -1024,6 +1024,18 @@ function startAnimMyth6() {
   // slide 3
   let pointThree = document.querySelector("#thirdPoint");
   let headingMyth6Point3 = document.querySelector("#headingMyth6Point3");
+  let ctPatients = document.getElementById("ctPatients").contentDocument;
+  let ctPatientsImg = ctPatients.getElementById("ctPatientsImg");
+  let ctPatientsTitle = ctPatients.getElementById("ct");
+  let crossOne = ctPatients.getElementById("cross");
+  let crossTwo = ctPatients.getElementById("cross2");
+  
+
+  let generalPatients = document.getElementById("generalPatients").contentDocument;
+  let generalPatientsImg = generalPatients.getElementById("generalPatients");
+  let generalPatientsTitle = generalPatients.getElementById("general");
+  let genCrossOne = generalPatients.getElementById("cross");
+  let genCrossTwo = generalPatients.getElementById("cross2");
   // slide 4
   let pointFour = document.querySelector("#fourthPoint");
   let headingMyth6Point4 = document.querySelector("#headingMyth6Point4");
@@ -1032,15 +1044,10 @@ function startAnimMyth6() {
 
   // animating myth 6 focus area
   TweenMax.fromTo(myth6FocusArea, 1, {
-    scale: 0,
     opacity: 0,
-    borderRadius: "100%",
-    transformOrigin: "center center"
   }, {
-    scale: 1,
     opacity: 1,
     ease: Power1.easeInOut,
-    borderRadius: "10px",
     onComplete: function () {
       TweenMax.fromTo(headingMyth6, 1, {
         opacity: 0,
@@ -1155,7 +1162,7 @@ function startAnimMyth6() {
       .to(pointTwo, 0.5, {
         opacity: 0,
         display: "none",
-        delay: 10
+        delay: 5
       })
 
       // show slide 3
@@ -1166,6 +1173,80 @@ function startAnimMyth6() {
           TweenMax.to(headingMyth6Point3, 1, {
             opacity: 1,
             ease: Power1.easeInOut
+          })
+
+          TweenMax.fromTo(ctPatientsTitle, 2, {
+            opacity: 0
+          },{
+            opacity: 1
+          })
+
+          TweenMax.fromTo(ctPatientsImg, 2, {
+            opacity: 0
+          },{
+            opacity: 1
+          })
+
+          TweenMax.fromTo(generalPatientsTitle, 2, {
+            opacity: 0
+          },{
+            opacity: 1
+          })
+
+          TweenMax.fromTo(generalPatientsImg, 2, {
+            opacity: 0
+          },{
+            opacity: 1
+          })
+
+          
+          TweenMax.fromTo(crossOne, 3, {
+            opacity: 0,
+            scale: 0,
+            y: 0
+          },{
+            opacity: 1,
+            y: '-140',
+            x: '-30',
+            scale: 1,
+            repeat: -1
+          })
+
+
+          TweenMax.fromTo(crossTwo, 3, {
+            opacity: 0,
+            scale: 0,
+            y: 0
+          },{
+            opacity: 1,
+            y: '-140',
+            x: '20',
+            scale: 1,
+            repeat: -1
+          })
+
+          TweenMax.fromTo(genCrossOne, 3, {
+            opacity: 1,
+            scale: 1,
+            y: 0
+          },{
+            opacity: 0,
+            y: '140',
+            x: '-10',
+            scale: 0,
+            repeat: -1
+          })
+
+          TweenMax.fromTo(genCrossTwo, 3, {
+            opacity: 1,
+            scale: 1,
+            y: 0
+          },{
+            opacity: 0,
+            y: '140',
+            x: '20',
+            scale: 0,
+            repeat: -1
           })
         }
       })
@@ -1295,7 +1376,7 @@ function startAnimMyth6() {
       .to(pointTwo, 0.5, {
         opacity: 0,
         display: "none",
-        delay: 10
+        delay: 5
       })
 
       // show slide 3
@@ -1307,6 +1388,81 @@ function startAnimMyth6() {
             opacity: 1,
             ease: Power1.easeInOut
           })
+
+          TweenMax.fromTo(ctPatientsTitle, 2, {
+            opacity: 0
+          },{
+            opacity: 1
+          })
+
+          TweenMax.fromTo(ctPatientsImg, 2, {
+            opacity: 0
+          },{
+            opacity: 1
+          })
+
+          TweenMax.fromTo(generalPatientsTitle, 2, {
+            opacity: 0
+          },{
+            opacity: 1
+          })
+
+          TweenMax.fromTo(generalPatientsImg, 2, {
+            opacity: 0
+          },{
+            opacity: 1
+          })
+
+          
+          TweenMax.fromTo(crossOne, 3, {
+            opacity: 0,
+            scale: 0,
+            y: 0
+          },{
+            opacity: 1,
+            y: '-140',
+            x: '-30',
+            scale: 1,
+            repeat: -1
+          })
+
+
+          TweenMax.fromTo(crossTwo, 3, {
+            opacity: 0,
+            scale: 0,
+            y: 0
+          },{
+            opacity: 1,
+            y: '-140',
+            x: '20',
+            scale: 1,
+            repeat: -1
+          })
+
+          TweenMax.fromTo(genCrossOne, 3, {
+            opacity: 1,
+            scale: 1,
+            y: 0
+          },{
+            opacity: 0,
+            y: '140',
+            x: '-10',
+            scale: 0,
+            repeat: -1
+          })
+
+          TweenMax.fromTo(genCrossTwo, 3, {
+            opacity: 1,
+            scale: 1,
+            y: 0
+          },{
+            opacity: 0,
+            y: '140',
+            x: '20',
+            scale: 0,
+            repeat: -1
+          })
+
         }
       })
 
