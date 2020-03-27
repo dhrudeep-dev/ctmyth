@@ -732,9 +732,11 @@ function startAnimMyth4() {
   let syringe = document.querySelector("#syringe");
   let stopIcon = document.querySelector("#stopIcon");
   let stopIconTwo = document.querySelector("#stopIconTwo");
+  let yesIcon = document.querySelector("#yesIcon");
+  let yesIconTwo = document.querySelector("#yesIconTwo");
   let visHead = visitorOne.getElementById('head');
 
-
+  
 
 
   // animating focus area
@@ -751,22 +753,22 @@ function startAnimMyth4() {
       borderRadius: "5px",
       ease: Expo.easeOut
     });
-
+  
     TweenMax.fromTo(visitor, 1, {
       scale: 0,
       opacity: 0
-
+  
     }, {
       scale: 1.5,
       opacity: 1,
     });
-    // head animation
-    TweenMax.fromTo(visHead, 1, {
+     // head animation
+      TweenMax.fromTo(visHead, 1, {
       yPercent: -5,
       rotation: -5,
       transformOrigin: "center center",
       transform: "-webkit-rotate3d(-1, 1, 0, 360deg)"
-
+  
     }, {
       zPercent: 5,
       rotation: 5,
@@ -775,7 +777,7 @@ function startAnimMyth4() {
       repeat: -1,
       delay: 4
     });
-
+  
     // animate visitor talking
     function visTalking() {
       TweenMax.fromTo(visLipUpper, 1, {
@@ -785,7 +787,7 @@ function startAnimMyth4() {
         repeat: 5,
         yoyo: true
       });
-
+  
       TweenMax.fromTo(visLipLower, 1, {
         y: 0,
       }, {
@@ -796,182 +798,260 @@ function startAnimMyth4() {
     }
     // $("#explain4").hide();
     let t1 = new TimelineMax()
-      .call(changeText, ["Is Clinical trials are for patients who have run out of options?"], this, 1)
-
+      .call(changeText, ["Is Clinical trials are for patients who have run out of options?"], this,1)
+  
     function changeText(newtext) {
       $("#bubbleScr5sec").show();
       $("#bubbleScr5sec").text(newtext);
       console.log(newtext);
-
+      
       visTalking();
     }
-
-
+  
+    
     let t2 = new TimelineMax()
-
+  
     TweenMax.fromTo(pills, 3, {
-      opacity: 0
-
+      opacity:0
+      
     }, {
-
+  
       opacity: 1,
-      x: 60
+      x:60
     })
-
+  
     TweenMax.fromTo(syringe, 3, {
-      opacity: 0
-
+      opacity:0
+      
     }, {
-
+  
       opacity: 1,
-      x: -50
-    })
-
+      x:-50
+    } )
+  
+  
+    
+  
     TweenMax.fromTo(stopIcon, 2, {
-      opacity: 0
+      opacity:0
     }, {
       delay: 3,
       opacity: 1
-    })
-
-    TweenMax.fromTo(stopIcon, 1, {
-      opacity: 0
+    } )
+  
+    // TweenMax.fromTo(stopIcon, 1, {
+    //   opacity:0
+    // },{
+    //   opacity:0
+    // })
+    // // $(stopIcon).hide();
+  
+    // TweenMax.fromTo(stopIconTwo, 2, {
+    //   opacity:0
+    // }, {
+    //   delay: 3,
+    //   opacity: 1
+    // } )
+    TweenMax.fromTo(stopIcon, 2, {
+      opacity:1
     }, {
+      delay: 5,
       opacity: 0
+    } )
+    TweenMax.fromTo(yesIcon, 2, {
+      opacity:0
+    }, {
+      delay: 7,
+      opacity: 0.6
+    } )
+  
+    TweenMax.fromTo(stopIcon, 1, {
+      opacity:0
+    },{
+      opacity:0
     })
     TweenMax.fromTo(stopIconTwo, 1, {
-      opacity: 0
-    }, {
-      opacity: 0
+      opacity:0
+    },{
+      opacity:0
     })
     // $(stopIcon).hide();
-
+  
     TweenMax.fromTo(stopIconTwo, 2, {
-      opacity: 0
+      opacity:0
     }, {
       delay: 3,
       opacity: 1
     })
+    TweenMax.fromTo(stopIconTwo, 2, {
+      opacity:1
+    }, {
+      delay: 5,
+      opacity: 0
+    })
+    TweenMax.fromTo(yesIconTwo, 2, {
+      opacity:0
+    }, {
+      delay: 7,
+      opacity: 0.6
+    })
+    TweenMax.fromTo("#myth4Text", 2, {
+      opacity:0
+    }, {
+      delay: 9,
+      opacity: 1
+    })
+    
   } else {
     // desktop animations
 
-    TweenMax.fromTo(myth4FocusArea, 1, {
-      scale: 0,
-      opacity: 0,
-      borderRadius: "100%"
-    }, {
-      scale: 1,
-      opacity: 1,
-      borderRadius: "5px",
-      ease: Expo.easeOut
-    });
+  TweenMax.fromTo(myth4FocusArea, 1, {
+    scale: 0,
+    opacity: 0,
+    borderRadius: "100%"
+  }, {
+    scale: 1,
+    opacity: 1,
+    borderRadius: "5px",
+    ease: Expo.easeOut
+  });
 
-    TweenMax.fromTo(visitor, 1, {
-      scale: 0,
-      opacity: 0
+  TweenMax.fromTo(visitor, 1, {
+    scale: 0,
+    opacity: 0
 
-    }, {
-      scale: 1.9,
-      opacity: 1,
-    });
-    // head animation
+  }, {
+    scale: 1.9,
+    opacity: 1,
+  });
+   // head animation
     TweenMax.fromTo(visHead, 1, {
-      yPercent: -5,
-      rotation: -5,
-      transformOrigin: "center center",
-      transform: "-webkit-rotate3d(-1, 1, 0, 360deg)"
+    yPercent: -5,
+    rotation: -5,
+    transformOrigin: "center center",
+    transform: "-webkit-rotate3d(-1, 1, 0, 360deg)"
 
+  }, {
+    zPercent: 5,
+    rotation: 5,
+    yoyo: true,
+    ease: Power1.easeInOut,
+    repeat: -1,
+    delay: 4
+  });
+
+  // animate visitor talking
+  function visTalking() {
+    TweenMax.fromTo(visLipUpper, 1, {
+      y: 0,
     }, {
-      zPercent: 5,
-      rotation: 5,
-      yoyo: true,
-      ease: Power1.easeInOut,
-      repeat: -1,
-      delay: 4
+      y: -0.5,
+      repeat: 5,
+      yoyo: true
     });
 
-    // animate visitor talking
-    function visTalking() {
-      TweenMax.fromTo(visLipUpper, 1, {
-        y: 0,
-      }, {
-        y: -0.5,
-        repeat: 5,
-        yoyo: true
-      });
-
-      TweenMax.fromTo(visLipLower, 1, {
-        y: 0,
-      }, {
-        y: 0.5,
-        repeat: 5,
-        yoyo: true
-      });
-    }
-    // $("#explain4").hide();
-    let t1 = new TimelineMax()
-      .call(changeText, ["Is Clinical trials are for patients who have run out of options?"], this, 1)
-
-    function changeText(newtext) {
-      $("#bubbleScr5sec").show();
-      $("#bubbleScr5sec").text(newtext);
-      console.log(newtext);
-
-      visTalking();
-    }
-
-
-    let t2 = new TimelineMax()
-
-    TweenMax.fromTo(pills, 3, {
-      opacity: 0
-
+    TweenMax.fromTo(visLipLower, 1, {
+      y: 0,
     }, {
-
-      opacity: 1,
-      x: 200
-    })
-
-    TweenMax.fromTo(syringe, 3, {
-      opacity: 0
-
-    }, {
-
-      opacity: 1,
-      x: -200
-    })
-
-
-
-
-    TweenMax.fromTo(stopIcon, 2, {
-      opacity: 0
-    }, {
-      delay: 3,
-      opacity: 1
-    })
-
-    TweenMax.fromTo(stopIcon, 1, {
-      opacity: 0
-    }, {
-      opacity: 0
-    })
-    // $(stopIcon).hide();
-
-    TweenMax.fromTo(stopIconTwo, 2, {
-      opacity: 0
-    }, {
-      delay: 3,
-      opacity: 1
-    })
-    TweenMax.fromTo("#myth4Text", 2, {
-      opacity: 0
-    }, {
-      delay: 3,
-      opacity: 1
-    })
+      y: 0.5,
+      repeat: 5,
+      yoyo: true
+    });
   }
+  // $("#explain4").hide();
+  let t1 = new TimelineMax()
+    .call(changeText, ["Is Clinical trials are for patients who have run out of options?"], this,1)
+
+  function changeText(newtext) {
+    $("#bubbleScr5sec").show();
+    $("#bubbleScr5sec").text(newtext);
+    console.log(newtext);
+    
+    visTalking();
+  }
+
+  
+  let t2 = new TimelineMax()
+
+  TweenMax.fromTo(pills, 3, {
+    opacity:0
+    
+  }, {
+
+    opacity: 1,
+    x:200
+  })
+
+  TweenMax.fromTo(syringe, 3, {
+    opacity:0
+    
+  }, {
+
+    opacity: 1,
+    x:-200
+  } )
+
+
+  
+
+  TweenMax.fromTo(stopIcon, 2, {
+    opacity:0
+  }, {
+    delay: 3,
+    opacity: 1
+  } )
+  TweenMax.fromTo(stopIcon, 2, {
+    opacity:1
+  }, {
+    delay: 5,
+    opacity: 0
+  } )
+  TweenMax.fromTo(yesIcon, 2, {
+    opacity:0
+  }, {
+    delay: 7,
+    opacity: 0.6
+  } )
+
+  TweenMax.fromTo(stopIcon, 1, {
+    opacity:0
+  },{
+    opacity:0
+  })
+  TweenMax.fromTo(stopIconTwo, 1, {
+    opacity:0
+  },{
+    opacity:0
+  })
+  // $(stopIcon).hide();
+
+  TweenMax.fromTo(stopIconTwo, 2, {
+    opacity:0
+  }, {
+    delay: 3,
+    opacity: 1
+  })
+  TweenMax.fromTo(stopIconTwo, 2, {
+    opacity:1
+  }, {
+    delay: 5,
+    opacity: 0
+  })
+  TweenMax.fromTo(yesIconTwo, 2, {
+    opacity:0
+  }, {
+    delay: 7,
+    opacity: 0.6
+  })
+  TweenMax.fromTo("#myth4Text", 2, {
+    opacity:0
+  }, {
+    delay: 9,
+    opacity: 1
+  })
 }
+}
+
 
 
 
