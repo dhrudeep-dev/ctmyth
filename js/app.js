@@ -1001,15 +1001,15 @@ function startAnimMyth6() {
   executedscr6 = true;
 
   let myth6FocusArea = document.querySelector(".myth6FocusArea");
+  let headingMyth6 = document.querySelector(".headingMyth6");
+  let infoPoints = document.querySelector(".infoPoints");
   // slide 1
   let pointOne = document.querySelector("#firstPoint");
-  let headingMyth6 = document.querySelector(".headingMyth6");
   let syringeMyth6 = document.querySelector("#syringeMyth6");
   let patientMyth6 = document.querySelector("#patientMyth6");
   let syringe = document.getElementById("syringeMyth6").contentDocument;
   let patient = document.getElementById("patientMyth6").contentDocument;
   let patientSkin = patient.getElementsByClassName("st1");
-  let patientLips = patient.getElementById("lips");
   let patientEyes = patient.getElementById("eyes");
   let patientSick = patient.getElementById("sick");
   let liquid = syringe.getElementById("liquid");
@@ -1017,13 +1017,13 @@ function startAnimMyth6() {
   let needle = syringe.getElementById("needle");
   // slide 2
   let pointTwo = document.querySelector("#secondPoint");
-  let headingMyth6Point2 = document.querySelector("#headingMyth6Point2");
+  let infoPoint1 = document.querySelector("#infoPoint1");
   let slide2Img = document.querySelector("#handMedicineMyth6");
   let handMedicineMyth6 = document.getElementById("handMedicineMyth6").contentDocument;
   let handMedicine = handMedicineMyth6.getElementById("handMedicine");
   // slide 3
   let pointThree = document.querySelector("#thirdPoint");
-  let headingMyth6Point3 = document.querySelector("#headingMyth6Point3");
+  let infoPoint2 = document.querySelector("#infoPoint2");
   let ctPatients = document.getElementById("ctPatients").contentDocument;
   let ctPatientsImg = ctPatients.getElementById("ctPatientsImg");
   let ctPatientsTitle = ctPatients.getElementById("ct");
@@ -1038,7 +1038,7 @@ function startAnimMyth6() {
   let genCrossTwo = generalPatients.getElementById("cross2");
   // slide 4
   let pointFour = document.querySelector("#fourthPoint");
-  let headingMyth6Point4 = document.querySelector("#headingMyth6Point4");
+  let infoPoint3 = document.querySelector("#infoPoint3");
 
   let myth6Replay = document.querySelector("#myth6Replay");
 
@@ -1055,16 +1055,34 @@ function startAnimMyth6() {
         opacity: 1,
         ease: Power1.easeInOut
       })
+      TweenMax.to(infoPoints, 1, {
+        opacity: 1,
+        ease: Power1.easeInOut,
+        delay: 2
+      })
+      // show screen 1
+      TweenMax.to(pointOne, 1, {
+        display: "block"
+      })
+      // hide other screens
+      TweenMax.to(pointTwo, 1, {
+        display: "none"
+      })
+      TweenMax.to(pointThree, 1, {
+        display: "none"
+      })
+      TweenMax.to(pointFour, 1, {
+        display: "none"
+      })
     }
   });
 
   let responsiveAnimation = window.matchMedia("(max-width: 570px)");
   //  mobile animation 
   if (responsiveAnimation.matches) {
-
     // animation sequence
-    let myth6Timeline = new TimelineMax()
 
+    let myth6Timeline = new TimelineMax()
       // fade in patient
       .to(patientMyth6, 2, {
         opacity: 1,
@@ -1077,7 +1095,7 @@ function startAnimMyth6() {
         x: 300,
         scale: 1
       },{
-        x: 100
+        x: 117
       })
 
       // move to patient arm
@@ -1110,7 +1128,6 @@ function startAnimMyth6() {
         ease: Power1.easeInOut
       }, '-=2')
 
-
       // patient getting sick
       .to(patientSkin, 2, {
         fill: "#c0ff96"
@@ -1133,10 +1150,14 @@ function startAnimMyth6() {
       })
 
       // show slide 2
-      .to(pointTwo, 1, {
+      .fromTo(pointTwo, 1, {
+        display: "none",
+        opacity: 0,
+      }, {
+        display: "block",
         opacity: 1,
         onComplete: function () {
-          TweenMax.to(headingMyth6Point2, 1, {
+          TweenMax.to(infoPoint1, 1, {
             opacity: 1,
             ease: Power1.easeInOut
           })
@@ -1166,11 +1187,14 @@ function startAnimMyth6() {
       })
 
       // show slide 3
-      .to(pointThree, 1, {
+      .fromTo(pointThree, 1, {
+        opacity: 0,
+        display: "none"
+      }, {
         opacity: 1,
         display: "block",
         onComplete: function () {
-          TweenMax.to(headingMyth6Point3, 1, {
+          TweenMax.to(infoPoint2, 1, {
             opacity: 1,
             ease: Power1.easeInOut
           })
@@ -1211,7 +1235,6 @@ function startAnimMyth6() {
             scale: 1,
             repeat: -1
           })
-
 
           TweenMax.fromTo(crossTwo, 3, {
             opacity: 0,
@@ -1255,21 +1278,23 @@ function startAnimMyth6() {
       .to(pointThree, 0.5, {
         opacity: 0,
         display: "none",
-        delay: 5
+        delay: 7
       })
 
-      // show slide 4
-      .to(pointFour, 1, {
-        display: "block",
-        opacity: 1,
-        onComplete: function () {
-          TweenMax.to(headingMyth6Point4, 1, {
-            opacity: 1,
-            ease: Power1.easeInOut
-          })
-        }
-      })
-
+     // show slide 4
+     .fromTo(pointFour, 1, {
+      display: "none",
+      opacity: 0
+    },{
+      display: "block",
+      opacity: 1,
+      onComplete: function () {
+        TweenMax.to(infoPoint3, 1, {
+          opacity: 1,
+          ease: Power1.easeInOut
+        })
+      }
+    })
     // restart timeline
     myth6Replay.addEventListener("click", function () {
       myth6Timeline.restart();
@@ -1324,7 +1349,6 @@ function startAnimMyth6() {
         ease: Power1.easeInOut
       }, '-=2')
 
-
       // patient getting sick
       .to(patientSkin, 2, {
         fill: "#c0ff96"
@@ -1347,10 +1371,14 @@ function startAnimMyth6() {
       })
 
       // show slide 2
-      .to(pointTwo, 1, {
+      .fromTo(pointTwo, 1, {
+        display: "none",
+        opacity: 0,
+      }, {
+        display: "block",
         opacity: 1,
         onComplete: function () {
-          TweenMax.to(headingMyth6Point2, 1, {
+          TweenMax.to(infoPoint1, 1, {
             opacity: 1,
             ease: Power1.easeInOut
           })
@@ -1380,11 +1408,14 @@ function startAnimMyth6() {
       })
 
       // show slide 3
-      .to(pointThree, 1, {
+      .fromTo(pointThree, 1, {
+        opacity: 0,
+        display: "none"
+      }, {
         opacity: 1,
         display: "block",
         onComplete: function () {
-          TweenMax.to(headingMyth6Point3, 1, {
+          TweenMax.to(infoPoint2, 1, {
             opacity: 1,
             ease: Power1.easeInOut
           })
@@ -1414,7 +1445,7 @@ function startAnimMyth6() {
           })
 
           
-          TweenMax.fromTo(crossOne, 3, {
+          TweenMax.fromTo(crossOne, 1, {
             opacity: 0,
             scale: 0,
             y: 0
@@ -1426,8 +1457,7 @@ function startAnimMyth6() {
             repeat: -1
           })
 
-
-          TweenMax.fromTo(crossTwo, 3, {
+          TweenMax.fromTo(crossTwo, 1, {
             opacity: 0,
             scale: 0,
             y: 0
@@ -1439,7 +1469,7 @@ function startAnimMyth6() {
             repeat: -1
           })
 
-          TweenMax.fromTo(genCrossOne, 3, {
+          TweenMax.fromTo(genCrossOne, 2, {
             opacity: 1,
             scale: 1,
             y: 0
@@ -1451,7 +1481,7 @@ function startAnimMyth6() {
             repeat: -1
           })
 
-          TweenMax.fromTo(genCrossTwo, 3, {
+          TweenMax.fromTo(genCrossTwo, 2, {
             opacity: 1,
             scale: 1,
             y: 0
@@ -1462,7 +1492,6 @@ function startAnimMyth6() {
             scale: 0,
             repeat: -1
           })
-
         }
       })
 
@@ -1474,11 +1503,14 @@ function startAnimMyth6() {
       })
 
       // show slide 4
-      .to(pointFour, 1, {
+      .fromTo(pointFour, 1, {
+        display: "none",
+        opacity: 0
+      },{
         display: "block",
         opacity: 1,
         onComplete: function () {
-          TweenMax.to(headingMyth6Point4, 1, {
+          TweenMax.to(infoPoint3, 1, {
             opacity: 1,
             ease: Power1.easeInOut
           })
