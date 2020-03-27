@@ -163,7 +163,7 @@
 #screen5_bg {
 
 	background: url(../images/mythfourbgOne.svg) top center no-repeat fixed;
-	height: 1000px;
+	height: 700px;
 	overflow: hidden;
 	width: 100%;
 	background-size: cover;
@@ -182,7 +182,7 @@
 #screen6_bg {
 
 	background: url(../images/photo1.jpg) top center no-repeat fixed;
-	height: 1000px;
+	height: 950px;
 	overflow: hidden;
 	width: 100%;
 	background-size: cover;
@@ -195,7 +195,7 @@
 #screen7_bg {
 
 	background: url(../images/myth6bg.svg) top center no-repeat fixed;
-	height: 1000px;
+	height: 800px;
 	overflow: hidden;
 	width: 100%;
 	background-size: cover;

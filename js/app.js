@@ -19,13 +19,13 @@ $(document).ready(function () {
   $('.screenFour').parallax("50%", 0.3);
 
   // myth 4
-  $('#screen5_bg').parallax("30%", 0.5);
+  $('#screen5_bg').parallax("30%");
 
   // myth 5
-  $('#screen6_bg').parallax("20%", 0.5);
+  $('#screen6_bg').parallax("20%");
 
   // myth 6
-  $('#screen7_bg').parallax("20%", 0.3);
+  $('#screen7_bg').parallax("20%");
 })
 
 window.onload = function () {
