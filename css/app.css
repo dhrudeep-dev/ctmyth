@@ -1022,6 +1022,10 @@
 	position: absolute;
 }
 
+.cancerStages {
+	opacity: 0;
+}
+
 .myth6Row {
 	text-align: center;
 }

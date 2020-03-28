@@ -1119,6 +1119,15 @@ function startAnimMyth6() {
   // slide 4
   let pointFour = document.querySelector("#fourthPoint");
   let infoPoint3 = document.querySelector("#infoPoint3");
+  let infoPoint4 = document.querySelector("#infoPoint4");
+  let stages = document.querySelector("#cancerStages");
+  let cancerStages = document.getElementById("cancerStages").contentDocument;
+  let trialOne = cancerStages.getElementById("trial1");
+  let trialTwo = cancerStages.getElementById("trial2");
+  let trialThree = cancerStages.getElementById("trial3");
+  let trialFour = cancerStages.getElementById("trial4");
+
+
 
   let myth6Replay = document.querySelector("#myth6Replay");
 
@@ -1144,7 +1153,7 @@ function startAnimMyth6() {
       TweenMax.to(pointOne, 1, {
         display: "block"
       })
-      // hide other screens
+      //hide other screens
       TweenMax.to(pointTwo, 1, {
         display: "none"
       })
@@ -1590,7 +1599,53 @@ function startAnimMyth6() {
         display: "block",
         opacity: 1,
         onComplete: function () {
-          TweenMax.to(infoPoint3, 1, {
+          
+          let t1 = new TimelineMax()
+
+          .to(infoPoint3, 1, {
+            opacity: 1,
+            ease: Power1.easeInOut
+          })
+
+          .to(cancerStages, 1, {
+            opacity: 1
+          })
+
+          .fromTo(trialOne, 1, {
+            opacity: 0
+          },{
+            opacity: 1
+          })
+
+          .fromTo(trialTwo, 1, {
+            opacity: 0
+          },{
+            opacity: 1
+          })
+
+          .fromTo(trialThree, 1, {
+            opacity: 0
+          },{
+            opacity: 1
+          })
+
+          .fromTo(trialFour, 1, {
+            opacity: 0
+          },{
+            opacity: 1
+          })
+          
+          .to(stages, 1, {
+            opacity: 0,
+            display: "none"
+          })
+
+          .to(infoPoint3, 1, {
+            opacity: 0,
+            ease: Power1.easeInOut
+          })
+
+          .to(infoPoint4, 1, {
             opacity: 1,
             ease: Power1.easeInOut
           })
