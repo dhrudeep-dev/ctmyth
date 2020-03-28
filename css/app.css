@@ -997,12 +997,19 @@
 	opacity: 0;
 }
 
-#infoPoint2 {
-	margin-top: 60px;
-}
-
 #thirdPoint {
 	opacity: 0;
+}
+
+#fourthPoint {
+	opacity: 0;
+}
+#fifthPoint {
+	opacity: 0;
+}
+
+#infoPoint2 {
+	margin-top: 60px;
 }
 
 #ctPatients {
@@ -1019,13 +1026,9 @@
 	left: 100px;
 }
 
-#fourthPoint {
-	opacity: 0;
-}
 
-#fifthPoint {
-	opacity: 0;
-}
+
+
 
 .infoPoint4 {
 	opacity: 0;
