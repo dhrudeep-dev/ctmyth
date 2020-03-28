@@ -1664,7 +1664,7 @@ function startAnimMyth6() {
       })
     // restart timeline
     myth6Replay.addEventListener("click", function () {
-      myth6Timeline.pause();
+      myth6Timeline.restart();
     })
   }
 }
