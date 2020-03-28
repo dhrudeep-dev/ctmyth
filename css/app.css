@@ -995,31 +995,44 @@
 
 #secondPoint {
 	opacity: 0;
-	position: absolute;
+}
+
+#infoPoint2 {
+	margin-top: 60px;
 }
 
 #thirdPoint {
 	opacity: 0;
-	position: absolute;
 }
 
 #ctPatients {
 	width: 20%;
 	position: relative;
-	top: 50px;
+	top: 30px;
 	right: 100px;
 }
 
 #generalPatients {
 	width: 20%;
 	position: relative;
-	top: 65px;
+	top: 35px;
 	left: 100px;
 }
 
 #fourthPoint {
 	opacity: 0;
-	position: absolute;
+}
+
+#fifthPoint {
+	opacity: 0;
+}
+
+.infoPoint4 {
+	opacity: 0;
+}
+
+#cancerStages {
+	margin: 50px 50px;
 }
 
 .cancerStages {
@@ -1031,13 +1044,13 @@
 }
 
 .infoPoints {
-	margin-top: 60px;
+	margin-top: 40px;
 	color: #000;
 	opacity: 0;
 }
 
-#infoPoint1 {
-	margin: 60px 100px;
+#infoPoint4 {
+	margin: 100px auto;
 }
 
 #myth6Replay {
@@ -1483,6 +1496,11 @@
 		opacity: 0;
 		position: absolute;
 		margin: 100px 0px;
+	}
+
+	#fifthPoint {
+		opacity: 0;
+		position: absolute;
 	}
 
 	#myth6Replay {

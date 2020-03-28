@@ -736,7 +736,7 @@ function startAnimMyth4() {
   let yesIconTwo = document.querySelector("#yesIconTwo");
   let visHead = visitorOne.getElementById('head');
 
-  
+
 
 
   // animating focus area
@@ -753,22 +753,22 @@ function startAnimMyth4() {
       borderRadius: "5px",
       ease: Expo.easeOut
     });
-  
+
     TweenMax.fromTo(visitor, 1, {
       scale: 0,
       opacity: 0
-  
+
     }, {
       scale: 1.5,
       opacity: 1,
     });
-     // head animation
-      TweenMax.fromTo(visHead, 1, {
+    // head animation
+    TweenMax.fromTo(visHead, 1, {
       yPercent: -5,
       rotation: -5,
       transformOrigin: "center center",
       transform: "-webkit-rotate3d(-1, 1, 0, 360deg)"
-  
+
     }, {
       zPercent: 5,
       rotation: 5,
@@ -777,7 +777,7 @@ function startAnimMyth4() {
       repeat: -1,
       delay: 4
     });
-  
+
     // animate visitor talking
     function visTalking() {
       TweenMax.fromTo(visLipUpper, 1, {
@@ -787,7 +787,7 @@ function startAnimMyth4() {
         repeat: 5,
         yoyo: true
       });
-  
+
       TweenMax.fromTo(visLipLower, 1, {
         y: 0,
       }, {
@@ -798,54 +798,54 @@ function startAnimMyth4() {
     }
     // $("#explain4").hide();
     let t1 = new TimelineMax()
-      .call(changeText, ["Is Clinical trials are for patients who have run out of options?"], this,1)
-  
+      .call(changeText, ["Is Clinical trials are for patients who have run out of options?"], this, 1)
+
     function changeText(newtext) {
       $("#bubbleScr5sec").show();
       $("#bubbleScr5sec").text(newtext);
       console.log(newtext);
-      
+
       visTalking();
     }
-  
-    
+
+
     let t2 = new TimelineMax()
-  
+
     TweenMax.fromTo(pills, 3, {
-      opacity:0
-      
+      opacity: 0
+
     }, {
-  
+
       opacity: 1,
-      x:60
+      x: 60
     })
-  
+
     TweenMax.fromTo(syringe, 3, {
-      opacity:0
-      
+      opacity: 0
+
     }, {
-  
+
       opacity: 1,
-      x:-50
-    } )
-  
-  
-    
-  
+      x: -50
+    })
+
+
+
+
     TweenMax.fromTo(stopIcon, 2, {
-      opacity:0
+      opacity: 0
     }, {
       delay: 3,
       opacity: 1
-    } )
-  
+    })
+
     // TweenMax.fromTo(stopIcon, 1, {
     //   opacity:0
     // },{
     //   opacity:0
     // })
     // // $(stopIcon).hide();
-  
+
     // TweenMax.fromTo(stopIconTwo, 2, {
     //   opacity:0
     // }, {
@@ -853,203 +853,203 @@ function startAnimMyth4() {
     //   opacity: 1
     // } )
     TweenMax.fromTo(stopIcon, 2, {
-      opacity:1
+      opacity: 1
     }, {
       delay: 5,
       opacity: 0
-    } )
+    })
     TweenMax.fromTo(yesIcon, 2, {
-      opacity:0
+      opacity: 0
     }, {
       delay: 7,
       opacity: 0.6
-    } )
-  
+    })
+
     TweenMax.fromTo(stopIcon, 1, {
-      opacity:0
-    },{
-      opacity:0
+      opacity: 0
+    }, {
+      opacity: 0
     })
     TweenMax.fromTo(stopIconTwo, 1, {
-      opacity:0
-    },{
-      opacity:0
+      opacity: 0
+    }, {
+      opacity: 0
     })
     // $(stopIcon).hide();
-  
+
     TweenMax.fromTo(stopIconTwo, 2, {
-      opacity:0
+      opacity: 0
     }, {
       delay: 3,
       opacity: 1
     })
     TweenMax.fromTo(stopIconTwo, 2, {
-      opacity:1
+      opacity: 1
     }, {
       delay: 5,
       opacity: 0
     })
     TweenMax.fromTo(yesIconTwo, 2, {
-      opacity:0
+      opacity: 0
     }, {
       delay: 7,
       opacity: 0.6
     })
     TweenMax.fromTo("#myth4Text", 2, {
-      opacity:0
+      opacity: 0
     }, {
       delay: 9,
       opacity: 1
     })
-    
+
   } else {
     // desktop animations
 
-  TweenMax.fromTo(myth4FocusArea, 1, {
-    scale: 0,
-    opacity: 0,
-    borderRadius: "100%"
-  }, {
-    scale: 1,
-    opacity: 1,
-    borderRadius: "5px",
-    ease: Expo.easeOut
-  });
+    TweenMax.fromTo(myth4FocusArea, 1, {
+      scale: 0,
+      opacity: 0,
+      borderRadius: "100%"
+    }, {
+      scale: 1,
+      opacity: 1,
+      borderRadius: "5px",
+      ease: Expo.easeOut
+    });
 
-  TweenMax.fromTo(visitor, 1, {
-    scale: 0,
-    opacity: 0
+    TweenMax.fromTo(visitor, 1, {
+      scale: 0,
+      opacity: 0
 
-  }, {
-    scale: 1.9,
-    opacity: 1,
-  });
-   // head animation
+    }, {
+      scale: 1.9,
+      opacity: 1,
+    });
+    // head animation
     TweenMax.fromTo(visHead, 1, {
-    yPercent: -5,
-    rotation: -5,
-    transformOrigin: "center center",
-    transform: "-webkit-rotate3d(-1, 1, 0, 360deg)"
+      yPercent: -5,
+      rotation: -5,
+      transformOrigin: "center center",
+      transform: "-webkit-rotate3d(-1, 1, 0, 360deg)"
 
-  }, {
-    zPercent: 5,
-    rotation: 5,
-    yoyo: true,
-    ease: Power1.easeInOut,
-    repeat: -1,
-    delay: 4
-  });
-
-  // animate visitor talking
-  function visTalking() {
-    TweenMax.fromTo(visLipUpper, 1, {
-      y: 0,
     }, {
-      y: -0.5,
-      repeat: 5,
-      yoyo: true
+      zPercent: 5,
+      rotation: 5,
+      yoyo: true,
+      ease: Power1.easeInOut,
+      repeat: -1,
+      delay: 4
     });
 
-    TweenMax.fromTo(visLipLower, 1, {
-      y: 0,
+    // animate visitor talking
+    function visTalking() {
+      TweenMax.fromTo(visLipUpper, 1, {
+        y: 0,
+      }, {
+        y: -0.5,
+        repeat: 5,
+        yoyo: true
+      });
+
+      TweenMax.fromTo(visLipLower, 1, {
+        y: 0,
+      }, {
+        y: 0.5,
+        repeat: 5,
+        yoyo: true
+      });
+    }
+    // $("#explain4").hide();
+    let t1 = new TimelineMax()
+      .call(changeText, ["Is Clinical trials are for patients who have run out of options?"], this, 1)
+
+    function changeText(newtext) {
+      $("#bubbleScr5sec").show();
+      $("#bubbleScr5sec").text(newtext);
+      console.log(newtext);
+
+      visTalking();
+    }
+
+
+    let t2 = new TimelineMax()
+
+    TweenMax.fromTo(pills, 3, {
+      opacity: 0
+
     }, {
-      y: 0.5,
-      repeat: 5,
-      yoyo: true
-    });
+
+      opacity: 1,
+      x: 200
+    })
+
+    TweenMax.fromTo(syringe, 3, {
+      opacity: 0
+
+    }, {
+
+      opacity: 1,
+      x: -200
+    })
+
+
+
+
+    TweenMax.fromTo(stopIcon, 2, {
+      opacity: 0
+    }, {
+      delay: 3,
+      opacity: 1
+    })
+    TweenMax.fromTo(stopIcon, 2, {
+      opacity: 1
+    }, {
+      delay: 5,
+      opacity: 0
+    })
+    TweenMax.fromTo(yesIcon, 2, {
+      opacity: 0
+    }, {
+      delay: 7,
+      opacity: 0.6
+    })
+
+    TweenMax.fromTo(stopIcon, 1, {
+      opacity: 0
+    }, {
+      opacity: 0
+    })
+    TweenMax.fromTo(stopIconTwo, 1, {
+      opacity: 0
+    }, {
+      opacity: 0
+    })
+    // $(stopIcon).hide();
+
+    TweenMax.fromTo(stopIconTwo, 2, {
+      opacity: 0
+    }, {
+      delay: 3,
+      opacity: 1
+    })
+    TweenMax.fromTo(stopIconTwo, 2, {
+      opacity: 1
+    }, {
+      delay: 5,
+      opacity: 0
+    })
+    TweenMax.fromTo(yesIconTwo, 2, {
+      opacity: 0
+    }, {
+      delay: 7,
+      opacity: 0.6
+    })
+    TweenMax.fromTo("#myth4Text", 2, {
+      opacity: 0
+    }, {
+      delay: 9,
+      opacity: 1
+    })
   }
-  // $("#explain4").hide();
-  let t1 = new TimelineMax()
-    .call(changeText, ["Is Clinical trials are for patients who have run out of options?"], this,1)
-
-  function changeText(newtext) {
-    $("#bubbleScr5sec").show();
-    $("#bubbleScr5sec").text(newtext);
-    console.log(newtext);
-    
-    visTalking();
-  }
-
-  
-  let t2 = new TimelineMax()
-
-  TweenMax.fromTo(pills, 3, {
-    opacity:0
-    
-  }, {
-
-    opacity: 1,
-    x:200
-  })
-
-  TweenMax.fromTo(syringe, 3, {
-    opacity:0
-    
-  }, {
-
-    opacity: 1,
-    x:-200
-  } )
-
-
-  
-
-  TweenMax.fromTo(stopIcon, 2, {
-    opacity:0
-  }, {
-    delay: 3,
-    opacity: 1
-  } )
-  TweenMax.fromTo(stopIcon, 2, {
-    opacity:1
-  }, {
-    delay: 5,
-    opacity: 0
-  } )
-  TweenMax.fromTo(yesIcon, 2, {
-    opacity:0
-  }, {
-    delay: 7,
-    opacity: 0.6
-  } )
-
-  TweenMax.fromTo(stopIcon, 1, {
-    opacity:0
-  },{
-    opacity:0
-  })
-  TweenMax.fromTo(stopIconTwo, 1, {
-    opacity:0
-  },{
-    opacity:0
-  })
-  // $(stopIcon).hide();
-
-  TweenMax.fromTo(stopIconTwo, 2, {
-    opacity:0
-  }, {
-    delay: 3,
-    opacity: 1
-  })
-  TweenMax.fromTo(stopIconTwo, 2, {
-    opacity:1
-  }, {
-    delay: 5,
-    opacity: 0
-  })
-  TweenMax.fromTo(yesIconTwo, 2, {
-    opacity:0
-  }, {
-    delay: 7,
-    opacity: 0.6
-  })
-  TweenMax.fromTo("#myth4Text", 2, {
-    opacity:0
-  }, {
-    delay: 9,
-    opacity: 1
-  })
-}
 }
 
 
@@ -1109,7 +1109,7 @@ function startAnimMyth6() {
   let ctPatientsTitle = ctPatients.getElementById("ct");
   let crossOne = ctPatients.getElementById("cross");
   let crossTwo = ctPatients.getElementById("cross2");
-  
+
 
   let generalPatients = document.getElementById("generalPatients").contentDocument;
   let generalPatientsImg = generalPatients.getElementById("generalPatients");
@@ -1119,7 +1119,6 @@ function startAnimMyth6() {
   // slide 4
   let pointFour = document.querySelector("#fourthPoint");
   let infoPoint3 = document.querySelector("#infoPoint3");
-  let infoPoint4 = document.querySelector("#infoPoint4");
   let stages = document.querySelector("#cancerStages");
   let cancerStages = document.getElementById("cancerStages").contentDocument;
   let trialOne = cancerStages.getElementById("trial1");
@@ -1127,7 +1126,9 @@ function startAnimMyth6() {
   let trialThree = cancerStages.getElementById("trial3");
   let trialFour = cancerStages.getElementById("trial4");
 
-
+  // slide 5 
+  let pointFive = document.querySelector("#fifthPoint");
+  let infoPoint4 = document.querySelector("#infoPoint4");
 
   let myth6Replay = document.querySelector("#myth6Replay");
 
@@ -1163,6 +1164,9 @@ function startAnimMyth6() {
       TweenMax.to(pointFour, 1, {
         display: "none"
       })
+      TweenMax.to(pointFive, 1, {
+        display: "none"
+      })
     }
   });
 
@@ -1183,7 +1187,7 @@ function startAnimMyth6() {
         opacity: 1,
         x: 300,
         scale: 1
-      },{
+      }, {
         x: 117
       })
 
@@ -1207,7 +1211,7 @@ function startAnimMyth6() {
       }, {
         fillOpacity: 0,
         ease: Power0.easeNone
-      },'-=0.3')
+      }, '-=0.3')
 
       // needle going in
       .to(needle, 2, {
@@ -1250,7 +1254,7 @@ function startAnimMyth6() {
             opacity: 1,
             ease: Power1.easeInOut
           })
-          
+
           // animate in asset for slide 2
           TweenMax.to(slide2Img, 1, {
             opacity: 1
@@ -1262,7 +1266,7 @@ function startAnimMyth6() {
 
           TweenMax.fromTo(handMedicine, 2, {
             x: -300
-          },{
+          }, {
             x: -150
           })
         }
@@ -1290,34 +1294,34 @@ function startAnimMyth6() {
 
           TweenMax.fromTo(ctPatientsTitle, 2, {
             opacity: 0
-          },{
+          }, {
             opacity: 1
           })
 
           TweenMax.fromTo(ctPatientsImg, 2, {
             opacity: 0
-          },{
+          }, {
             opacity: 1
           })
 
           TweenMax.fromTo(generalPatientsTitle, 2, {
             opacity: 0
-          },{
+          }, {
             opacity: 1
           })
 
           TweenMax.fromTo(generalPatientsImg, 2, {
             opacity: 0
-          },{
+          }, {
             opacity: 1
           })
 
-          
+
           TweenMax.fromTo(crossOne, 3, {
             opacity: 0,
             scale: 0,
             y: 0
-          },{
+          }, {
             opacity: 1,
             y: '-140',
             x: '-30',
@@ -1329,7 +1333,7 @@ function startAnimMyth6() {
             opacity: 0,
             scale: 0,
             y: 0
-          },{
+          }, {
             opacity: 1,
             y: '-140',
             x: '20',
@@ -1341,7 +1345,7 @@ function startAnimMyth6() {
             opacity: 1,
             scale: 1,
             y: 0
-          },{
+          }, {
             opacity: 0,
             y: '140',
             x: '-10',
@@ -1353,7 +1357,7 @@ function startAnimMyth6() {
             opacity: 1,
             scale: 1,
             y: 0
-          },{
+          }, {
             opacity: 0,
             y: '140',
             x: '20',
@@ -1370,25 +1374,25 @@ function startAnimMyth6() {
         delay: 7
       })
 
-     // show slide 4
-     .fromTo(pointFour, 1, {
-      display: "none",
-      opacity: 0
-    },{
-      display: "block",
-      opacity: 1,
-      onComplete: function () {
-        TweenMax.to(infoPoint3, 1, {
-          opacity: 1,
-          ease: Power1.easeInOut
-        })
-      }
-    })
+      // show slide 4
+      .fromTo(pointFour, 1, {
+        display: "none",
+        opacity: 0
+      }, {
+        display: "block",
+        opacity: 1,
+        onComplete: function () {
+          TweenMax.to(infoPoint3, 1, {
+            opacity: 1,
+            ease: Power1.easeInOut
+          })
+        }
+      })
     // restart timeline
     myth6Replay.addEventListener("click", function () {
       myth6Timeline.restart();
     })
-  
+
 
     // desktop animations
   } else {
@@ -1428,7 +1432,7 @@ function startAnimMyth6() {
       }, {
         fillOpacity: 0,
         ease: Power0.easeNone
-      },'-=0.3')
+      }, '-=0.3')
 
       // needle going in
       .to(needle, 2, {
@@ -1471,7 +1475,7 @@ function startAnimMyth6() {
             opacity: 1,
             ease: Power1.easeInOut
           })
-          
+
           // animate in asset for slide 2
           TweenMax.to(slide2Img, 1, {
             opacity: 1
@@ -1483,7 +1487,7 @@ function startAnimMyth6() {
 
           TweenMax.fromTo(handMedicine, 2, {
             x: -300
-          },{
+          }, {
             x: -150
           })
         }
@@ -1511,34 +1515,34 @@ function startAnimMyth6() {
 
           TweenMax.fromTo(ctPatientsTitle, 2, {
             opacity: 0
-          },{
+          }, {
             opacity: 1
           })
 
           TweenMax.fromTo(ctPatientsImg, 2, {
             opacity: 0
-          },{
+          }, {
             opacity: 1
           })
 
           TweenMax.fromTo(generalPatientsTitle, 2, {
             opacity: 0
-          },{
+          }, {
             opacity: 1
           })
 
           TweenMax.fromTo(generalPatientsImg, 2, {
             opacity: 0
-          },{
+          }, {
             opacity: 1
           })
 
-          
+
           TweenMax.fromTo(crossOne, 1, {
             opacity: 0,
             scale: 0,
             y: 0
-          },{
+          }, {
             opacity: 1,
             y: '-140',
             x: '-30',
@@ -1550,7 +1554,7 @@ function startAnimMyth6() {
             opacity: 0,
             scale: 0,
             y: 0
-          },{
+          }, {
             opacity: 1,
             y: '-140',
             x: '20',
@@ -1562,7 +1566,7 @@ function startAnimMyth6() {
             opacity: 1,
             scale: 1,
             y: 0
-          },{
+          }, {
             opacity: 0,
             y: '140',
             x: '-10',
@@ -1574,7 +1578,7 @@ function startAnimMyth6() {
             opacity: 1,
             scale: 1,
             y: 0
-          },{
+          }, {
             opacity: 0,
             y: '140',
             x: '20',
@@ -1595,66 +1599,72 @@ function startAnimMyth6() {
       .fromTo(pointFour, 1, {
         display: "none",
         opacity: 0
-      },{
+      }, {
         display: "block",
         opacity: 1,
         onComplete: function () {
-          
+
           let t1 = new TimelineMax()
 
-          .to(infoPoint3, 1, {
-            opacity: 1,
-            ease: Power1.easeInOut
-          })
+            .to(infoPoint3, 1, {
+              opacity: 1,
+              ease: Power1.easeInOut
+            })
 
-          .to(cancerStages, 1, {
-            opacity: 1
-          })
+            .to(cancerStages, 1, {
+              opacity: 1
+            })
 
-          .fromTo(trialOne, 1, {
-            opacity: 0
-          },{
-            opacity: 1
-          })
+            .fromTo(trialOne, 1, {
+              opacity: 0
+            }, {
+              opacity: 1
+            })
 
-          .fromTo(trialTwo, 1, {
-            opacity: 0
-          },{
-            opacity: 1
-          })
+            .fromTo(trialTwo, 1, {
+              opacity: 0
+            }, {
+              opacity: 1
+            })
 
-          .fromTo(trialThree, 1, {
-            opacity: 0
-          },{
-            opacity: 1
-          })
+            .fromTo(trialThree, 1, {
+              opacity: 0
+            }, {
+              opacity: 1
+            })
 
-          .fromTo(trialFour, 1, {
-            opacity: 0
-          },{
-            opacity: 1
-          })
-          
-          .to(stages, 1, {
-            opacity: 0,
-            display: "none"
-          })
-
-          .to(infoPoint3, 1, {
-            opacity: 0,
-            ease: Power1.easeInOut
-          })
-
-          .to(infoPoint4, 1, {
-            opacity: 1,
-            ease: Power1.easeInOut
-          })
+            .fromTo(trialFour, 1, {
+              opacity: 0
+            }, {
+              opacity: 1,
+              onComplete: function () {
+                // hide slide 4
+                TweenMax.to(pointFour, 0.5, {
+                  opacity: 0,
+                  display: "none",
+                  delay: 2,
+                  onComplete: function () {
+                    TweenMax.fromTo(pointFive, 1, {
+                      display: "none",
+                      opacity: 0
+                    }, {
+                      display: "block",
+                      opacity: 1,
+                      onComplete: function () {
+                        TweenMax.to(infoPoint4, 1, {
+                          opacity: 1
+                        })
+                      }
+                    })
+                  }
+                })
+              }
+            })
         }
       })
-
     // restart timeline
     myth6Replay.addEventListener("click", function () {
-      myth6Timeline.restart();
+      myth6Timeline.pause();
     })
   }
 }
