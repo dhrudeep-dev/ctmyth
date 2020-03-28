@@ -1145,26 +1145,21 @@ function startAnimMyth6() {
         opacity: 1,
         ease: Power1.easeInOut
       })
-      TweenMax.to(infoPoints, 1, {
-        opacity: 1,
-        ease: Power1.easeInOut,
-        delay: 2
-      })
       // show screen 1
       TweenMax.to(pointOne, 1, {
         display: "block"
       })
       //hide other screens
-      TweenMax.to(pointTwo, 1, {
+      TweenMax.to(pointTwo, 0, {
         display: "none"
       })
-      TweenMax.to(pointThree, 1, {
+      TweenMax.to(pointThree, 0, {
         display: "none"
       })
-      TweenMax.to(pointFour, 1, {
+      TweenMax.to(pointFour, 0, {
         display: "none"
       })
-      TweenMax.to(pointFive, 1, {
+      TweenMax.to(pointFive, 0, {
         display: "none"
       })
     }
