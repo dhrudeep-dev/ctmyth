@@ -1110,12 +1110,12 @@ function startAnimMyth6() {
   let crossOne = ctPatients.getElementById("cross");
   let crossTwo = ctPatients.getElementById("cross2");
 
-
   let generalPatients = document.getElementById("generalPatients").contentDocument;
   let generalPatientsImg = generalPatients.getElementById("generalPatients");
   let generalPatientsTitle = generalPatients.getElementById("general");
   let genCrossOne = generalPatients.getElementById("cross");
   let genCrossTwo = generalPatients.getElementById("cross2");
+
   // slide 4
   let pointFour = document.querySelector("#fourthPoint");
   let infoPoint3 = document.querySelector("#infoPoint3");
@@ -1125,6 +1125,17 @@ function startAnimMyth6() {
   let trialTwo = cancerStages.getElementById("trial2");
   let trialThree = cancerStages.getElementById("trial3");
   let trialFour = cancerStages.getElementById("trial4");
+  // slide 4 mobile
+  let cancerStagesMobile = document.getElementById("cancerStagesMobile").contentDocument;
+  let stagesMobile = cancerStagesMobile.getElementById("stagesMobile");
+  let stage1Mobile = cancerStagesMobile.getElementById("stage1");
+  let stage2Mobile = cancerStagesMobile.getElementById("stage2");
+  let stage3Mobile = cancerStagesMobile.getElementById("stage3");
+  let stage4Mobile = cancerStagesMobile.getElementById("stage4");
+  let trialOneM = cancerStagesMobile.getElementById("trial1");
+  let trialTwoM = cancerStagesMobile.getElementById("trial2");
+  let trialThreeM = cancerStagesMobile.getElementById("trial3");
+  let trialFourM = cancerStagesMobile.getElementById("trial4");
 
   // slide 5 
   let pointFive = document.querySelector("#fifthPoint");
@@ -1311,7 +1322,6 @@ function startAnimMyth6() {
             opacity: 1
           })
 
-
           TweenMax.fromTo(crossOne, 3, {
             opacity: 0,
             scale: 0,
@@ -1377,17 +1387,114 @@ function startAnimMyth6() {
         display: "block",
         opacity: 1,
         onComplete: function () {
-          TweenMax.to(infoPoint3, 1, {
-            opacity: 1,
-            ease: Power1.easeInOut
-          })
+
+          let t1 = new TimelineMax()
+
+            .fromTo(infoPoint3, 1, {
+              opacity: 0
+            }, {
+              opacity: 1,
+              ease: Power1.easeInOut
+            })
+
+            .fromTo(stage1Mobile, 1, {
+              opacity: 0
+            }, {
+              opacity: 1,
+              onComplete: function () {
+                TweenMax.fromTo(trialOneM, 0.5, {
+                  opacity: 0
+                }, {
+                  opacity: 1
+                })
+              }
+            })
+
+            .to(stage1Mobile, 0.5, {
+              opacity: 0,
+              delay: 2
+            })
+
+            .fromTo(stage2Mobile, 1, {
+              opacity: 0
+            }, {
+              opacity: 1,
+              onComplete: function () {
+                TweenMax.fromTo(trialTwoM, 0.5, {
+                  opacity: 0
+                }, {
+                  opacity: 1
+                })
+              }
+            })
+
+            .to(stage2Mobile, 0.5, {
+              opacity: 0,
+              delay: 2
+            })
+
+            .fromTo(stage3Mobile, 1, {
+              opacity: 0
+            }, {
+              opacity: 1,
+              onComplete: function () {
+                TweenMax.fromTo(trialThreeM, 0.5, {
+                  opacity: 0
+                }, {
+                  opacity: 1
+                })
+              }
+            })
+
+            .to(stage3Mobile, 0.5, {
+              opacity: 0,
+              delay: 2
+            })
+
+            .fromTo(stage4Mobile, 0.5, {
+              opacity: 0
+            }, {
+              opacity: 1,
+              onComplete: function () {
+                TweenMax.fromTo(trialFourM, 0.5, {
+                  opacity: 0,
+                }, {
+                  opacity: 1,
+                  onComplete: function () {
+                    // hide slide 4
+                    TweenMax.to(pointFour, 0.5, {
+                      opacity: 0,
+                      display: "none",
+                      delay: 2,
+                      onComplete: function() {
+                        TweenMax.fromTo(pointFive, 1, {
+                          display: "none",
+                          opacity: 0
+                        }, {
+                          display: "block",
+                          opacity: 1,
+                          onComplete: function () {
+                            TweenMax.fromTo(infoPoint4, 1, {
+                              opacity: 0
+                            }, {
+                              opacity: 1,
+                              ease: Power1.easeInOut
+                            })
+                          }
+                        })
+                      }
+                    })
+                  }
+                })
+              }
+            })
         }
       })
+
     // restart timeline
     myth6Replay.addEventListener("click", function () {
       myth6Timeline.restart();
     })
-
 
     // desktop animations
   } else {
@@ -1532,7 +1639,6 @@ function startAnimMyth6() {
             opacity: 1
           })
 
-
           TweenMax.fromTo(crossOne, 1, {
             opacity: 0,
             scale: 0,
@@ -1655,11 +1761,12 @@ function startAnimMyth6() {
                 })
               }
             })
+            // restart timeline
+    myth6Replay.addEventListener("click", function () {
+      t1.pause();
+    })
         }
       })
-    // restart timeline
-    myth6Replay.addEventListener("click", function () {
-      myth6Timeline.restart();
-    })
+    
   }
 }

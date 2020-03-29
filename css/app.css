@@ -1026,20 +1026,13 @@
 	left: 100px;
 }
 
-
-
-
-
-.infoPoint4 {
-	opacity: 0;
-}
-
 #cancerStages {
 	margin: 50px 50px;
 }
 
-.cancerStages {
+#cancerStagesMobile {
 	opacity: 0;
+	position: absolute;
 }
 
 .myth6Row {
@@ -1494,16 +1487,37 @@
 		left: 0px;
 	}
 
-
 	#fourthPoint {
 		opacity: 0;
 		position: absolute;
 		margin: 100px 0px;
 	}
 
+	#cancerStages {
+		opacity: 0;
+		position: absolute;
+	}
+
+	#cancerStagesMobile {
+		width: 60%;
+		margin: 50px 50px 40px 0px;
+		opacity: 1;
+		position: relative;
+	}
+
+	#infoPoint3 {
+		margin: 0px 10px;
+		font-size: 15px;
+	}
+
+	#infoPoint4 {
+		margin: 250px 10px;
+	}
+
 	#fifthPoint {
 		opacity: 0;
 		position: absolute;
+		display: none;
 	}
 
 	#myth6Replay {
