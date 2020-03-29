@@ -1761,12 +1761,11 @@ function startAnimMyth6() {
                 })
               }
             })
-            // restart timeline
-    myth6Replay.addEventListener("click", function () {
-      t1.pause();
-    })
         }
       })
-    
+    // restart timeline
+    myth6Replay.addEventListener("click", function () {
+      myth6Timeline.restart();
+    })
   }
 }
