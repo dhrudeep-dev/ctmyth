@@ -116,9 +116,12 @@
 	
 /* feature page */
 .screenOne {
-	background: url(../images/featureImage.svg) top no-repeat fixed;
+	background: url(../images/featureImage.jpg) top repeat repeat;
+	background-attachment: fixed;
 	height: 768px;
 	background-size: cover;
+	overflow: hidden;
+
 }
 
 #featurePageReplay{
