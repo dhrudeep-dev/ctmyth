@@ -19,6 +19,10 @@
 		font-family: 'Roboto Condensed', sans-serif;
 	}
 
+
+	.top-bar{
+		z-index: 100;
+	}
 	/* Nav */
 	.navigation {
 		position: fixed !important;
@@ -86,7 +90,7 @@
 		margin: 0 auto;
 		position: relative;
 		top: 43vh;
-		z-index: 1000;
+		z-index: 1 !important;
 		box-shadow:         inset 0 0 10px #0000002d;
 	}
 	#screen4_bg .ContHeading{
